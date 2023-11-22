@@ -5,7 +5,7 @@ using CM.SendBrick.Library.Core;
 
 namespace CM.SendBrick.Library.Data
 {
-    internal class TransferOrderData : IOrderData, ICloneable
+    public class TransferOrderData : IOrderData, ICloneable
     {
         #region variables
         // control variables

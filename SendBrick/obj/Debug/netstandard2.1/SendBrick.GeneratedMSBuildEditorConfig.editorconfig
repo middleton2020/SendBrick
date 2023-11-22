@@ -1,3 +1,3 @@
 is_global = true
-build_property.RootNamespace = SendBrick
+build_property.RootNamespace = CM.SendBrick.Library
 build_property.ProjectDir = C:\Users\colin\source\repos\SendBrick\SendBrick\

@@ -7,6 +7,13 @@ namespace CM.SendBrick.Library.Data
     internal class SubclassNavigation
     {
         #region SubClassNavigationMethods
+        /// <summary>
+        /// Gets the first record in the specified list.
+        /// </summary>
+        /// <typeparam name="T">The type used for the return and inpRecordList</typeparam>
+        /// <param name="inpCurrentRecord">A counter holding the current record in inpRecordList</param>
+        /// <param name="inpRecordList">A list of type T objects to navigate through</param>
+        /// <returns>An object of type T from the inpRecordList</returns>
         public static bool FindFirstRecord<T>(ref int inpCurrentRecord,
                                               ref List<T> inpRecordList)
         {
@@ -22,6 +29,14 @@ namespace CM.SendBrick.Library.Data
                 throw;
             }
         }
+
+        /// <summary>
+        /// Gets the next record in the specified list.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="inpCurrentRecord"></param>
+        /// <param name="inpRecordList"></param>
+        /// <returns></returns>
         public static bool FindNextRecord<T>(ref int inpCurrentRecord,
                                              ref List<T> inpRecordList)
         {
@@ -41,6 +56,14 @@ namespace CM.SendBrick.Library.Data
                 throw;
             }
         }
+
+        /// <summary>
+        /// Gets the previous record in the specified list.
+        /// </summary>
+        /// <typeparam name="T">The type used for the return and inpRecordList</typeparam>
+        /// <param name="inpCurrentRecord">A counter holding the current record in inpRecordList</param>
+        /// <param name="inpRecordList">A list of type T objects to navigate through</param>
+        /// <returns>An object of type T from the inpRecordList</returns>
         public static bool FindPrevRecord<T>(ref int inpCurrentRecord,
                                              ref List<T> inpRecordList)
         {
@@ -60,6 +83,14 @@ namespace CM.SendBrick.Library.Data
                 throw;
             }
         }
+
+        /// <summary>
+        /// Gets the Last record in the specified list.
+        /// </summary>
+        /// <typeparam name="T">The type used for the return and inpRecordList</typeparam>
+        /// <param name="inpCurrentRecord">A counter holding the current record in inpRecordList</param>
+        /// <param name="inpRecordList">A list of type T objects to navigate through</param>
+        /// <returns>An object of type T from the inpRecordList</returns>
         public static bool FindLastRecord<T>(ref int inpCurrentRecord,
                                              ref List<T> inpRecordList)
         {
@@ -74,6 +105,15 @@ namespace CM.SendBrick.Library.Data
                 throw;
             }
         }
+
+        /// <summary>
+        /// Gets a specified record in the specified list.
+        /// </summary>
+        /// <typeparam name="T">The type used for the return and inpRecordList</typeparam>
+        /// <param name="inpParcelIndex">The index that you want to find in inpRecordList</param>
+        /// <param name="inpCurrentRecord">A counter holding the current record in inpRecordList</param>
+        /// <param name="inpRecordList">A list of type T objects to navigate through</param>
+        /// <returns>An object of type T from the inpRecordList</returns>
         public static bool FindSpecificRecord<T>(int inpParcelIndex,
                                                  ref int inpCurrentRecord,
                                                  ref List<T> inpRecordList)

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CM.SendBrick.Library.Core
 {
-    internal class SystemTypes
+    public class SystemTypes
     {
         // All the systems that can send Orders through this system.
         public enum SourceSystemType

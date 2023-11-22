@@ -99,7 +99,7 @@ using CM.SendBrick.Library.Core;
 
 namespace CM.SendBrick.Library.Data
 {
-    internal interface IOrderData
+    public interface IOrderData
     {
         // Control values
         SystemTypes.PostageSystemType PostalSystem { get; }
