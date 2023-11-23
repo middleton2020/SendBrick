@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendBrick", "SendBrick.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendBrickTests", "..\SendBrickTests\SendBrickTests.csproj", "{9C85E400-FAF1-4F05-BAF9-183047422545}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonTools", "..\..\JsonTools\JsonTools\JsonTools.csproj", "{B9FD9472-2C83-4669-B4F5-CDF5EA7EB8A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonToolsTests", "..\..\JsonTools\JsonToolsTests\JsonToolsTests.csproj", "{E26BC944-8171-4302-861C-5CDE18077C8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{9C85E400-FAF1-4F05-BAF9-183047422545}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C85E400-FAF1-4F05-BAF9-183047422545}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C85E400-FAF1-4F05-BAF9-183047422545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9FD9472-2C83-4669-B4F5-CDF5EA7EB8A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9FD9472-2C83-4669-B4F5-CDF5EA7EB8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9FD9472-2C83-4669-B4F5-CDF5EA7EB8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9FD9472-2C83-4669-B4F5-CDF5EA7EB8A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E26BC944-8171-4302-861C-5CDE18077C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E26BC944-8171-4302-861C-5CDE18077C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E26BC944-8171-4302-861C-5CDE18077C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E26BC944-8171-4302-861C-5CDE18077C8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
