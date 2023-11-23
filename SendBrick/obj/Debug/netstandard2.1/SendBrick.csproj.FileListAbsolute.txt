@@ -1,0 +1,10 @@
+C:\Users\colin\source\repos\SendBrick\SendBrick\bin\Debug\netstandard2.1\SendBrick.deps.json
+C:\Users\colin\source\repos\SendBrick\SendBrick\bin\Debug\netstandard2.1\SendBrick.dll
+C:\Users\colin\source\repos\SendBrick\SendBrick\bin\Debug\netstandard2.1\SendBrick.pdb
+C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.csproj.AssemblyReference.cache
+C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.AssemblyInfoInputs.cache
+C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.AssemblyInfo.cs
+C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.csproj.CoreCompileInputs.cache
+C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.dll
+C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.pdb
