@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <Folder Include="BrickOwl\" />
-    <Folder Include="RoyalMail\" />
   </ItemGroup>
 
   <ItemGroup>
