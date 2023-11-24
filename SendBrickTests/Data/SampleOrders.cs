@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CM.SendBrick.Library.Tests
 {
+    #region FullOrders
     static class SampleOrder1
     {
         #region SupplierValues
@@ -4095,4 +4096,689 @@ namespace CM.SendBrick.Library.Tests
         }
         #endregion
     }
+#endregion
+
+    #region ParcelSamples
+    static class SampleParcel1
+    {
+        public static string ParcelId
+        {
+            //Packages.packagingId
+            get
+            {
+                return "TestParcel4";
+            }
+        }
+        public static int ParcelInstance
+        {
+            //Packages.packageOccurrence
+            get
+            {
+                return 2;
+            }
+        }
+        public static double ParcelWeight
+        {
+            //Packages.weight
+            get
+            {
+                return 5.1;
+            }
+        }
+        public static int ParcelHeight
+        {
+            //Packages.height
+            get
+            {
+                return 3;
+            }
+        }
+        public static int ParcelLength
+        {
+            //Packages.length
+            get
+            {
+                return 16;
+            }
+        }
+        public static int ParcelWidth
+        {
+            //Packages.width
+            get
+            {
+                return 8;
+            }
+        }
+    }
+
+    static class SampleParcel2
+    {
+        public static string ParcelId
+        {
+            //Packages.packagingId
+            get
+            {
+                return "TestParcel2";
+            }
+        }
+        public static int ParcelInstance
+        {
+            //Packages.packageOccurrence
+            get
+            {
+                return 3;
+            }
+        }
+        public static double ParcelWeight
+        {
+            //Packages.weight
+            get
+            {
+                return 1.3;
+            }
+        }
+        public static int ParcelHeight
+        {
+            //Packages.height
+            get
+            {
+                return 1;
+            }
+        }
+        public static int ParcelLength
+        {
+            //Packages.length
+            get
+            {
+                return 8;
+            }
+        }
+        public static int ParcelWidth
+        {
+            //Packages.width
+            get
+            {
+                return 3;
+            }
+        }
+    }
+
+    static class SampleParcel3
+    {
+        public static string ParcelId
+        {
+            //Packages.packagingId
+            get
+            {
+                return "TestParcel3";
+            }
+        }
+        public static int ParcelInstance
+        {
+            //Packages.packageOccurrence
+            get
+            {
+                return 6;
+            }
+        }
+        public static double ParcelWeight
+        {
+            //Packages.weight
+            get
+            {
+                return 0.2;
+            }
+        }
+        public static int ParcelHeight
+        {
+            //Packages.height
+            get
+            {
+                return 2;
+            }
+        }
+        public static int ParcelLength
+        {
+            //Packages.length
+            get
+            {
+                return 5;
+            }
+        }
+        public static int ParcelWidth
+        {
+            //Packages.width
+            get
+            {
+                return 5;
+            }
+        }
+    }
+
+    static class SampleParcel4
+    {
+        public static string ParcelId
+        {
+            //Packages.packagingId
+            get
+            {
+                return "TestParcel4";
+            }
+        }
+        public static int ParcelInstance
+        {
+            //Packages.packageOccurrence
+            get
+            {
+                return 2;
+            }
+        }
+        public static double ParcelWeight
+        {
+            //Packages.weight
+            get
+            {
+                return 5.1;
+            }
+        }
+        public static int ParcelHeight
+        {
+            //Packages.height
+            get
+            {
+                return 3;
+            }
+        }
+        public static int ParcelLength
+        {
+            //Packages.length
+            get
+            {
+                return 16;
+            }
+        }
+        public static int ParcelWidth
+        {
+            //Packages.width
+            get
+            {
+                return 8;
+            }
+        }
+    }
+
+    static class SampleParcel5
+    {
+        public static string ParcelId
+        {
+            //Packages.packagingId
+            get
+            {
+                return "";
+            }
+        }
+        public static int ParcelInstance
+        {
+            //Packages.packageOccurrence
+            get
+            {
+                return 0;
+            }
+        }
+        public static double ParcelWeight
+        {
+            //Packages.weight
+            get
+            {
+                return 0.00;
+            }
+        }
+        public static int ParcelHeight
+        {
+            //Packages.height
+            get
+            {
+                return 0;
+            }
+        }
+        public static int ParcelLength
+        {
+            //Packages.length
+            get
+            {
+                return 0;
+            }
+        }
+        public static int ParcelWidth
+        {
+            //Packages.width
+            get
+            {
+                return 0;
+            }
+        }
+    }
+    #endregion
+
+    #region ItemSamples
+    static class SampleItem1
+    {
+        public static string Item1Id
+        {
+            //Items.itemId
+            get
+            {
+                return "1";
+            }
+        }
+        public static string Item1Description
+        {
+            //Items.description
+            get
+            {
+                return "Plate 1x4";
+            }
+        }
+        public static int Item1ParcelInstance
+        {
+            //Items.packageOccurrence
+            get
+            {
+                return 0;
+            }
+        }
+        public static int Item1Quantity
+        {
+            //Items.quantity
+            get
+            {
+                return 3;
+            }
+        }
+        public static double Item1Value
+        {
+            //Items.valueData
+            get
+            {
+                return 0.06;
+            }
+        }
+        public static double Item1Weight
+        {
+            //Items.weight
+            get
+            {
+                return 0.02;
+            }
+        }
+        public static string ItemCountryOfOrigin
+        {
+            //Items.countryOfOrigin
+            get
+            {
+                return "Denmark";
+            }
+        }
+        public static string ItemHsCode
+        {
+            //Items.hsCode
+            get
+            {
+                return "Code1";
+            }
+        }
+        public static string ItemSkuCode
+        {
+            //Items.skuCode
+            get
+            {
+                return "SKU1";
+            }
+        }
+        public static string ItemImageUrl
+        {
+            //Item.imageUrl
+            get
+            {
+                return "";
+            }
+        }
+    }
+
+    static class SampleItem2
+    {
+        public static string Item1Id
+        {
+            //Items.itemId
+            get
+            {
+                return "5";
+            }
+        }
+        public static string Item1Description
+        {
+            //Items.description
+            get
+            {
+                return "Turntable 2x2";
+            }
+        }
+        public static int Item1ParcelInstance
+        {
+            //Items.packageOccurrence
+            get
+            {
+                return 0;
+            }
+        }
+        public static int Item1Quantity
+        {
+            //Items.quantity
+            get
+            {
+                return 1;
+            }
+        }
+        public static double Item1Value
+        {
+            //Items.valueData
+            get
+            {
+                return 0.12;
+            }
+        }
+        public static double Item1Weight
+        {
+            //Items.weight
+            get
+            {
+                return 0.03;
+            }
+        }
+        public static string ItemCountryOfOrigin
+        {
+            //Items.countryOfOrigin
+            get
+            {
+                return "Denmark";
+            }
+        }
+        public static string ItemHsCode
+        {
+            //Items.hsCode
+            get
+            {
+                return "Code3";
+            }
+        }
+        public static string ItemSkuCode
+        {
+            //Items.skuCode
+            get
+            {
+                return "SKU3";
+            }
+        }
+        public static string ItemImageUrl
+        {
+            //Item.imageUrl
+            get
+            {
+                return "";
+            }
+        }
+    }
+
+    static class SampleItem3
+    {
+        public static string Item1Id
+        {
+            //Items.itemId
+            get
+            {
+                return "2";
+            }
+        }
+        public static string Item1Description
+        {
+            //Items.description
+            get
+            {
+                return "Tile 2x4";
+            }
+        }
+        public static int Item1ParcelInstance
+        {
+            //Items.packageOccurrence
+            get
+            {
+                return 0;
+            }
+        }
+        public static int Item1Quantity
+        {
+            //Items.quantity
+            get
+            {
+                return 2;
+            }
+        }
+        public static double Item1Value
+        {
+            //Items.valueData
+            get
+            {
+                return 0.06;
+            }
+        }
+        public static double Item1Weight
+        {
+            //Items.weight
+            get
+            {
+                return 0.02;
+            }
+        }
+        public static string ItemCountryOfOrigin
+        {
+            //Items.countryOfOrigin
+            get
+            {
+                return "Denmark";
+            }
+        }
+        public static string ItemHsCode
+        {
+            //Items.hsCode
+            get
+            {
+                return "Code2";
+            }
+        }
+        public static string ItemSkuCode
+        {
+            //Items.skuCode
+            get
+            {
+                return "SKU2";
+            }
+        }
+        public static string ItemImageUrl
+        {
+            //Item.imageUrl
+            get
+            {
+                return "";
+            }
+        }
+    }
+
+    static class SampleItem4
+    {
+        public static string Item1Id
+        {
+            //Items.itemId
+            get
+            {
+                return "3";
+            }
+        }
+        public static string Item1Description
+        {
+            //Items.description
+            get
+            {
+                return "Round Brick 2x2";
+            }
+        }
+        public static int Item1ParcelInstance
+        {
+            //Items.packageOccurrence
+            get
+            {
+                return 0;
+            }
+        }
+        public static int Item1Quantity
+        {
+            //Items.quantity
+            get
+            {
+                return 1;
+            }
+        }
+        public static double Item1Value
+        {
+            //Items.valueData
+            get
+            {
+                return 0.15;
+            }
+        }
+        public static double Item1Weight
+        {
+            //Items.weight
+            get
+            {
+                return 0.05;
+            }
+        }
+        public static string ItemCountryOfOrigin
+        {
+            //Items.countryOfOrigin
+            get
+            {
+                return "Denmark";
+            }
+        }
+        public static string ItemHsCode
+        {
+            //Items.hsCode
+            get
+            {
+                return "Code4";
+            }
+        }
+        public static string ItemSkuCode
+        {
+            //Items.skuCode
+            get
+            {
+                return "SKU4";
+            }
+        }
+        public static string ItemImageUrl
+        {
+            //Item.imageUrl
+            get
+            {
+                return "";
+            }
+        }
+    }
+
+    static class SampleItem5
+    {
+        public static string Item1Id
+        {
+            //Items.itemId
+            get
+            {
+                return "";
+            }
+        }
+        public static string Item1Description
+        {
+            //Items.description
+            get
+            {
+                return "";
+            }
+        }
+        public static int Item1ParcelInstance
+        {
+            //Items.packageOccurrence
+            get
+            {
+                return 0;
+            }
+        }
+        public static int Item1Quantity
+        {
+            //Items.quantity
+            get
+            {
+                return 0;
+            }
+        }
+        public static double Item1Value
+        {
+            //Items.valueData
+            get
+            {
+                return 0.00;
+            }
+        }
+        public static double Item1Weight
+        {
+            //Items.weight
+            get
+            {
+                return 0.00;
+            }
+        }
+        public static string ItemCountryOfOrigin
+        {
+            //Items.countryOfOrigin
+            get
+            {
+                return "";
+            }
+        }
+        public static string ItemHsCode
+        {
+            //Items.hsCode
+            get
+            {
+                return "";
+            }
+        }
+        public static string ItemSkuCode
+        {
+            //Items.skuCode
+            get
+            {
+                return "";
+            }
+        }
+        public static string ItemImageUrl
+        {
+            //Item.imageUrl
+            get
+            {
+                return "";
+            }
+        }
+    }
+    #endregion
 }
