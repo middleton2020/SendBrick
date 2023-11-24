@@ -100,3 +100,5 @@ C:\Users\colin\source\repos\SendBrick\SendBrickTests\obj\Debug\net5.0\SendBrickT
 C:\Users\colin\source\repos\SendBrick\SendBrickTests\obj\Debug\net5.0\ref\SendBrickTests.dll
 C:\Users\colin\source\repos\SendBrick\SendBrickTests\obj\Debug\net5.0\SendBrickTests.pdb
 C:\Users\colin\source\repos\SendBrick\SendBrickTests\obj\Debug\net5.0\SendBrickTests.genruntimeconfig.cache
+C:\Users\colin\source\repos\SendBrick\SendBrickTests\bin\Debug\net5.0\JsonTools.dll
+C:\Users\colin\source\repos\SendBrick\SendBrickTests\bin\Debug\net5.0\JsonTools.pdb

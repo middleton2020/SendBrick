@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CM.SendBrick.Library.Tests;
 
-namespace CM.SendBrick.Library.RoyalMail.Tests
+namespace CM.SendBrick.Library.Tests
 {
     [TestClass()]
     public class RoyalMailDataTests

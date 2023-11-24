@@ -26,139 +26,136 @@ namespace CM.SendBrick.Library.Tests
         {
             TransferOrderData testItem;
 
-            DateTime justDate = new DateTime(2022, 01, 16);
-
-
-            testItem = new TransferOrderData("bricksinbloom7308",
-                                "Leigha Middleton",
-                                "Bricks In  Bloom",
-                                "7308",
-                                "BrcikLink",
-                                7308,
-                                "Unit 4",
-                                "Candy Works",
-                                "15 Parkhouse Road",
-                                "",
-                                "Carlisle",
-                                "Cumbria",
-                                "GB",
-                                "CA3 0JU",
-                                "1228511030",
-                                "bricksinbloom@bricklink.com",
-                                "GB123 4567 89",
-                                "BL15748250",
-                                "Colin Middleton",
-                                "",
-                                "257 Ecclesall Road",
-                                "",
-                                "",
-                                "",
-                                "Sheffield",
-                                "South Yorkshire",
-                                "GB",
-                                "S5 7HJ",
-                                "7505363818",
-                                "colin@test.com",
-                                "",
-                                "Front Porch",
-                                justDate,
-                                "TPLN",
-                                "KG",
-                                "123456789",
-                                "01",
-                                "P",
-                                false,
-                                "Level5",
-                                false,
-                                "EmailAndSMS",
-                                false,
-                                "LEGO",
-                                "LEGO sets",
-                                "Sale of goods",
-                                10.42,
-                                0.00,
-                                "GBP",
-                                "DDU",
-                                "15748250",
-                                justDate,
-                                "PDF",
-                                "75b59db8-3cd3-4578-888e-54be016f07cc",
-                                "Process",
-                                "GB15748250",
-                                "EORI",
-                                0.00,
-                                false,
-                                1234567890);
+            testItem = new TransferOrderData(SampleOrder1.SupplierId,
+                                SampleOrder1.SupplierContactName,
+                                SampleOrder1.SupplierBusinessName,
+                                SampleOrder1.SupplierReference1,
+                                SampleOrder1.SupplierReference2,
+                                SampleOrder1.Department,
+                                SampleOrder1.SupplierAddressLine1,
+                                SampleOrder1.SupplierAddressLine2,
+                                SampleOrder1.SupplierAddressLine3,
+                                SampleOrder1.SupplierAddressLine4,
+                                SampleOrder1.SupplierAddressTown,
+                                SampleOrder1.SupplierAddressCounty,
+                                SampleOrder1.SupplierCountryCode,
+                                SampleOrder1.SupplierAddressPostcode,
+                                SampleOrder1.SupplierPhoneNumber,
+                                SampleOrder1.SupplierEmailAddress,
+                                SampleOrder1.SupplierVatNumber,
+                                SampleOrder1.CustomerId,
+                                SampleOrder1.CustomerContactName,
+                                SampleOrder1.CustomerBusinessName,
+                                SampleOrder1.CustomerAddressLine1,
+                                SampleOrder1.CustomerAddressLine2,
+                                SampleOrder1.CustomerAddressLine3,
+                                SampleOrder1.CustomerAddressLine4,
+                                SampleOrder1.CustomerAddressTown,
+                                SampleOrder1.CustomerAddressCounty,
+                                SampleOrder1.CustomerCountryCode,
+                                SampleOrder1.CustomerAddressPostcode,
+                                SampleOrder1.CustomerPhoneNumber,
+                                SampleOrder1.CustomerEmailAddress,
+                                SampleOrder1.CustomerVatNumber,
+                                SampleOrder1.CustomerSafeplace,
+                                SampleOrder1.PostingDate,
+                                SampleOrder1.PostageType,
+                                SampleOrder1.PostingWeightUOM,
+                                SampleOrder1.PostingLocation,
+                                SampleOrder1.PostingServiceLevel,
+                                SampleOrder1.PostingServiceFormat,
+                                SampleOrder1.PostingSaturdayGuaranteed,
+                                SampleOrder1.PostingConsequentialLoss,
+                                SampleOrder1.PostingLocalCollect,
+                                SampleOrder1.PostingTrackingNotifications,
+                                SampleOrder1.PostingRecordedSignedFor,
+                                SampleOrder1.CustomsProduct,
+                                SampleOrder1.CustomsDescriptionOfGoods,
+                                SampleOrder1.CustomsReasonForExport,
+                                SampleOrder1.CustomsShippingCharges,
+                                SampleOrder1.CustomsOtherCharges,
+                                SampleOrder1.CustomsCurrency,
+                                SampleOrder1.CustomsIncoterms,
+                                SampleOrder1.CustomsInvoiceNumber,
+                                SampleOrder1.CustomsInvoiceDate,
+                                SampleOrder1.CustomsLabelFormat,
+                                SampleOrder1.CustomsSilentPrintProfile,
+                                SampleOrder1.CustomsShipmentAction,
+                                SampleOrder1.CustomsPreRegistrationNumber,
+                                SampleOrder1.CustomsPreRegistrationType,
+                                SampleOrder1.CustomsQuotedLandedCost,
+                                SampleOrder1.CustomsExportLicence,
+                                SampleOrder1.AddresseeIdentificationReferenceNumber);
 
             Assert.IsNotNull(testItem);
 
-            Assert.AreEqual(testItem.SupplierId, "bricksinbloom7308", false);
-            Assert.AreEqual(testItem.SupplierReference1, "7308", false);
-            Assert.AreEqual(testItem.SupplierReference2, "BrcikLink", false);
-            Assert.AreEqual(testItem.Department, 7308, 0);
-            Assert.AreEqual(testItem.SupplierBusinessName, "Bricks In  Bloom", false);
-            Assert.AreEqual(testItem.SupplierContactName, "Leigha Middleton", false);
-            Assert.AreEqual(testItem.SupplierAddressLine1, "Unit 4", false);
-            Assert.AreEqual(testItem.SupplierAddressLine2, "Candy Works", false);
-            Assert.AreEqual(testItem.SupplierAddressLine3, "15 Parkhouse Road", false);
-            Assert.AreEqual(testItem.SupplierAddressLine4, "", false);
-            Assert.AreEqual(testItem.SupplierAddressTown, "Carlisle", false);
-            Assert.AreEqual(testItem.SupplierAddressCounty, "Cumbria", false);
-            Assert.AreEqual(testItem.SupplierCountryCode, "GB", false);
-            Assert.AreEqual(testItem.SupplierAddressPostcode, "CA3 0JU", false);
-            Assert.AreEqual(testItem.SupplierPhoneNumber, "1228511030", false);
-            Assert.AreEqual(testItem.SupplierEmailAddress, "bricksinbloom@bricklink.com", false);
-            Assert.AreEqual(testItem.SupplierVatNumber, "GB123 4567 89", false);
+            Assert.AreEqual(SampleOrder1.SupplierId, testItem.SupplierId, false);
+            Assert.AreEqual(SampleOrder1.SupplierReference1, testItem.SupplierReference1, false);
+            Assert.AreEqual(SampleOrder1.SupplierReference2, testItem.SupplierReference2, false);
+            Assert.AreEqual(SampleOrder1.Department, testItem.Department, 0);
+            Assert.AreEqual(SampleOrder1.SupplierBusinessName, testItem.SupplierBusinessName, false);
+            Assert.AreEqual(SampleOrder1.SupplierContactName, testItem.SupplierContactName, false);
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine1, testItem.SupplierAddressLine1, false);
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine2, testItem.SupplierAddressLine2, false);
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine3, testItem.SupplierAddressLine3, false);
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine4, testItem.SupplierAddressLine4, false);
+            Assert.AreEqual(SampleOrder1.SupplierAddressTown, testItem.SupplierAddressTown, false);
+            Assert.AreEqual(SampleOrder1.SupplierAddressCounty, testItem.SupplierAddressCounty, false);
+            Assert.AreEqual(SampleOrder1.SupplierCountryCode, testItem.SupplierCountryCode, false);
+            Assert.AreEqual(SampleOrder1.SupplierAddressPostcode, testItem.SupplierAddressPostcode, false);
+            Assert.AreEqual(SampleOrder1.SupplierPhoneNumber, testItem.SupplierPhoneNumber, false);
+            Assert.AreEqual(SampleOrder1.SupplierEmailAddress, testItem.SupplierEmailAddress, false);
+            Assert.AreEqual(SampleOrder1.SupplierVatNumber, testItem.SupplierVatNumber, false);
 
-            Assert.AreEqual(testItem.CustomerId, "BL15748250", false);
-            Assert.AreEqual(testItem.CustomerBusinessName, "", false);
-            Assert.AreEqual(testItem.CustomerContactName, "Colin Middleton", false);
-            Assert.AreEqual(testItem.CustomerAddressLine1, "257 Ecclesall Road", false);
-            Assert.AreEqual(testItem.CustomerAddressLine2, "", false);
-            Assert.AreEqual(testItem.CustomerAddressLine3, "", false);
-            Assert.AreEqual(testItem.CustomerAddressLine4, "", false);
-            Assert.AreEqual(testItem.CustomerAddressTown, "Sheffield", false);
-            Assert.AreEqual(testItem.CustomerAddressCounty, "South Yorkshire", false);
-            Assert.AreEqual(testItem.CustomerCountryCode, "GB", false);
-            Assert.AreEqual(testItem.CustomerAddressPostcode, "S5 7HJ", false);
-            Assert.AreEqual(testItem.CustomerPhoneNumber, "7505363818");
-            Assert.AreEqual(testItem.CustomerEmailAddress, "colin@test.com", false);
-            Assert.AreEqual(testItem.CustomerVatNumber, "", false);
+            Assert.AreEqual(SampleOrder1.CustomerId, testItem.CustomerId, false);
+            Assert.AreEqual(SampleOrder1.CustomerBusinessName, testItem.CustomerBusinessName, false);
+            Assert.AreEqual(SampleOrder1.CustomerContactName, testItem.CustomerContactName, false);
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine1, testItem.CustomerAddressLine1, false);
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine2, testItem.CustomerAddressLine2, false);
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine3, testItem.CustomerAddressLine3, false);
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine4, testItem.CustomerAddressLine4, false);
+            Assert.AreEqual(SampleOrder1.CustomerAddressTown, testItem.CustomerAddressTown, false);
+            Assert.AreEqual(SampleOrder1.CustomerAddressCounty, testItem.CustomerAddressCounty, false);
+            Assert.AreEqual(SampleOrder1.CustomerCountryCode, testItem.CustomerCountryCode, false);
+            Assert.AreEqual(SampleOrder1.CustomerAddressPostcode, testItem.CustomerAddressPostcode, false);
+            Assert.AreEqual(SampleOrder1.CustomerPhoneNumber, testItem.CustomerPhoneNumber);
+            Assert.AreEqual(SampleOrder1.CustomerEmailAddress, testItem.CustomerEmailAddress, false);
+            Assert.AreEqual(SampleOrder1.CustomerVatNumber, testItem.CustomerVatNumber, false);
 
-            Assert.AreEqual(testItem.PostingDate.ToString(), justDate.ToString(), false);
-            Assert.AreEqual(testItem.PostageType, "TPLN", false);
-            //Assert.AreEqual(testItem.PostingTotalPackages, 2, 0);
-            //Assert.AreEqual(testItem.PostingTotalWeight, 3.1, 0);
-            Assert.AreEqual(testItem.PostingWeightUOM, "KG", false);
-            Assert.AreEqual(testItem.CustomsProduct, "LEGO", false);
-            Assert.AreEqual(testItem.CustomsDescriptionOfGoods, "LEGO sets", false);
-            Assert.AreEqual(testItem.CustomsReasonForExport, "Sale of goods", false);
-            //Assert.AreEqual(testItem.CustomsValue, 112.97, 0);
-            Assert.AreEqual(testItem.CustomsCurrency, "GBP", false);
-            Assert.AreEqual(testItem.CustomsIncoterms, "DDU", false);
-            Assert.AreEqual(testItem.CustomsLabelFormat, "PDF", false);
-            Assert.AreEqual(testItem.CustomsSilentPrintProfile, "75b59db8-3cd3-4578-888e-54be016f07cc", false);
-            Assert.AreEqual(testItem.CustomsShipmentAction, "Process", false);
+            Assert.AreEqual(SampleOrder1.PostingDate.ToString(), testItem.PostingDate.ToString(), false);
+            Assert.AreEqual(SampleOrder1.PostageType, testItem.PostageType, false);
+            Assert.AreEqual(0, testItem.PostingTotalPackages, 0);
+            Assert.AreEqual(0, testItem.PostingTotalWeight, 0);
+            Assert.AreEqual(SampleOrder1.PostingWeightUOM, testItem.PostingWeightUOM, false);
+            Assert.AreEqual(SampleOrder1.CustomsProduct, testItem.CustomsProduct, false);
+            Assert.AreEqual(SampleOrder1.CustomsDescriptionOfGoods, testItem.CustomsDescriptionOfGoods, false);
+            Assert.AreEqual(SampleOrder1.CustomsReasonForExport, testItem.CustomsReasonForExport, false);
+            Assert.AreEqual(0, testItem.CustomsValue, 0);
+            Assert.AreEqual(SampleOrder1.CustomsCurrency, testItem.CustomsCurrency, false);
+            Assert.AreEqual(SampleOrder1.CustomsIncoterms, testItem.CustomsIncoterms, false);
+            Assert.AreEqual(SampleOrder1.CustomsLabelFormat, testItem.CustomsLabelFormat, false);
+            Assert.AreEqual(SampleOrder1.CustomsSilentPrintProfile, testItem.CustomsSilentPrintProfile, false);
+            Assert.AreEqual(SampleOrder1.CustomsShipmentAction, testItem.CustomsShipmentAction, false);
 
-            Assert.AreEqual(testItem.PostingLocation, "123456789", false);
-            Assert.AreEqual(testItem.PostingServiceLevel, "01", false);
-            Assert.AreEqual(testItem.PostingServiceFormat, "P", false);
-            Assert.AreEqual(testItem.CustomerSafeplace, "Front Porch", false);
+            Assert.AreEqual(SampleOrder1.PostingLocation, testItem.PostingLocation, false);
+            Assert.AreEqual(SampleOrder1.PostingServiceLevel, testItem.PostingServiceLevel, false);
+            Assert.AreEqual(SampleOrder1.PostingServiceFormat, testItem.PostingServiceFormat, false);
+            Assert.AreEqual(SampleOrder1.CustomerSafeplace, testItem.CustomerSafeplace, false);
             Assert.IsFalse(testItem.PostingSaturdayGuaranteed);
-            Assert.AreEqual(testItem.PostingConsequentialLoss, "Level5", false);
+            Assert.AreEqual(SampleOrder1.PostingConsequentialLoss, testItem.PostingConsequentialLoss, false);
             Assert.IsFalse(testItem.PostingLocalCollect);
-            Assert.AreEqual(testItem.PostingTrackingNotifications, "EmailAndSMS", false);
+            Assert.AreEqual(SampleOrder1.PostingTrackingNotifications, testItem.PostingTrackingNotifications, false);
             Assert.IsFalse(testItem.PostingRecordedSignedFor);
 
-            Assert.AreEqual(testItem.CustomsPreRegistrationNumber, "GB15748250", false);
-            Assert.AreEqual(testItem.CustomsPreRegistrationType, "EORI", false);
-            Assert.AreEqual(testItem.CustomsShippingCharges, 10.42, 0);
-            Assert.AreEqual(testItem.CustomsOtherCharges, 0.00, 0);
-            Assert.AreEqual(testItem.CustomsQuotedLandedCost, 0.00, 0);
-            Assert.AreEqual(testItem.CustomsInvoiceNumber, "15748250", false);
-            Assert.AreEqual(testItem.CustomsInvoiceDate.ToString(), justDate.ToString(), false);
+            Assert.AreEqual(SampleOrder1.CustomsPreRegistrationNumber, testItem.CustomsPreRegistrationNumber, false);
+            Assert.AreEqual(SampleOrder1.CustomsPreRegistrationType, testItem.CustomsPreRegistrationType, false);
+            Assert.AreEqual(SampleOrder1.CustomsShippingCharges, testItem.CustomsShippingCharges, 0);
+            Assert.AreEqual(SampleOrder1.CustomsOtherCharges, testItem.CustomsOtherCharges, 0);
+            Assert.AreEqual(SampleOrder1.CustomsQuotedLandedCost, testItem.CustomsQuotedLandedCost, 0);
+            Assert.AreEqual(SampleOrder1.CustomsInvoiceNumber, testItem.CustomsInvoiceNumber, false);
+            Assert.AreEqual(SampleOrder1.CustomsInvoiceDate.ToString(), testItem.CustomsInvoiceDate.ToString(), false);
             Assert.IsFalse(testItem.CustomsExportLicence);
-            Assert.AreEqual(testItem.AddresseeIdentificationReferenceNumber, 1234567890, 0);
+            Assert.AreEqual(SampleOrder1.AddresseeIdentificationReferenceNumber, testItem.AddresseeIdentificationReferenceNumber, 0);
         }
         #endregion
 

@@ -8,3 +8,8 @@ C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBri
 C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.csproj.CoreCompileInputs.cache
 C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.dll
 C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.pdb
+C:\Users\colin\source\repos\SendBrick\SendBrick\bin\Debug\netstandard2.1\JsonTools.dll
+C:\Users\colin\source\repos\SendBrick\SendBrick\bin\Debug\netstandard2.1\JsonTools.pdb
+C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\CM.SendBrick.Library.Properties.Resources.resources
+C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.csproj.GenerateResource.cache
+C:\Users\colin\source\repos\SendBrick\SendBrick\obj\Debug\netstandard2.1\SendBrick.csproj.CopyComplete

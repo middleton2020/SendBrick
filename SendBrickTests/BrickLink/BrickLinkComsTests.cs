@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CM.SendBrick.Library.Data;
 
-namespace CM.SendBrick.Library.BrickLink.Tests
+namespace CM.SendBrick.Library.Tests
 {
     [TestClass()]
     public class BrickLinkComsTests

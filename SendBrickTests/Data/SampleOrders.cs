@@ -311,12 +311,12 @@ namespace CM.SendBrick.Library.Tests
                 return "DDU";
             }
         }
-        public static string CustomsInvoiceDate
+        public static DateTime CustomsInvoiceDate
         {
             //CustomsInformation.invoiceDate
             get
             {
-                return "2022-01-16";
+                return Convert.ToDateTime("2022-01-16");
             }
         }
         public static string CustomsInvoiceNumber
@@ -426,12 +426,12 @@ namespace CM.SendBrick.Library.Tests
                 return "TPLN";
             }
         }
-        public static string PostingDate
+        public static DateTime PostingDate
         {
             //ShipmentInformation.shipmentDate
             get
             {
-                return "2022-01-16";
+                return Convert.ToDateTime("2022-01-16");
             }
         }
         public static string PostingServiceFormat
@@ -1189,12 +1189,12 @@ namespace CM.SendBrick.Library.Tests
                 return "DDU";
             }
         }
-        public static string CustomsInvoiceDate
+        public static DateTime CustomsInvoiceDate
         {
             //CustomsInformation.invoiceDate
             get
             {
-                return "2022-01-16";
+                return Convert.ToDateTime("2022-01-16");
             }
         }
         public static string CustomsInvoiceNumber
@@ -1304,12 +1304,12 @@ namespace CM.SendBrick.Library.Tests
                 return "TPLN";
             }
         }
-        public static string PostingDate
+        public static DateTime PostingDate
         {
             //ShipmentInformation.shipmentDate
             get
             {
-                return "2022-01-16";
+                return Convert.ToDateTime("2022-01-16");
             }
         }
         public static string PostingServiceFormat
@@ -2067,12 +2067,12 @@ namespace CM.SendBrick.Library.Tests
                 return "DDU";
             }
         }
-        public static string CustomsInvoiceDate
+        public static DateTime CustomsInvoiceDate
         {
             //CustomsInformation.invoiceDate
             get
             {
-                return "2022-01-16";
+                return Convert.ToDateTime("2022-01-16");
             }
         }
         public static string CustomsInvoiceNumber
@@ -2182,12 +2182,12 @@ namespace CM.SendBrick.Library.Tests
                 return "TPLN";
             }
         }
-        public static string PostingDate
+        public static DateTime PostingDate
         {
             //ShipmentInformation.shipmentDate
             get
             {
-                return "2022-01-16";
+                return Convert.ToDateTime("2022-01-16");
             }
         }
         public static string PostingServiceFormat
@@ -3079,12 +3079,12 @@ namespace CM.SendBrick.Library.Tests
                 return "";
             }
         }
-        public static string CustomsInvoiceDate
+        public static DateTime CustomsInvoiceDate
         {
             //CustomsInformation.invoiceDate
             get
             {
-                return "";
+                return Convert.ToDateTime("");
             }
         }
         public static string CustomsInvoiceNumber
@@ -3194,12 +3194,12 @@ namespace CM.SendBrick.Library.Tests
                 return "";
             }
         }
-        public static string PostingDate
+        public static DateTime PostingDate
         {
             //ShipmentInformation.shipmentDate
             get
             {
-                return "";
+                return Convert.ToDateTime("");
             }
         }
         public static string PostingServiceFormat
@@ -3740,12 +3740,12 @@ namespace CM.SendBrick.Library.Tests
                 return "";
             }
         }
-        public static string CustomsInvoiceDate
+        public static DateTime CustomsInvoiceDate
         {
             //CustomsInformation.invoiceDate
             get
             {
-                return "";
+                return Convert.ToDateTime("");
             }
         }
         public static string CustomsInvoiceNumber
@@ -3855,12 +3855,12 @@ namespace CM.SendBrick.Library.Tests
                 return "";
             }
         }
-        public static string PostingDate
+        public static DateTime PostingDate
         {
             //ShipmentInformation.shipmentDate
             get
             {
-                return "";
+                return Convert.ToDateTime("");
             }
         }
         public static string PostingServiceFormat
