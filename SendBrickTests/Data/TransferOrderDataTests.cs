@@ -186,118 +186,229 @@ namespace CM.SendBrick.Library.Tests
         [TestMethod()]
         public void ParcelAddTestFromData()
         {
+            double totalWeight = 0;
             TransferOrderData testItem;
+
             testItem = new TransferOrderData();
-            testItem.AddParcel(1, "TestParcel", 3.2, 15, 8, 1);
+            testItem.AddParcel( SampleParcel1.ParcelInstance,   // 2
+                                SampleParcel1.ParcelId,         // "TestParcel4"
+                                SampleParcel1.ParcelWeight,     // 5.1
+                                SampleParcel1.ParcelLength,     // 16
+                                SampleParcel1.ParcelWidth,      // 8
+                                SampleParcel1.ParcelHeight);    // 3
+            totalWeight += SampleParcel1.ParcelWeight;
 
             Assert.AreNotEqual(testItem.PostingTotalPackages, 0);
-            Assert.AreEqual(testItem.ParcelInstance, 1);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel");
-            Assert.AreEqual(testItem.ParcelWeight, 3.2);
-            Assert.AreEqual(testItem.ParcelLength, 15);
-            Assert.AreEqual(testItem.ParcelWidth, 8);
-            Assert.AreEqual(testItem.ParcelHeight, 1);
-            Assert.AreEqual(testItem.PostingTotalWeight, 3.2);
+            Assert.AreEqual(SampleParcel1.ParcelInstance, testItem.ParcelInstance); // 2
+            Assert.AreEqual(SampleParcel1.ParcelId, testItem.ParcelId);             // "TestParcel4"
+            Assert.AreEqual(SampleParcel1.ParcelWeight, testItem.ParcelWeight);     // 5.1
+            Assert.AreEqual(SampleParcel1.ParcelLength, testItem.ParcelLength);     // 16
+            Assert.AreEqual(SampleParcel1.ParcelWidth, testItem.ParcelWidth);       // 8
+            Assert.AreEqual(SampleParcel1.ParcelHeight, testItem.ParcelHeight);     // 3
+            Assert.AreEqual(totalWeight, testItem.PostingTotalWeight);
         }
         [TestMethod()]
         public void ParcelGetFirstTest()
         {
+            double totalWeight = 0;
             TransferOrderData testItem;
+
             testItem = new TransferOrderData();
-            testItem.AddParcel(1, "TestParcel", 3.2, 15, 8, 1); // First parcel
-            testItem.AddParcel(3, "TestParcel2", 1.3, 8, 3, 1); // Second parcel
-            testItem.AddParcel(6, "TestParcel3", 0.2, 5, 5, 2); // Third parcel
-            testItem.AddParcel(2, "TestParcel4", 5.1, 16, 8, 3); // Fourth parcel
+            // First Parcel
+            testItem.AddParcel( SampleParcel1.ParcelInstance,   // 2
+                                SampleParcel1.ParcelId,         // "TestParcel1"
+                                SampleParcel1.ParcelWeight,     // 5.1
+                                SampleParcel1.ParcelLength,     // 16
+                                SampleParcel1.ParcelWidth,      // 8
+                                SampleParcel1.ParcelHeight);    // 3
+            totalWeight += SampleParcel1.ParcelWeight;
+            
+            // Second Parcel
+            testItem.AddParcel( SampleParcel2.ParcelInstance,   // 3
+                                SampleParcel2.ParcelId,         // "TestParcel2"
+                                SampleParcel2.ParcelWeight,     // 1.3
+                                SampleParcel2.ParcelLength,     // 8
+                                SampleParcel2.ParcelWidth,      // 3
+                                SampleParcel2.ParcelHeight);    // 1
+            totalWeight += SampleParcel2.ParcelWeight;
+
+            // Third Parcel
+            testItem.AddParcel( SampleParcel3.ParcelInstance,   // 6
+                                SampleParcel3.ParcelId,         // "TestParcel3"
+                                SampleParcel3.ParcelWeight,     // 0.2
+                                SampleParcel3.ParcelLength,     // 5
+                                SampleParcel3.ParcelWidth,      // 5
+                                SampleParcel3.ParcelHeight);    // 2
+            totalWeight += SampleParcel3.ParcelWeight;
+
+            // Fourth Parcel
+            testItem.AddParcel( SampleParcel4.ParcelInstance,   // 1
+                                SampleParcel4.ParcelId,         // "TestParcel4"
+                                SampleParcel4.ParcelWeight,     // 3.2
+                                SampleParcel4.ParcelLength,     // 15
+                                SampleParcel4.ParcelWidth,      // 8
+                                SampleParcel4.ParcelHeight);    // 1
+            totalWeight += SampleParcel4.ParcelWeight;
+
 
             bool hasFound = testItem.FindFirstParcel();
 
-            Assert.AreEqual(testItem.PostingTotalPackages, 4);
-            Assert.AreEqual(testItem.PostingTotalWeight, 9.8);
+            Assert.AreEqual(4, testItem.PostingTotalPackages);
+            Assert.AreEqual(totalWeight, testItem.PostingTotalWeight);
+            // Has found the first parcel correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ParcelInstance, 1);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel");
-            Assert.AreEqual(testItem.ParcelWeight, 3.2);
-            Assert.AreEqual(testItem.ParcelLength, 15);
-            Assert.AreEqual(testItem.ParcelWidth, 8);
-            Assert.AreEqual(testItem.ParcelHeight, 1);
+            Assert.AreEqual(SampleParcel1.ParcelInstance, testItem.ParcelInstance); // 2, 5.1 , 3, 16, 8
+            Assert.AreEqual(SampleParcel1.ParcelId, testItem.ParcelId);             // "TestParcel4"
+            Assert.AreEqual(SampleParcel1.ParcelWeight, testItem.ParcelWeight);     // 5.1
+            Assert.AreEqual(SampleParcel1.ParcelLength, testItem.ParcelLength);     // 16
+            Assert.AreEqual(SampleParcel1.ParcelWidth, testItem.ParcelWidth);       // 8
+            Assert.AreEqual(SampleParcel1.ParcelHeight, testItem.ParcelHeight);     // 3
         }
         [TestMethod()]
         public void ParcelGetLastTest()
         {
+            double totalWeight = 0;
             TransferOrderData testItem;
+
             testItem = new TransferOrderData();
-            testItem.AddParcel(1, "TestParcel", 3.2, 15, 8, 1); // First parcel
-            testItem.AddParcel(3, "TestParcel2", 1.3, 8, 3, 1); // Second parcel
-            testItem.AddParcel(6, "TestParcel3", 0.2, 5, 5, 2); // Third parcel
-            testItem.AddParcel(2, "TestParcel4", 5.1, 16, 8, 3); // Fourth parcel
+            // First Parcel
+            testItem.AddParcel(SampleParcel1.ParcelInstance,   // 2
+                                SampleParcel1.ParcelId,         // "TestParcel4"
+                                SampleParcel1.ParcelWeight,     // 5.1
+                                SampleParcel1.ParcelLength,     // 16
+                                SampleParcel1.ParcelWidth,      // 8
+                                SampleParcel1.ParcelHeight);    // 3
+            totalWeight += SampleParcel1.ParcelWeight;
+
+            // Second Parcel
+            testItem.AddParcel(SampleParcel2.ParcelInstance,   // 3
+                                SampleParcel2.ParcelId,         // "TestParcel2"
+                                SampleParcel2.ParcelWeight,     // 1.3
+                                SampleParcel2.ParcelLength,     // 8
+                                SampleParcel2.ParcelWidth,      // 3
+                                SampleParcel2.ParcelHeight);    // 1
+            totalWeight += SampleParcel2.ParcelWeight;
+
+            // Third Parcel
+            testItem.AddParcel(SampleParcel3.ParcelInstance,   // 6
+                                SampleParcel3.ParcelId,         // "TestParcel3"
+                                SampleParcel3.ParcelWeight,     // 0.2
+                                SampleParcel3.ParcelLength,     // 5
+                                SampleParcel3.ParcelWidth,      // 5
+                                SampleParcel3.ParcelHeight);    // 2
+            totalWeight += SampleParcel3.ParcelWeight;
+
+            // Fourth Parcel
+            testItem.AddParcel(SampleParcel4.ParcelInstance,   // 1
+                                SampleParcel4.ParcelId,         // "TestParcel4"
+                                SampleParcel4.ParcelWeight,     // 3.2
+                                SampleParcel4.ParcelLength,     // 15
+                                SampleParcel4.ParcelWidth,      // 8
+                                SampleParcel4.ParcelHeight);    // 1
+            totalWeight += SampleParcel4.ParcelWeight;
+
 
             bool hasFound = testItem.FindLastParcel();
 
             Assert.AreEqual(testItem.PostingTotalPackages, 4);
-            Assert.AreEqual(testItem.PostingTotalWeight, 9.8);
+            Assert.AreEqual(totalWeight, testItem.PostingTotalWeight);
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ParcelInstance, 2);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel4");
-            Assert.AreEqual(testItem.ParcelWeight, 5.1);
-            Assert.AreEqual(testItem.ParcelLength, 16);
-            Assert.AreEqual(testItem.ParcelWidth, 8);
-            Assert.AreEqual(testItem.ParcelHeight, 3);
+            Assert.AreEqual(SampleParcel4.ParcelInstance, testItem.ParcelInstance); // 1
+            Assert.AreEqual(SampleParcel4.ParcelId, testItem.ParcelId);             // "TestParcel4"
+            Assert.AreEqual(SampleParcel4.ParcelWeight, testItem.ParcelWeight);     // 3.2
+            Assert.AreEqual(SampleParcel4.ParcelLength, testItem.ParcelLength);     // 15
+            Assert.AreEqual(SampleParcel4.ParcelWidth, testItem.ParcelWidth);       // 8
+            Assert.AreEqual(SampleParcel4.ParcelHeight, testItem.ParcelHeight);     // 1
         }
         [TestMethod()]
         public void ParcelStepThroughTest()
         {
+            double totalWeight = 0;
             TransferOrderData testItem;
+
             testItem = new TransferOrderData();
-            testItem.AddParcel(1, "TestParcel", 3.2, 15, 8, 1); // First parcel
-            testItem.AddParcel(3, "TestParcel2", 1.3, 8, 3, 1); // Second parcel
-            testItem.AddParcel(6, "TestParcel3", 0.2, 5, 5, 2); // Third parcel
-            testItem.AddParcel(2, "TestParcel4", 5.1, 16, 8, 3); // Fourth parcel
+            // First Parcel
+            testItem.AddParcel(SampleParcel1.ParcelInstance,   // 2
+                                SampleParcel1.ParcelId,         // "TestParcel4"
+                                SampleParcel1.ParcelWeight,     // 5.1
+                                SampleParcel1.ParcelLength,     // 16
+                                SampleParcel1.ParcelWidth,      // 8
+                                SampleParcel1.ParcelHeight);    // 3
+            totalWeight += SampleParcel1.ParcelWeight;
+
+            // Second Parcel
+            testItem.AddParcel(SampleParcel2.ParcelInstance,   // 3
+                                SampleParcel2.ParcelId,         // "TestParcel2"
+                                SampleParcel2.ParcelWeight,     // 1.3
+                                SampleParcel2.ParcelLength,     // 8
+                                SampleParcel2.ParcelWidth,      // 3
+                                SampleParcel2.ParcelHeight);    // 1
+            totalWeight += SampleParcel2.ParcelWeight;
+
+            // Third Parcel
+            testItem.AddParcel(SampleParcel3.ParcelInstance,   // 6
+                                SampleParcel3.ParcelId,         // "TestParcel3"
+                                SampleParcel3.ParcelWeight,     // 0.2
+                                SampleParcel3.ParcelLength,     // 5
+                                SampleParcel3.ParcelWidth,      // 5
+                                SampleParcel3.ParcelHeight);    // 2
+            totalWeight += SampleParcel3.ParcelWeight;
+
+            // Fourth Parcel
+            testItem.AddParcel(SampleParcel4.ParcelInstance,   // 1
+                                SampleParcel4.ParcelId,         // "TestParcel4"
+                                SampleParcel4.ParcelWeight,     // 3.2
+                                SampleParcel4.ParcelLength,     // 15
+                                SampleParcel4.ParcelWidth,      // 8
+                                SampleParcel4.ParcelHeight);    // 1
+            totalWeight += SampleParcel4.ParcelWeight;
+
 
             bool hasFound = testItem.FindFirstParcel();
 
             // Check that we've got the first parcel correctly.
             Assert.AreEqual(testItem.PostingTotalPackages, 4);
-            Assert.AreEqual(testItem.PostingTotalWeight, 9.8);
+            Assert.AreEqual(totalWeight, testItem.PostingTotalWeight);
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ParcelInstance, 1);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel");
-            Assert.AreEqual(testItem.ParcelWeight, 3.2);
-            Assert.AreEqual(testItem.ParcelLength, 15);
-            Assert.AreEqual(testItem.ParcelWidth, 8);
-            Assert.AreEqual(testItem.ParcelHeight, 1);
+            Assert.AreEqual(SampleParcel1.ParcelInstance, testItem.ParcelInstance); // 2, 5.1 , 3, 16, 8
+            Assert.AreEqual(SampleParcel1.ParcelId, testItem.ParcelId);             // "TestParcel4"
+            Assert.AreEqual(SampleParcel1.ParcelWeight, testItem.ParcelWeight);     // 5.1
+            Assert.AreEqual(SampleParcel1.ParcelLength, testItem.ParcelLength);     // 16
+            Assert.AreEqual(SampleParcel1.ParcelWidth, testItem.ParcelWidth);       // 8
+            Assert.AreEqual(SampleParcel1.ParcelHeight, testItem.ParcelHeight);     // 3
 
             hasFound = testItem.FindNextParcel();
 
             // Check that we've got the second parcel correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ParcelInstance, 3);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel2");
-            Assert.AreEqual(testItem.ParcelWeight, 1.3);
-            Assert.AreEqual(testItem.ParcelLength, 8);
-            Assert.AreEqual(testItem.ParcelWidth, 3);
-            Assert.AreEqual(testItem.ParcelHeight, 1);
+            Assert.AreEqual(SampleParcel2.ParcelInstance, testItem.ParcelInstance); // 3
+            Assert.AreEqual(SampleParcel2.ParcelId, testItem.ParcelId);             // "TestParcel2"
+            Assert.AreEqual(SampleParcel2.ParcelWeight, testItem.ParcelWeight);     // 1.3
+            Assert.AreEqual(SampleParcel2.ParcelLength, testItem.ParcelLength);     // 8
+            Assert.AreEqual(SampleParcel2.ParcelWidth, testItem.ParcelWidth);       // 3
+            Assert.AreEqual(SampleParcel2.ParcelHeight, testItem.ParcelHeight);     // 1
 
             hasFound = testItem.FindNextParcel();
 
             // Check that we've got the third parcel correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ParcelInstance, 6);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel3");
-            Assert.AreEqual(testItem.ParcelWeight, 0.2);
-            Assert.AreEqual(testItem.ParcelLength, 5);
-            Assert.AreEqual(testItem.ParcelWidth, 5);
-            Assert.AreEqual(testItem.ParcelHeight, 2);
+            Assert.AreEqual(SampleParcel3.ParcelInstance, testItem.ParcelInstance); // 6
+            Assert.AreEqual(SampleParcel3.ParcelId, testItem.ParcelId);             // "TestParcel3"
+            Assert.AreEqual(SampleParcel3.ParcelWeight, testItem.ParcelWeight);     // 0.2
+            Assert.AreEqual(SampleParcel3.ParcelLength, testItem.ParcelLength);     // 5
+            Assert.AreEqual(SampleParcel3.ParcelWidth, testItem.ParcelWidth);       // 5
+            Assert.AreEqual(SampleParcel3.ParcelHeight, testItem.ParcelHeight);     // 2
 
             hasFound = testItem.FindNextParcel();
 
             // Check that we've got the fourth parcel correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ParcelInstance, 2);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel4");
-            Assert.AreEqual(testItem.ParcelWeight, 5.1);
-            Assert.AreEqual(testItem.ParcelLength, 16);
-            Assert.AreEqual(testItem.ParcelWidth, 8);
-            Assert.AreEqual(testItem.ParcelHeight, 3);
+            Assert.AreEqual(SampleParcel4.ParcelInstance, testItem.ParcelInstance); // 1
+            Assert.AreEqual(SampleParcel4.ParcelId, testItem.ParcelId);             // "TestParcel4"
+            Assert.AreEqual(SampleParcel4.ParcelWeight, testItem.ParcelWeight);     // 3.2
+            Assert.AreEqual(SampleParcel4.ParcelLength, testItem.ParcelLength);     // 15
+            Assert.AreEqual(SampleParcel4.ParcelWidth, testItem.ParcelWidth);       // 8
+            Assert.AreEqual(SampleParcel4.ParcelHeight, testItem.ParcelHeight);     // 1
 
             hasFound = testItem.FindNextParcel();
             // Check that we've not found any more parcels.
@@ -306,59 +417,91 @@ namespace CM.SendBrick.Library.Tests
         [TestMethod()]
         public void ParcelStepBackTest()
         {
+            double totalWeight = 0;
             TransferOrderData testItem;
+
             testItem = new TransferOrderData();
-            testItem.AddParcel(1, "TestParcel", 3.2, 15, 8, 1); // First parcel
-            testItem.AddParcel(3, "TestParcel2", 1.3, 8, 3, 1); // Second parcel
-            testItem.AddParcel(6, "TestParcel3", 0.2, 5, 5, 2); // Third parcel
-            testItem.AddParcel(2, "TestParcel4", 5.1, 16, 8, 3); // Fourth parcel
+            // First Parcel
+            testItem.AddParcel(SampleParcel1.ParcelInstance,   // 2
+                                SampleParcel1.ParcelId,         // "TestParcel4"
+                                SampleParcel1.ParcelWeight,     // 5.1
+                                SampleParcel1.ParcelLength,     // 16
+                                SampleParcel1.ParcelWidth,      // 8
+                                SampleParcel1.ParcelHeight);    // 3
+            totalWeight += SampleParcel1.ParcelWeight;
+
+            // Second Parcel
+            testItem.AddParcel(SampleParcel2.ParcelInstance,   // 3
+                                SampleParcel2.ParcelId,         // "TestParcel2"
+                                SampleParcel2.ParcelWeight,     // 1.3
+                                SampleParcel2.ParcelLength,     // 8
+                                SampleParcel2.ParcelWidth,      // 3
+                                SampleParcel2.ParcelHeight);    // 1
+            totalWeight += SampleParcel2.ParcelWeight;
+
+            // Third Parcel
+            testItem.AddParcel(SampleParcel3.ParcelInstance,   // 6
+                                SampleParcel3.ParcelId,         // "TestParcel3"
+                                SampleParcel3.ParcelWeight,     // 0.2
+                                SampleParcel3.ParcelLength,     // 5
+                                SampleParcel3.ParcelWidth,      // 5
+                                SampleParcel3.ParcelHeight);    // 2
+            totalWeight += SampleParcel3.ParcelWeight;
+
+            // Fourth Parcel
+            testItem.AddParcel(SampleParcel4.ParcelInstance,   // 1
+                                SampleParcel4.ParcelId,         // "TestParcel4"
+                                SampleParcel4.ParcelWeight,     // 3.2
+                                SampleParcel4.ParcelLength,     // 15
+                                SampleParcel4.ParcelWidth,      // 8
+                                SampleParcel4.ParcelHeight);    // 1
+            totalWeight += SampleParcel4.ParcelWeight;
+
 
             bool hasFound = testItem.FindLastParcel();
 
             // Check that we've got the last (fourth) parcel correctly.
             Assert.AreEqual(testItem.PostingTotalPackages, 4);
-            Assert.AreEqual(testItem.PostingTotalWeight, 9.8);
+            Assert.AreEqual(totalWeight, testItem.PostingTotalWeight);
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ParcelInstance, 2);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel4");
-            Assert.AreEqual(testItem.ParcelWeight, 5.1);
-            Assert.AreEqual(testItem.ParcelLength, 16);
-            Assert.AreEqual(testItem.ParcelWidth, 8);
-            Assert.AreEqual(testItem.ParcelHeight, 3);
+            Assert.AreEqual(SampleParcel4.ParcelInstance, testItem.ParcelInstance); // 1
+            Assert.AreEqual(SampleParcel4.ParcelId, testItem.ParcelId);             // "TestParcel4"
+            Assert.AreEqual(SampleParcel4.ParcelWeight, testItem.ParcelWeight);     // 3.2
+            Assert.AreEqual(SampleParcel4.ParcelLength, testItem.ParcelLength);     // 15
+            Assert.AreEqual(SampleParcel4.ParcelWidth, testItem.ParcelWidth);       // 8
+            Assert.AreEqual(SampleParcel4.ParcelHeight, testItem.ParcelHeight);     // 1
 
             hasFound = testItem.FindPrevParcel();
 
             // Check that we've got the third parcel correctly.
-            Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ParcelInstance, 6);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel3");
-            Assert.AreEqual(testItem.ParcelWeight, 0.2);
-            Assert.AreEqual(testItem.ParcelLength, 5);
-            Assert.AreEqual(testItem.ParcelWidth, 5);
-            Assert.AreEqual(testItem.ParcelHeight, 2);
+            Assert.AreEqual(SampleParcel3.ParcelInstance, testItem.ParcelInstance); // 6
+            Assert.AreEqual(SampleParcel3.ParcelId, testItem.ParcelId);             // "TestParcel3"
+            Assert.AreEqual(SampleParcel3.ParcelWeight, testItem.ParcelWeight);     // 0.2
+            Assert.AreEqual(SampleParcel3.ParcelLength, testItem.ParcelLength);     // 5
+            Assert.AreEqual(SampleParcel3.ParcelWidth, testItem.ParcelWidth);       // 5
+            Assert.AreEqual(SampleParcel3.ParcelHeight, testItem.ParcelHeight);     // 2
 
             hasFound = testItem.FindPrevParcel();
 
             // Check that we've got the second parcel correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ParcelInstance, 3);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel2");
-            Assert.AreEqual(testItem.ParcelWeight, 1.3);
-            Assert.AreEqual(testItem.ParcelLength, 8);
-            Assert.AreEqual(testItem.ParcelWidth, 3);
-            Assert.AreEqual(testItem.ParcelHeight, 1);
+            Assert.AreEqual(SampleParcel2.ParcelInstance, testItem.ParcelInstance); // 3
+            Assert.AreEqual(SampleParcel2.ParcelId, testItem.ParcelId);             // "TestParcel2"
+            Assert.AreEqual(SampleParcel2.ParcelWeight, testItem.ParcelWeight);     // 1.3
+            Assert.AreEqual(SampleParcel2.ParcelLength, testItem.ParcelLength);     // 8
+            Assert.AreEqual(SampleParcel2.ParcelWidth, testItem.ParcelWidth);       // 3
+            Assert.AreEqual(SampleParcel2.ParcelHeight, testItem.ParcelHeight);     // 1
 
             hasFound = testItem.FindPrevParcel();
 
             // Check that we've got the first parcel correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ParcelInstance, 1);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel");
-            Assert.AreEqual(testItem.ParcelWeight, 3.2);
-            Assert.AreEqual(testItem.ParcelLength, 15);
-            Assert.AreEqual(testItem.ParcelWidth, 8);
-            Assert.AreEqual(testItem.ParcelHeight, 1);
+            Assert.AreEqual(SampleParcel1.ParcelInstance, testItem.ParcelInstance); // 2, 5.1 , 3, 16, 8
+            Assert.AreEqual(SampleParcel1.ParcelId, testItem.ParcelId);             // "TestParcel4"
+            Assert.AreEqual(SampleParcel1.ParcelWeight, testItem.ParcelWeight);     // 5.1
+            Assert.AreEqual(SampleParcel1.ParcelLength, testItem.ParcelLength);     // 16
+            Assert.AreEqual(SampleParcel1.ParcelWidth, testItem.ParcelWidth);       // 8
+            Assert.AreEqual(SampleParcel1.ParcelHeight, testItem.ParcelHeight);     // 3
 
             hasFound = testItem.FindPrevParcel();
             // Check that we've not found any more parcels.
@@ -367,26 +510,59 @@ namespace CM.SendBrick.Library.Tests
         [TestMethod()]
         public void ParcelGetSpecificTest()
         {
-
+            double totalWeight = 0;
             TransferOrderData testItem;
+         
             testItem = new TransferOrderData();
-            testItem.AddParcel(1, "TestParcel", 3.2, 15, 8, 1); // First parcel
-            testItem.AddParcel(3, "TestParcel2", 1.3, 8, 3, 1); // Second parcel
-            testItem.AddParcel(6, "TestParcel3", 0.2, 5, 5, 2); // Third parcel
-            testItem.AddParcel(2, "TestParcel4", 5.1, 16, 8, 3); // Fourth parcel
+            // First Parcel
+            testItem.AddParcel(SampleParcel1.ParcelInstance,   // 2
+                                SampleParcel1.ParcelId,         // "TestParcel4"
+                                SampleParcel1.ParcelWeight,     // 5.1
+                                SampleParcel1.ParcelLength,     // 16
+                                SampleParcel1.ParcelWidth,      // 8
+                                SampleParcel1.ParcelHeight);    // 3
+            totalWeight += SampleParcel1.ParcelWeight;
+
+            // Second Parcel
+            testItem.AddParcel(SampleParcel2.ParcelInstance,   // 3
+                                SampleParcel2.ParcelId,         // "TestParcel2"
+                                SampleParcel2.ParcelWeight,     // 1.3
+                                SampleParcel2.ParcelLength,     // 8
+                                SampleParcel2.ParcelWidth,      // 3
+                                SampleParcel2.ParcelHeight);    // 1
+            totalWeight += SampleParcel2.ParcelWeight;
+
+            // Third Parcel
+            testItem.AddParcel(SampleParcel3.ParcelInstance,   // 6
+                                SampleParcel3.ParcelId,         // "TestParcel3"
+                                SampleParcel3.ParcelWeight,     // 0.2
+                                SampleParcel3.ParcelLength,     // 5
+                                SampleParcel3.ParcelWidth,      // 5
+                                SampleParcel3.ParcelHeight);    // 2
+            totalWeight += SampleParcel3.ParcelWeight;
+
+            // Fourth Parcel
+            testItem.AddParcel(SampleParcel4.ParcelInstance,   // 1
+                                SampleParcel4.ParcelId,         // "TestParcel4"
+                                SampleParcel4.ParcelWeight,     // 3.2
+                                SampleParcel4.ParcelLength,     // 15
+                                SampleParcel4.ParcelWidth,      // 8
+                                SampleParcel4.ParcelHeight);    // 1
+            totalWeight += SampleParcel4.ParcelWeight;
+
 
             bool hasFound = testItem.FindSpecificParcel(2);
 
             // Check that we've got the third parcel correctly.
-            Assert.AreEqual(testItem.PostingTotalPackages, 4);
-            Assert.AreEqual(testItem.PostingTotalWeight, 9.8);
+            Assert.AreEqual(4, testItem.PostingTotalPackages);
+            Assert.AreEqual(totalWeight, testItem.PostingTotalWeight);
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ParcelInstance, 6);
-            Assert.AreEqual(testItem.ParcelId, "TestParcel3");
-            Assert.AreEqual(testItem.ParcelWeight, 0.2);
-            Assert.AreEqual(testItem.ParcelLength, 5);
-            Assert.AreEqual(testItem.ParcelWidth, 5);
-            Assert.AreEqual(testItem.ParcelHeight, 2);
+            Assert.AreEqual(SampleParcel3.ParcelInstance, testItem.ParcelInstance); // 6
+            Assert.AreEqual(SampleParcel3.ParcelId, testItem.ParcelId);             // "TestParcel3"
+            Assert.AreEqual(SampleParcel3.ParcelWeight, testItem.ParcelWeight);     // 0.2
+            Assert.AreEqual(SampleParcel3.ParcelLength, testItem.ParcelLength);     // 5
+            Assert.AreEqual(SampleParcel3.ParcelWidth, testItem.ParcelWidth);       // 5
+            Assert.AreEqual(SampleParcel3.ParcelHeight, testItem.ParcelHeight);     // 2
         }
         #endregion
 

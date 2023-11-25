@@ -4096,9 +4096,12 @@ namespace CM.SendBrick.Library.Tests
         }
         #endregion
     }
-#endregion
+    #endregion
 
     #region ParcelSamples
+    /// <summary>
+    /// 2, "TestParcel1", 5.1 (KG), 16 * 8 * 3
+    /// </summary>
     static class SampleParcel1
     {
         public static string ParcelId
@@ -4106,7 +4109,7 @@ namespace CM.SendBrick.Library.Tests
             //Packages.packagingId
             get
             {
-                return "TestParcel4";
+                return "TestParcel1";
             }
         }
         public static int ParcelInstance
@@ -4151,6 +4154,9 @@ namespace CM.SendBrick.Library.Tests
         }
     }
 
+    /// <summary>
+    /// 3, "TestParcel2", 1.3 (KG), 8 * 3 * 1
+    /// </summary>
     static class SampleParcel2
     {
         public static string ParcelId
@@ -4203,6 +4209,9 @@ namespace CM.SendBrick.Library.Tests
         }
     }
 
+    /// <summary>
+    /// 6, "TestParcel3", 0.2 (KG), 5 * 5 * 2
+    /// </summary>
     static class SampleParcel3
     {
         public static string ParcelId
@@ -4255,6 +4264,9 @@ namespace CM.SendBrick.Library.Tests
         }
     }
 
+    /// <summary>
+    /// 1, "TestParcel4", 3.2 (KG), 15 * 8 * 1
+    /// </summary>
     static class SampleParcel4
     {
         public static string ParcelId
@@ -4270,7 +4282,7 @@ namespace CM.SendBrick.Library.Tests
             //Packages.packageOccurrence
             get
             {
-                return 2;
+                return 1;
             }
         }
         public static double ParcelWeight
@@ -4278,7 +4290,7 @@ namespace CM.SendBrick.Library.Tests
             //Packages.weight
             get
             {
-                return 5.1;
+                return 3.2;
             }
         }
         public static int ParcelHeight
@@ -4286,7 +4298,7 @@ namespace CM.SendBrick.Library.Tests
             //Packages.height
             get
             {
-                return 3;
+                return 1;
             }
         }
         public static int ParcelLength
@@ -4294,7 +4306,7 @@ namespace CM.SendBrick.Library.Tests
             //Packages.length
             get
             {
-                return 16;
+                return 15;
             }
         }
         public static int ParcelWidth
@@ -4307,57 +4319,57 @@ namespace CM.SendBrick.Library.Tests
         }
     }
 
-    static class SampleParcel5
-    {
-        public static string ParcelId
-        {
-            //Packages.packagingId
-            get
-            {
-                return "";
-            }
-        }
-        public static int ParcelInstance
-        {
-            //Packages.packageOccurrence
-            get
-            {
-                return 0;
-            }
-        }
-        public static double ParcelWeight
-        {
-            //Packages.weight
-            get
-            {
-                return 0.00;
-            }
-        }
-        public static int ParcelHeight
-        {
-            //Packages.height
-            get
-            {
-                return 0;
-            }
-        }
-        public static int ParcelLength
-        {
-            //Packages.length
-            get
-            {
-                return 0;
-            }
-        }
-        public static int ParcelWidth
-        {
-            //Packages.width
-            get
-            {
-                return 0;
-            }
-        }
-    }
+    //static class SampleParcel5
+    //{
+    //    public static string ParcelId
+    //    {
+    //        //Packages.packagingId
+    //        get
+    //        {
+    //            return "";
+    //        }
+    //    }
+    //    public static int ParcelInstance
+    //    {
+    //        //Packages.packageOccurrence
+    //        get
+    //        {
+    //            return 0;
+    //        }
+    //    }
+    //    public static double ParcelWeight
+    //    {
+    //        //Packages.weight
+    //        get
+    //        {
+    //            return 0.00;
+    //        }
+    //    }
+    //    public static int ParcelHeight
+    //    {
+    //        //Packages.height
+    //        get
+    //        {
+    //            return 0;
+    //        }
+    //    }
+    //    public static int ParcelLength
+    //    {
+    //        //Packages.length
+    //        get
+    //        {
+    //            return 0;
+    //        }
+    //    }
+    //    public static int ParcelWidth
+    //    {
+    //        //Packages.width
+    //        get
+    //        {
+    //            return 0;
+    //        }
+    //    }
+    //}
     #endregion
 
     #region ItemSamples
