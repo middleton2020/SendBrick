@@ -4373,9 +4373,12 @@ namespace CM.SendBrick.Library.Tests
     #endregion
 
     #region ItemSamples
+    /// <summary>
+    /// 1, "Plate 1x4", 3, 0.06, 0.02
+    /// </summary>
     static class SampleItem1
     {
-        public static string Item1Id
+        public static string ItemId
         {
             //Items.itemId
             get
@@ -4383,7 +4386,7 @@ namespace CM.SendBrick.Library.Tests
                 return "1";
             }
         }
-        public static string Item1Description
+        public static string ItemDescription
         {
             //Items.description
             get
@@ -4391,7 +4394,7 @@ namespace CM.SendBrick.Library.Tests
                 return "Plate 1x4";
             }
         }
-        public static int Item1ParcelInstance
+        public static int ItemParcelInstance
         {
             //Items.packageOccurrence
             get
@@ -4399,7 +4402,7 @@ namespace CM.SendBrick.Library.Tests
                 return 0;
             }
         }
-        public static int Item1Quantity
+        public static int ItemQuantity
         {
             //Items.quantity
             get
@@ -4407,7 +4410,7 @@ namespace CM.SendBrick.Library.Tests
                 return 3;
             }
         }
-        public static double Item1Value
+        public static double ItemValue
         {
             //Items.valueData
             get
@@ -4415,7 +4418,7 @@ namespace CM.SendBrick.Library.Tests
                 return 0.06;
             }
         }
-        public static double Item1Weight
+        public static double ItemWeight
         {
             //Items.weight
             get
@@ -4457,9 +4460,12 @@ namespace CM.SendBrick.Library.Tests
         }
     }
 
+    /// <summary>
+    /// 5, "Turntable 2x2", 1, 0.12, 0.03
+    /// </summary>
     static class SampleItem2
     {
-        public static string Item1Id
+        public static string ItemId
         {
             //Items.itemId
             get
@@ -4467,7 +4473,7 @@ namespace CM.SendBrick.Library.Tests
                 return "5";
             }
         }
-        public static string Item1Description
+        public static string ItemDescription
         {
             //Items.description
             get
@@ -4475,7 +4481,7 @@ namespace CM.SendBrick.Library.Tests
                 return "Turntable 2x2";
             }
         }
-        public static int Item1ParcelInstance
+        public static int ItemParcelInstance
         {
             //Items.packageOccurrence
             get
@@ -4483,7 +4489,7 @@ namespace CM.SendBrick.Library.Tests
                 return 0;
             }
         }
-        public static int Item1Quantity
+        public static int ItemQuantity
         {
             //Items.quantity
             get
@@ -4491,7 +4497,7 @@ namespace CM.SendBrick.Library.Tests
                 return 1;
             }
         }
-        public static double Item1Value
+        public static double ItemValue
         {
             //Items.valueData
             get
@@ -4499,7 +4505,7 @@ namespace CM.SendBrick.Library.Tests
                 return 0.12;
             }
         }
-        public static double Item1Weight
+        public static double ItemWeight
         {
             //Items.weight
             get
@@ -4541,9 +4547,12 @@ namespace CM.SendBrick.Library.Tests
         }
     }
 
+    /// <summary>
+    /// 2, "Tile 2x4", 2, 0.06, 0.02
+    /// </summary>
     static class SampleItem3
     {
-        public static string Item1Id
+        public static string ItemId
         {
             //Items.itemId
             get
@@ -4551,7 +4560,7 @@ namespace CM.SendBrick.Library.Tests
                 return "2";
             }
         }
-        public static string Item1Description
+        public static string ItemDescription
         {
             //Items.description
             get
@@ -4559,7 +4568,7 @@ namespace CM.SendBrick.Library.Tests
                 return "Tile 2x4";
             }
         }
-        public static int Item1ParcelInstance
+        public static int ItemParcelInstance
         {
             //Items.packageOccurrence
             get
@@ -4567,7 +4576,7 @@ namespace CM.SendBrick.Library.Tests
                 return 0;
             }
         }
-        public static int Item1Quantity
+        public static int ItemQuantity
         {
             //Items.quantity
             get
@@ -4575,7 +4584,7 @@ namespace CM.SendBrick.Library.Tests
                 return 2;
             }
         }
-        public static double Item1Value
+        public static double ItemValue
         {
             //Items.valueData
             get
@@ -4583,7 +4592,7 @@ namespace CM.SendBrick.Library.Tests
                 return 0.06;
             }
         }
-        public static double Item1Weight
+        public static double ItemWeight
         {
             //Items.weight
             get
@@ -4625,9 +4634,12 @@ namespace CM.SendBrick.Library.Tests
         }
     }
 
+    /// <summary>
+    /// 3, "Round Brick 2x2", 1, 0.15, 0.05
+    /// </summary>
     static class SampleItem4
     {
-        public static string Item1Id
+        public static string ItemId
         {
             //Items.itemId
             get
@@ -4635,7 +4647,7 @@ namespace CM.SendBrick.Library.Tests
                 return "3";
             }
         }
-        public static string Item1Description
+        public static string ItemDescription
         {
             //Items.description
             get
@@ -4643,7 +4655,7 @@ namespace CM.SendBrick.Library.Tests
                 return "Round Brick 2x2";
             }
         }
-        public static int Item1ParcelInstance
+        public static int ItemParcelInstance
         {
             //Items.packageOccurrence
             get
@@ -4651,7 +4663,7 @@ namespace CM.SendBrick.Library.Tests
                 return 0;
             }
         }
-        public static int Item1Quantity
+        public static int ItemQuantity
         {
             //Items.quantity
             get
@@ -4659,7 +4671,7 @@ namespace CM.SendBrick.Library.Tests
                 return 1;
             }
         }
-        public static double Item1Value
+        public static double ItemValue
         {
             //Items.valueData
             get
@@ -4667,7 +4679,7 @@ namespace CM.SendBrick.Library.Tests
                 return 0.15;
             }
         }
-        public static double Item1Weight
+        public static double ItemWeight
         {
             //Items.weight
             get
@@ -4709,54 +4721,57 @@ namespace CM.SendBrick.Library.Tests
         }
     }
 
+    /// <summary>
+    /// 4, "Brick 1x2", 8, 0.24, 0.24, URL Populated
+    /// </summary>
     static class SampleItem5
     {
-        public static string Item1Id
+        public static string ItemId
         {
             //Items.itemId
             get
             {
-                return "";
+                return "4";
             }
         }
-        public static string Item1Description
+        public static string ItemDescription
         {
             //Items.description
             get
             {
-                return "";
+                return "Brick 1x2";
             }
         }
-        public static int Item1ParcelInstance
+        public static int ItemParcelInstance
         {
             //Items.packageOccurrence
             get
             {
-                return 0;
+                return 1;
             }
         }
-        public static int Item1Quantity
+        public static int ItemQuantity
         {
             //Items.quantity
             get
             {
-                return 0;
+                return 8;
             }
         }
-        public static double Item1Value
+        public static double ItemValue
         {
             //Items.valueData
             get
             {
-                return 0.00;
+                return 0.24;
             }
         }
-        public static double Item1Weight
+        public static double ItemWeight
         {
             //Items.weight
             get
             {
-                return 0.00;
+                return 0.24;
             }
         }
         public static string ItemCountryOfOrigin
@@ -4764,7 +4779,7 @@ namespace CM.SendBrick.Library.Tests
             //Items.countryOfOrigin
             get
             {
-                return "";
+                return "China";
             }
         }
         public static string ItemHsCode
@@ -4772,7 +4787,7 @@ namespace CM.SendBrick.Library.Tests
             //Items.hsCode
             get
             {
-                return "";
+                return "Code7";
             }
         }
         public static string ItemSkuCode
@@ -4780,7 +4795,7 @@ namespace CM.SendBrick.Library.Tests
             //Items.skuCode
             get
             {
-                return "";
+                return "SKU7";
             }
         }
         public static string ItemImageUrl
@@ -4788,7 +4803,7 @@ namespace CM.SendBrick.Library.Tests
             //Item.imageUrl
             get
             {
-                return "";
+                return "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P";
             }
         }
     }

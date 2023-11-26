@@ -596,19 +596,28 @@ namespace CM.SendBrick.Library.Tests
             TransferOrderData testItem;
 
             testItem = new TransferOrderData();
-            testItem.AddItem("1", 3, 0, "Plate 1x4", 0.06, 0.02, "Code1", "SKU1", "Denmark", "");
+            testItem.AddItem(   SampleItem1.ItemId,                 // 1
+                                SampleItem1.ItemQuantity,           // 3
+                                SampleItem1.ItemParcelInstance,     // 0
+                                SampleItem1.ItemDescription,        // "Plate 1x4"
+                                SampleItem1.ItemValue,              // 0.06
+                                SampleItem1.ItemWeight,             // 0.02
+                                SampleItem1.ItemHsCode,             // "Code1"
+                                SampleItem1.ItemSkuCode,            // "SKU1"
+                                SampleItem1.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem1.ItemImageUrl);          // ""
 
             Assert.AreEqual(testItem.TotalItemCount, 1);
-            Assert.AreEqual(testItem.ItemId, "1");
-            Assert.AreEqual(testItem.ItemQuantity, 3);
-            Assert.AreEqual(testItem.ItemParcelInstance, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Plate 1x4");
-            Assert.AreEqual(testItem.ItemValue, 0.06);
-            Assert.AreEqual(testItem.ItemWeight, 0.02);
-            Assert.AreEqual(testItem.ItemHsCode, "Code1");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU1");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "Denmark");
-            Assert.AreEqual(testItem.ItemImageUrl, "");
+            Assert.AreEqual(SampleItem1.ItemId, testItem.ItemId);                           // 1
+            Assert.AreEqual(SampleItem1.ItemQuantity, testItem.ItemQuantity);               // 3
+            Assert.AreEqual(SampleItem1.ItemParcelInstance, testItem.ItemParcelInstance);   // 0
+            Assert.AreEqual(SampleItem1.ItemDescription, testItem.ItemDescription);         // "Plate 1x4"
+            Assert.AreEqual(SampleItem1.ItemValue, testItem.ItemValue);                     // 0.06
+            Assert.AreEqual(SampleItem1.ItemWeight, testItem.ItemWeight);                   // 0.02
+            Assert.AreEqual(SampleItem1.ItemHsCode, testItem.ItemHsCode);                   // "Code1"
+            Assert.AreEqual(SampleItem1.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU1"
+            Assert.AreEqual(SampleItem1.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); // "Denmark"
+            Assert.AreEqual(SampleItem1.ItemImageUrl, testItem.ItemImageUrl);               // ""
         }
         [TestMethod()]
         public void ItemGetFirstTest()
@@ -616,26 +625,79 @@ namespace CM.SendBrick.Library.Tests
             TransferOrderData testItem;
 
             testItem = new TransferOrderData();
-            testItem.AddItem("1", 3, 0, "Plate 1x4", 0.06, 0.02, "Code1", "SKU1", "Denmark", ""); // First Item
-            testItem.AddItem("5", 1, 0, "Turntable 2x2", 0.12, 0.03, "Code3", "SKU3", "Denmark", ""); // Second Item
-            testItem.AddItem("2", 2, 0, "Tile 2x4", 0.06, 0.02, "Code2", "SKU2", "Denmark", ""); // Third Item
-            testItem.AddItem("3", 1, 0, "Round Brick 2x2", 0.15, 0.05, "Code4", "SKU4", "Denmark", ""); // Fourth Item
-            testItem.AddItem("4", 8, 1, "Brick 1x2", 0.24, 0.24, "Code7", "SKU7", "China", "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P"); // Fifth Item
+            // First Item
+            testItem.AddItem(SampleItem1.ItemId,                 // 1
+                                SampleItem1.ItemQuantity,           // 3
+                                SampleItem1.ItemParcelInstance,     // 0
+                                SampleItem1.ItemDescription,        // "Plate 1x4"
+                                SampleItem1.ItemValue,              // 0.06
+                                SampleItem1.ItemWeight,             // 0.02
+                                SampleItem1.ItemHsCode,             // "Code1"
+                                SampleItem1.ItemSkuCode,            // "SKU1"
+                                SampleItem1.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem1.ItemImageUrl);          // ""
+
+            // Second Item
+            testItem.AddItem(SampleItem2.ItemId,                    // 5
+                                SampleItem2.ItemQuantity,           // 1
+                                SampleItem2.ItemParcelInstance,     // 0
+                                SampleItem2.ItemDescription,        // "Turntable 2x2"
+                                SampleItem2.ItemValue,              // 0.12
+                                SampleItem2.ItemWeight,             // 0.03
+                                SampleItem2.ItemHsCode,             // "Code3"
+                                SampleItem2.ItemSkuCode,            // "SKU3"
+                                SampleItem2.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem2.ItemImageUrl);          // ""
+
+            // Third Item
+            testItem.AddItem(SampleItem3.ItemId,                    // 2
+                                SampleItem3.ItemQuantity,           // 2
+                                SampleItem3.ItemParcelInstance,     // 0
+                                SampleItem3.ItemDescription,        // "Tile 2x4"
+                                SampleItem3.ItemValue,              // 0.06
+                                SampleItem3.ItemWeight,             // 0.02
+                                SampleItem3.ItemHsCode,             // "Code2"
+                                SampleItem3.ItemSkuCode,            // "SKU2"
+                                SampleItem3.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem3.ItemImageUrl);          // ""
+
+            // Fourth Item
+            testItem.AddItem(SampleItem4.ItemId,                    // 3
+                                SampleItem4.ItemQuantity,           // 1
+                                SampleItem4.ItemParcelInstance,     // 0
+                                SampleItem4.ItemDescription,        // "Round Brick 2x2"
+                                SampleItem4.ItemValue,              // 0.15
+                                SampleItem4.ItemWeight,             // 0.05
+                                SampleItem4.ItemHsCode,             // "Code4"
+                                SampleItem4.ItemSkuCode,            // "SKU4"
+                                SampleItem4.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem4.ItemImageUrl);          // ""
+
+            // Fifth Item
+            testItem.AddItem(SampleItem5.ItemId,                    // 4
+                                SampleItem5.ItemQuantity,           // 8
+                                SampleItem5.ItemParcelInstance,     // 1
+                                SampleItem5.ItemDescription,        // "Brick 1x2"
+                                SampleItem5.ItemValue,              // 0.24
+                                SampleItem5.ItemWeight,             // 0.24
+                                SampleItem5.ItemHsCode,             // "Code7"
+                                SampleItem5.ItemSkuCode,            // "SKU7"
+                                SampleItem5.ItemCountryOfOrigin,    // "China"
+                                SampleItem5.ItemImageUrl);          // "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P"
 
             bool hasFound = testItem.FindFirstItem();
 
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.TotalItemCount, 5);
-            Assert.AreEqual(testItem.ItemId, "1");
-            Assert.AreEqual(testItem.ItemQuantity, 3);
-            Assert.AreEqual(testItem.ItemParcelInstance, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Plate 1x4");
-            Assert.AreEqual(testItem.ItemValue, 0.06);
-            Assert.AreEqual(testItem.ItemWeight, 0.02);
-            Assert.AreEqual(testItem.ItemHsCode, "Code1");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU1");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "Denmark");
-            Assert.AreEqual(testItem.ItemImageUrl, "");
+            Assert.AreEqual(SampleItem1.ItemId, testItem.ItemId);                           // 1
+            Assert.AreEqual(SampleItem1.ItemQuantity, testItem.ItemQuantity);               // 3
+            Assert.AreEqual(SampleItem1.ItemParcelInstance, testItem.ItemParcelInstance);   // 0
+            Assert.AreEqual(SampleItem1.ItemDescription, testItem.ItemDescription);         // "Plate 1x4"
+            Assert.AreEqual(SampleItem1.ItemValue, testItem.ItemValue);                     // 0.06
+            Assert.AreEqual(SampleItem1.ItemWeight, testItem.ItemWeight);                   // 0.02
+            Assert.AreEqual(SampleItem1.ItemHsCode, testItem.ItemHsCode);                   // "Code1"
+            Assert.AreEqual(SampleItem1.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU1"
+            Assert.AreEqual(SampleItem1.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); // "Denmark"
+            Assert.AreEqual(SampleItem1.ItemImageUrl, testItem.ItemImageUrl);               // ""
         }
         [TestMethod()]
         public void ItemGetLastTest()
@@ -643,26 +705,80 @@ namespace CM.SendBrick.Library.Tests
             TransferOrderData testItem;
 
             testItem = new TransferOrderData();
-            testItem.AddItem("1", 3, 0, "Plate 1x4", 0.06, 0.02, "Code1", "SKU1", "Denmark", ""); // First Item
-            testItem.AddItem("5", 1, 0, "Turntable 2x2", 0.12, 0.03, "Code3", "SKU3", "Denmark", ""); // Second Item
-            testItem.AddItem("2", 2, 0, "Tile 2x4", 0.06, 0.02, "Code2", "SKU2", "Denmark", ""); // Third Item
-            testItem.AddItem("3", 1, 0, "Round Brick 2x2", 0.15, 0.05, "Code4", "SKU4", "Denmark", ""); // Fourth Item
-            testItem.AddItem("4", 8, 1, "Brick 1x2", 0.24, 0.24, "Code7", "SKU7", "China", "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P"); // Fifth Item
+            // First Item
+            testItem.AddItem(SampleItem1.ItemId,                 // 1
+                                SampleItem1.ItemQuantity,           // 3
+                                SampleItem1.ItemParcelInstance,     // 0
+                                SampleItem1.ItemDescription,        // "Plate 1x4"
+                                SampleItem1.ItemValue,              // 0.06
+                                SampleItem1.ItemWeight,             // 0.02
+                                SampleItem1.ItemHsCode,             // "Code1"
+                                SampleItem1.ItemSkuCode,            // "SKU1"
+                                SampleItem1.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem1.ItemImageUrl);          // ""
+
+            // Second Item
+            testItem.AddItem(SampleItem2.ItemId,                    // 5
+                                SampleItem2.ItemQuantity,           // 1
+                                SampleItem2.ItemParcelInstance,     // 0
+                                SampleItem2.ItemDescription,        // "Turntable 2x2"
+                                SampleItem2.ItemValue,              // 0.12
+                                SampleItem2.ItemWeight,             // 0.03
+                                SampleItem2.ItemHsCode,             // "Code3"
+                                SampleItem2.ItemSkuCode,            // "SKU3"
+                                SampleItem2.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem2.ItemImageUrl);          // ""
+
+            // Third Item
+            testItem.AddItem(SampleItem3.ItemId,                    // 2
+                                SampleItem3.ItemQuantity,           // 2
+                                SampleItem3.ItemParcelInstance,     // 0
+                                SampleItem3.ItemDescription,        // "Tile 2x4"
+                                SampleItem3.ItemValue,              // 0.06
+                                SampleItem3.ItemWeight,             // 0.02
+                                SampleItem3.ItemHsCode,             // "Code2"
+                                SampleItem3.ItemSkuCode,            // "SKU2"
+                                SampleItem3.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem3.ItemImageUrl);          // ""
+
+            // Fourth Item
+            testItem.AddItem(SampleItem4.ItemId,                    // 3
+                                SampleItem4.ItemQuantity,           // 1
+                                SampleItem4.ItemParcelInstance,     // 0
+                                SampleItem4.ItemDescription,        // "Round Brick 2x2"
+                                SampleItem4.ItemValue,              // 0.15
+                                SampleItem4.ItemWeight,             // 0.05
+                                SampleItem4.ItemHsCode,             // "Code4"
+                                SampleItem4.ItemSkuCode,            // "SKU4"
+                                SampleItem4.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem4.ItemImageUrl);          // ""
+
+            // Fifth Item
+            testItem.AddItem(SampleItem5.ItemId,                    // 4
+                                SampleItem5.ItemQuantity,           // 8
+                                SampleItem5.ItemParcelInstance,     // 1
+                                SampleItem5.ItemDescription,        // "Brick 1x2"
+                                SampleItem5.ItemValue,              // 0.24
+                                SampleItem5.ItemWeight,             // 0.24
+                                SampleItem5.ItemHsCode,             // "Code7"
+                                SampleItem5.ItemSkuCode,            // "SKU7"
+                                SampleItem5.ItemCountryOfOrigin,    // "China"
+                                SampleItem5.ItemImageUrl);          // "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P"
 
             bool hasFound = testItem.FindLastItem();
 
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.TotalItemCount, 5);
-            Assert.AreEqual(testItem.ItemId, "4");
-            Assert.AreEqual(testItem.ItemQuantity, 8);
-            Assert.AreEqual(testItem.ItemParcelInstance, 1);
-            Assert.AreEqual(testItem.ItemDescription, "Brick 1x2");
-            Assert.AreEqual(testItem.ItemValue, 0.24);
-            Assert.AreEqual(testItem.ItemWeight, 0.24);
-            Assert.AreEqual(testItem.ItemHsCode, "Code7");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU7");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "China");
-            Assert.AreEqual(testItem.ItemImageUrl, "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P");
+            Assert.AreEqual(5, testItem.TotalItemCount);
+            Assert.AreEqual(SampleItem5.ItemId, testItem.ItemId);                           // "4"
+            Assert.AreEqual(SampleItem5.ItemQuantity, testItem.ItemQuantity);               // 8
+            Assert.AreEqual(SampleItem5.ItemParcelInstance, testItem.ItemParcelInstance);   // 1
+            Assert.AreEqual(SampleItem5.ItemDescription, testItem.ItemDescription);         // "Brick 1x2"
+            Assert.AreEqual(SampleItem5.ItemValue, testItem.ItemValue);                     // 0.24
+            Assert.AreEqual(SampleItem5.ItemWeight, testItem.ItemWeight);                   // 0.24
+            Assert.AreEqual(SampleItem5.ItemHsCode, testItem.ItemHsCode);                   // "Code7"
+            Assert.AreEqual(SampleItem5.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU7"
+            Assert.AreEqual(SampleItem5.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); //  "China"
+            Assert.AreEqual(SampleItem5.ItemImageUrl, testItem.ItemImageUrl);               // "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P");
         }
         [TestMethod()]
         public void ItemStepThroughTest()
@@ -670,87 +786,141 @@ namespace CM.SendBrick.Library.Tests
             TransferOrderData testItem;
 
             testItem = new TransferOrderData();
-            testItem.AddItem("1", 3, 0, "Plate 1x4", 0.06, 0.02, "Code1", "SKU1", "Denmark", ""); // First Item
-            testItem.AddItem("5", 1, 0, "Turntable 2x2", 0.12, 0.03, "Code3", "SKU3", "Denmark", ""); // Second Item
-            testItem.AddItem("2", 2, 0, "Tile 2x4", 0.06, 0.02, "Code2", "SKU2", "Denmark", ""); // Third Item
-            testItem.AddItem("3", 1, 0, "Round Brick 2x2", 0.15, 0.05, "Code4", "SKU4", "Denmark", ""); // Fourth Item
-            testItem.AddItem("4", 8, 1, "Brick 1x2", 0.24, 0.24, "Code7", "SKU7", "China", "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P"); // Fifth Item
+            // First Item
+            testItem.AddItem(SampleItem1.ItemId,                 // 1
+                                SampleItem1.ItemQuantity,           // 3
+                                SampleItem1.ItemParcelInstance,     // 0
+                                SampleItem1.ItemDescription,        // "Plate 1x4"
+                                SampleItem1.ItemValue,              // 0.06
+                                SampleItem1.ItemWeight,             // 0.02
+                                SampleItem1.ItemHsCode,             // "Code1"
+                                SampleItem1.ItemSkuCode,            // "SKU1"
+                                SampleItem1.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem1.ItemImageUrl);          // ""
+
+            // Second Item
+            testItem.AddItem(SampleItem2.ItemId,                    // 5
+                                SampleItem2.ItemQuantity,           // 1
+                                SampleItem2.ItemParcelInstance,     // 0
+                                SampleItem2.ItemDescription,        // "Turntable 2x2"
+                                SampleItem2.ItemValue,              // 0.12
+                                SampleItem2.ItemWeight,             // 0.03
+                                SampleItem2.ItemHsCode,             // "Code3"
+                                SampleItem2.ItemSkuCode,            // "SKU3"
+                                SampleItem2.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem2.ItemImageUrl);          // ""
+
+            // Third Item
+            testItem.AddItem(SampleItem3.ItemId,                    // 2
+                                SampleItem3.ItemQuantity,           // 2
+                                SampleItem3.ItemParcelInstance,     // 0
+                                SampleItem3.ItemDescription,        // "Tile 2x4"
+                                SampleItem3.ItemValue,              // 0.06
+                                SampleItem3.ItemWeight,             // 0.02
+                                SampleItem3.ItemHsCode,             // "Code2"
+                                SampleItem3.ItemSkuCode,            // "SKU2"
+                                SampleItem3.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem3.ItemImageUrl);          // ""
+
+            // Fourth Item
+            testItem.AddItem(SampleItem4.ItemId,                    // 3
+                                SampleItem4.ItemQuantity,           // 1
+                                SampleItem4.ItemParcelInstance,     // 0
+                                SampleItem4.ItemDescription,        // "Round Brick 2x2"
+                                SampleItem4.ItemValue,              // 0.15
+                                SampleItem4.ItemWeight,             // 0.05
+                                SampleItem4.ItemHsCode,             // "Code4"
+                                SampleItem4.ItemSkuCode,            // "SKU4"
+                                SampleItem4.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem4.ItemImageUrl);          // ""
+
+            // Fifth Item
+            testItem.AddItem(SampleItem5.ItemId,                    // 4
+                                SampleItem5.ItemQuantity,           // 8
+                                SampleItem5.ItemParcelInstance,     // 1
+                                SampleItem5.ItemDescription,        // "Brick 1x2"
+                                SampleItem5.ItemValue,              // 0.24
+                                SampleItem5.ItemWeight,             // 0.24
+                                SampleItem5.ItemHsCode,             // "Code7"
+                                SampleItem5.ItemSkuCode,            // "SKU7"
+                                SampleItem5.ItemCountryOfOrigin,    // "China"
+                                SampleItem5.ItemImageUrl);          // "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P"
 
             bool hasFound = testItem.FindFirstItem();
 
             // Check that we've got the first item correctly.
             Assert.AreEqual(hasFound, true);
             Assert.AreEqual(testItem.TotalItemCount, 5);
-            Assert.AreEqual(testItem.ItemId, "1");
-            Assert.AreEqual(testItem.ItemQuantity, 3);
-            Assert.AreEqual(testItem.ItemParcelInstance, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Plate 1x4");
-            Assert.AreEqual(testItem.ItemValue, 0.06);
-            Assert.AreEqual(testItem.ItemWeight, 0.02);
-            Assert.AreEqual(testItem.ItemHsCode, "Code1");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU1");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "Denmark");
-            Assert.AreEqual(testItem.ItemImageUrl, "");
+            Assert.AreEqual(SampleItem1.ItemId, testItem.ItemId);                           // 1
+            Assert.AreEqual(SampleItem1.ItemQuantity, testItem.ItemQuantity);               // 3
+            Assert.AreEqual(SampleItem1.ItemParcelInstance, testItem.ItemParcelInstance);   // 0
+            Assert.AreEqual(SampleItem1.ItemDescription, testItem.ItemDescription);         // "Plate 1x4"
+            Assert.AreEqual(SampleItem1.ItemValue, testItem.ItemValue);                     // 0.06
+            Assert.AreEqual(SampleItem1.ItemWeight, testItem.ItemWeight);                   // 0.02
+            Assert.AreEqual(SampleItem1.ItemHsCode, testItem.ItemHsCode);                   // "Code1"
+            Assert.AreEqual(SampleItem1.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU1"
+            Assert.AreEqual(SampleItem1.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); // "Denmark"
+            Assert.AreEqual(SampleItem1.ItemImageUrl, testItem.ItemImageUrl);               // ""
 
             hasFound = testItem.FindNextItem();
 
             // Check that we've got the second item correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ItemId, "5");
-            Assert.AreEqual(testItem.ItemQuantity, 1);
-            Assert.AreEqual(testItem.ItemParcelInstance, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Turntable 2x2");
-            Assert.AreEqual(testItem.ItemValue, 0.12);
-            Assert.AreEqual(testItem.ItemWeight, 0.03);
-            Assert.AreEqual(testItem.ItemHsCode, "Code3");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU3");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "Denmark");
-            Assert.AreEqual(testItem.ItemImageUrl, "");
+            Assert.AreEqual(SampleItem2.ItemId, testItem.ItemId);                           // "5"
+            Assert.AreEqual(SampleItem2.ItemQuantity, testItem.ItemQuantity);               // 1
+            Assert.AreEqual(SampleItem2.ItemParcelInstance, testItem.ItemParcelInstance);   // 0
+            Assert.AreEqual(SampleItem2.ItemDescription, testItem.ItemDescription);         // "Turntable 2x2"
+            Assert.AreEqual(SampleItem2.ItemValue, testItem.ItemValue);                     // 0.12
+            Assert.AreEqual(SampleItem2.ItemWeight, testItem.ItemWeight);                   // 0.03
+            Assert.AreEqual(SampleItem2.ItemHsCode, testItem.ItemHsCode);                   // "Code3"
+            Assert.AreEqual(SampleItem2.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU3"
+            Assert.AreEqual(SampleItem2.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); // "Denmark"
+            Assert.AreEqual(SampleItem2.ItemImageUrl, testItem.ItemImageUrl);               // ""
 
             hasFound = testItem.FindNextItem();
 
             // Check that we've got the third item correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ItemId, "2");
-            Assert.AreEqual(testItem.ItemQuantity, 2);
-            Assert.AreEqual(testItem.ItemParcelInstance, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Tile 2x4");
-            Assert.AreEqual(testItem.ItemValue, 0.06);
-            Assert.AreEqual(testItem.ItemWeight, 0.02);
-            Assert.AreEqual(testItem.ItemHsCode, "Code2");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU2");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "Denmark");
-            Assert.AreEqual(testItem.ItemImageUrl, "");
+            Assert.AreEqual(SampleItem3.ItemId, testItem.ItemId);                           // "2"
+            Assert.AreEqual(SampleItem3.ItemQuantity, testItem.ItemQuantity);               // 2
+            Assert.AreEqual(SampleItem3.ItemParcelInstance, testItem.ItemParcelInstance);   // 0
+            Assert.AreEqual(SampleItem3.ItemDescription, testItem.ItemDescription);         // "Tile 2x4"
+            Assert.AreEqual(SampleItem3.ItemValue, testItem.ItemValue);                     // 0.06
+            Assert.AreEqual(SampleItem3.ItemWeight, testItem.ItemWeight);                   // 0.02
+            Assert.AreEqual(SampleItem3.ItemHsCode, testItem.ItemHsCode);                   // "Code2"
+            Assert.AreEqual(SampleItem3.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU2"
+            Assert.AreEqual(SampleItem3.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); // "Denmark"
+            Assert.AreEqual(SampleItem3.ItemImageUrl, testItem.ItemImageUrl);               // ""
 
             hasFound = testItem.FindNextItem();
 
             // Check that we've got the fourth item correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ItemId, "3");
-            Assert.AreEqual(testItem.ItemQuantity, 1);
-            Assert.AreEqual(testItem.ItemParcelInstance, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Round Brick 2x2");
-            Assert.AreEqual(testItem.ItemValue, 0.15);
-            Assert.AreEqual(testItem.ItemWeight, 0.05);
-            Assert.AreEqual(testItem.ItemHsCode, "Code4");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU4");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "Denmark");
-            Assert.AreEqual(testItem.ItemImageUrl, "");
+            Assert.AreEqual(SampleItem4.ItemId, testItem.ItemId);                           // "3"
+            Assert.AreEqual(SampleItem4.ItemQuantity, testItem.ItemQuantity);               // 1
+            Assert.AreEqual(SampleItem4.ItemParcelInstance, testItem.ItemParcelInstance);   // 0
+            Assert.AreEqual(SampleItem4.ItemDescription, testItem.ItemDescription);         // "Round Brick 2x2"
+            Assert.AreEqual(SampleItem4.ItemValue, testItem.ItemValue);                     // 0.15
+            Assert.AreEqual(SampleItem4.ItemWeight, testItem.ItemWeight);                   // 0.05
+            Assert.AreEqual(SampleItem4.ItemHsCode, testItem.ItemHsCode);                   // "Code4"
+            Assert.AreEqual(SampleItem4.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU4"
+            Assert.AreEqual(SampleItem4.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); // "Denmark"
+            Assert.AreEqual(SampleItem4.ItemImageUrl, testItem.ItemImageUrl);               // ""
 
             hasFound = testItem.FindNextItem();
 
             // Check that we've got the last (fifth) item correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ItemId, "4");
-            Assert.AreEqual(testItem.ItemQuantity, 8);
-            Assert.AreEqual(testItem.ItemParcelInstance, 1);
-            Assert.AreEqual(testItem.ItemDescription, "Brick 1x2");
-            Assert.AreEqual(testItem.ItemValue, 0.24);
-            Assert.AreEqual(testItem.ItemWeight, 0.24);
-            Assert.AreEqual(testItem.ItemHsCode, "Code7");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU7");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "China");
-            Assert.AreEqual(testItem.ItemImageUrl, "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P");
+            Assert.AreEqual(SampleItem5.ItemId, testItem.ItemId);                           // "4"
+            Assert.AreEqual(SampleItem5.ItemQuantity, testItem.ItemQuantity);               // 8
+            Assert.AreEqual(SampleItem5.ItemParcelInstance, testItem.ItemParcelInstance);   // 1
+            Assert.AreEqual(SampleItem5.ItemDescription, testItem.ItemDescription);         // "Brick 1x2"
+            Assert.AreEqual(SampleItem5.ItemValue, testItem.ItemValue);                     // 0.24
+            Assert.AreEqual(SampleItem5.ItemWeight, testItem.ItemWeight);                   // 0.24
+            Assert.AreEqual(SampleItem5.ItemHsCode, testItem.ItemHsCode);                   // "Code7"
+            Assert.AreEqual(SampleItem5.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU7"
+            Assert.AreEqual(SampleItem5.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); //  "China"
+            Assert.AreEqual(SampleItem5.ItemImageUrl, testItem.ItemImageUrl);               // "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P");
 
             hasFound = testItem.FindNextItem();
             // Check that we've not found any more item.
@@ -762,88 +932,141 @@ namespace CM.SendBrick.Library.Tests
             TransferOrderData testItem;
 
             testItem = new TransferOrderData();
-            testItem.AddItem("1", 3, 0, "Plate 1x4", 0.06, 0.02, "Code1", "SKU1", "Denmark", ""); // First Item
-            testItem.AddItem("5", 1, 0, "Turntable 2x2", 0.12, 0.03, "Code3", "SKU3", "Denmark", ""); // Second Item
-            testItem.AddItem("2", 2, 0, "Tile 2x4", 0.06, 0.02, "Code2", "SKU2", "Denmark", ""); // Third Item
-            testItem.AddItem("3", 1, 0, "Round Brick 2x2", 0.15, 0.05, "Code4", "SKU4", "Denmark", ""); // Fourth Item
-            testItem.AddItem("4", 8, 1, "Brick 1x2", 0.24, 0.24, "Code7", "SKU7", "China", "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P"); // Fifth Item
+
+            // First Item
+            testItem.AddItem(SampleItem1.ItemId,                 // 1
+                                SampleItem1.ItemQuantity,           // 3
+                                SampleItem1.ItemParcelInstance,     // 0
+                                SampleItem1.ItemDescription,        // "Plate 1x4"
+                                SampleItem1.ItemValue,              // 0.06
+                                SampleItem1.ItemWeight,             // 0.02
+                                SampleItem1.ItemHsCode,             // "Code1"
+                                SampleItem1.ItemSkuCode,            // "SKU1"
+                                SampleItem1.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem1.ItemImageUrl);          // ""
+
+            // Second Item
+            testItem.AddItem(SampleItem2.ItemId,                    // 5
+                                SampleItem2.ItemQuantity,           // 1
+                                SampleItem2.ItemParcelInstance,     // 0
+                                SampleItem2.ItemDescription,        // "Turntable 2x2"
+                                SampleItem2.ItemValue,              // 0.12
+                                SampleItem2.ItemWeight,             // 0.03
+                                SampleItem2.ItemHsCode,             // "Code3"
+                                SampleItem2.ItemSkuCode,            // "SKU3"
+                                SampleItem2.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem2.ItemImageUrl);          // ""
+
+            // Third Item
+            testItem.AddItem(SampleItem3.ItemId,                    // 2
+                                SampleItem3.ItemQuantity,           // 2
+                                SampleItem3.ItemParcelInstance,     // 0
+                                SampleItem3.ItemDescription,        // "Tile 2x4"
+                                SampleItem3.ItemValue,              // 0.06
+                                SampleItem3.ItemWeight,             // 0.02
+                                SampleItem3.ItemHsCode,             // "Code2"
+                                SampleItem3.ItemSkuCode,            // "SKU2"
+                                SampleItem3.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem3.ItemImageUrl);          // ""
+
+            // Fourth Item
+            testItem.AddItem(SampleItem4.ItemId,                    // 3
+                                SampleItem4.ItemQuantity,           // 1
+                                SampleItem4.ItemParcelInstance,     // 0
+                                SampleItem4.ItemDescription,        // "Round Brick 2x2"
+                                SampleItem4.ItemValue,              // 0.15
+                                SampleItem4.ItemWeight,             // 0.05
+                                SampleItem4.ItemHsCode,             // "Code4"
+                                SampleItem4.ItemSkuCode,            // "SKU4"
+                                SampleItem4.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem4.ItemImageUrl);          // ""
+
+            // Fifth Item
+            testItem.AddItem(SampleItem5.ItemId,                    // 4
+                                SampleItem5.ItemQuantity,           // 8
+                                SampleItem5.ItemParcelInstance,     // 1
+                                SampleItem5.ItemDescription,        // "Brick 1x2"
+                                SampleItem5.ItemValue,              // 0.24
+                                SampleItem5.ItemWeight,             // 0.24
+                                SampleItem5.ItemHsCode,             // "Code7"
+                                SampleItem5.ItemSkuCode,            // "SKU7"
+                                SampleItem5.ItemCountryOfOrigin,    // "China"
+                                SampleItem5.ItemImageUrl);          // "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P"
 
             bool hasFound = testItem.FindLastItem();
 
             //// Check that we've got the last (fifth) item correctly.
-            Assert.AreEqual(testItem.TotalItemCount, 5);
-            Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ItemId, "4");
-            Assert.AreEqual(testItem.ItemQuantity, 8);
-            Assert.AreEqual(testItem.ItemParcelInstance, 1);
-            Assert.AreEqual(testItem.ItemDescription, "Brick 1x2");
-            Assert.AreEqual(testItem.ItemValue, 0.24);
-            Assert.AreEqual(testItem.ItemWeight, 0.24);
-            Assert.AreEqual(testItem.ItemHsCode, "Code7");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU7");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "China");
-            Assert.AreEqual(testItem.ItemImageUrl, "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P");
+            Assert.AreEqual(SampleItem5.ItemId, testItem.ItemId);                           // "4"
+            Assert.AreEqual(SampleItem5.ItemQuantity, testItem.ItemQuantity);               // 8
+            Assert.AreEqual(SampleItem5.ItemParcelInstance, testItem.ItemParcelInstance);   // 1
+            Assert.AreEqual(SampleItem5.ItemDescription, testItem.ItemDescription);         // "Brick 1x2"
+            Assert.AreEqual(SampleItem5.ItemValue, testItem.ItemValue);                     // 0.24
+            Assert.AreEqual(SampleItem5.ItemWeight, testItem.ItemWeight);                   // 0.24
+            Assert.AreEqual(SampleItem5.ItemHsCode, testItem.ItemHsCode);                   // "Code7"
+            Assert.AreEqual(SampleItem5.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU7"
+            Assert.AreEqual(SampleItem5.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); //  "China"
+            Assert.AreEqual(SampleItem5.ItemImageUrl, testItem.ItemImageUrl);               // "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P");
 
             hasFound = testItem.FindPrevItem();
 
             // Check that we've got the fourth item correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ItemId, "3");
-            Assert.AreEqual(testItem.ItemQuantity, 1);
-            Assert.AreEqual(testItem.ItemParcelInstance, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Round Brick 2x2");
-            Assert.AreEqual(testItem.ItemValue, 0.15);
-            Assert.AreEqual(testItem.ItemWeight, 0.05);
-            Assert.AreEqual(testItem.ItemHsCode, "Code4");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU4");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "Denmark");
-            Assert.AreEqual(testItem.ItemImageUrl, "");
+            Assert.AreEqual(SampleItem4.ItemId, testItem.ItemId);                           // "3"
+            Assert.AreEqual(SampleItem4.ItemQuantity, testItem.ItemQuantity);               // 1
+            Assert.AreEqual(SampleItem4.ItemParcelInstance, testItem.ItemParcelInstance);   // 0
+            Assert.AreEqual(SampleItem4.ItemDescription, testItem.ItemDescription);         // "Round Brick 2x2"
+            Assert.AreEqual(SampleItem4.ItemValue, testItem.ItemValue);                     // 0.15
+            Assert.AreEqual(SampleItem4.ItemWeight, testItem.ItemWeight);                   // 0.05
+            Assert.AreEqual(SampleItem4.ItemHsCode, testItem.ItemHsCode);                   // "Code4"
+            Assert.AreEqual(SampleItem4.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU4"
+            Assert.AreEqual(SampleItem4.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); // "Denmark"
+            Assert.AreEqual(SampleItem4.ItemImageUrl, testItem.ItemImageUrl);               // ""
 
             hasFound = testItem.FindPrevItem();
 
             // Check that we've got the third item correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ItemId, "2");
-            Assert.AreEqual(testItem.ItemQuantity, 2);
-            Assert.AreEqual(testItem.ItemParcelInstance, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Tile 2x4");
-            Assert.AreEqual(testItem.ItemValue, 0.06);
-            Assert.AreEqual(testItem.ItemWeight, 0.02);
-            Assert.AreEqual(testItem.ItemHsCode, "Code2");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU2");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "Denmark");
-            Assert.AreEqual(testItem.ItemImageUrl, "");
+            Assert.AreEqual(SampleItem3.ItemId, testItem.ItemId);                           // "2"
+            Assert.AreEqual(SampleItem3.ItemQuantity, testItem.ItemQuantity);               // 2
+            Assert.AreEqual(SampleItem3.ItemParcelInstance, testItem.ItemParcelInstance);   // 0
+            Assert.AreEqual(SampleItem3.ItemDescription, testItem.ItemDescription);         // "Tile 2x4"
+            Assert.AreEqual(SampleItem3.ItemValue, testItem.ItemValue);                     // 0.06
+            Assert.AreEqual(SampleItem3.ItemWeight, testItem.ItemWeight);                   // 0.02
+            Assert.AreEqual(SampleItem3.ItemHsCode, testItem.ItemHsCode);                   // "Code2"
+            Assert.AreEqual(SampleItem3.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU2"
+            Assert.AreEqual(SampleItem3.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); // "Denmark"
+            Assert.AreEqual(SampleItem3.ItemImageUrl, testItem.ItemImageUrl);               // ""
 
             hasFound = testItem.FindPrevItem();
 
             // Check that we've got the second item correctly.
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ItemId, "5");
-            Assert.AreEqual(testItem.ItemQuantity, 1);
-            Assert.AreEqual(testItem.ItemParcelInstance, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Turntable 2x2");
-            Assert.AreEqual(testItem.ItemValue, 0.12);
-            Assert.AreEqual(testItem.ItemWeight, 0.03);
-            Assert.AreEqual(testItem.ItemHsCode, "Code3");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU3");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "Denmark");
-            Assert.AreEqual(testItem.ItemImageUrl, "");
+            Assert.AreEqual(SampleItem2.ItemId, testItem.ItemId);                           // "5"
+            Assert.AreEqual(SampleItem2.ItemQuantity, testItem.ItemQuantity);               // 1
+            Assert.AreEqual(SampleItem2.ItemParcelInstance, testItem.ItemParcelInstance);   // 0
+            Assert.AreEqual(SampleItem2.ItemDescription, testItem.ItemDescription);         // "Turntable 2x2"
+            Assert.AreEqual(SampleItem2.ItemValue, testItem.ItemValue);                     // 0.12
+            Assert.AreEqual(SampleItem2.ItemWeight, testItem.ItemWeight);                   // 0.03
+            Assert.AreEqual(SampleItem2.ItemHsCode, testItem.ItemHsCode);                   // "Code3"
+            Assert.AreEqual(SampleItem2.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU3"
+            Assert.AreEqual(SampleItem2.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); // "Denmark"
+            Assert.AreEqual(SampleItem2.ItemImageUrl, testItem.ItemImageUrl);               // ""
 
             hasFound = testItem.FindPrevItem();
 
             // Check that we've got the first item correctly.
             Assert.AreEqual(hasFound, true);
             Assert.AreEqual(testItem.TotalItemCount, 5);
-            Assert.AreEqual(testItem.ItemId, "1");
-            Assert.AreEqual(testItem.ItemQuantity, 3);
-            Assert.AreEqual(testItem.ItemParcelInstance, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Plate 1x4");
-            Assert.AreEqual(testItem.ItemValue, 0.06);
-            Assert.AreEqual(testItem.ItemWeight, 0.02);
-            Assert.AreEqual(testItem.ItemHsCode, "Code1");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU1");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "Denmark");
-            Assert.AreEqual(testItem.ItemImageUrl, "");
+            Assert.AreEqual(SampleItem1.ItemId, testItem.ItemId);                           // 1
+            Assert.AreEqual(SampleItem1.ItemQuantity, testItem.ItemQuantity);               // 3
+            Assert.AreEqual(SampleItem1.ItemParcelInstance, testItem.ItemParcelInstance);   // 0
+            Assert.AreEqual(SampleItem1.ItemDescription, testItem.ItemDescription);         // "Plate 1x4"
+            Assert.AreEqual(SampleItem1.ItemValue, testItem.ItemValue);                     // 0.06
+            Assert.AreEqual(SampleItem1.ItemWeight, testItem.ItemWeight);                   // 0.02
+            Assert.AreEqual(SampleItem1.ItemHsCode, testItem.ItemHsCode);                   // "Code1"
+            Assert.AreEqual(SampleItem1.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU1"
+            Assert.AreEqual(SampleItem1.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); // "Denmark"
+            Assert.AreEqual(SampleItem1.ItemImageUrl, testItem.ItemImageUrl);               // ""
 
             hasFound = testItem.FindPrevItem();
             // Check that we've not found any more item.
@@ -855,27 +1078,82 @@ namespace CM.SendBrick.Library.Tests
             TransferOrderData testItem;
 
             testItem = new TransferOrderData();
-            testItem.AddItem("1", 3, 0, "Plate 1x4", 0.06, 0.02, "Code1", "SKU1", "Denmark", ""); // First Item
-            testItem.AddItem("5", 1, 0, "Turntable 2x2", 0.12, 0.03, "Code3", "SKU3", "Denmark", ""); // Second Item
-            testItem.AddItem("2", 2, 0, "Tile 2x4", 0.06, 0.02, "Code2", "SKU2", "Denmark", ""); // Third Item
-            testItem.AddItem("3", 1, 0, "Round Brick 2x2", 0.15, 0.05, "Code4", "SKU4", "Denmark", ""); // Fourth Item
-            testItem.AddItem("4", 8, 1, "Brick 1x2", 0.24, 0.24, "Code7", "SKU7", "China", "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P"); // Fifth Item
+
+            // First Item
+            testItem.AddItem(SampleItem1.ItemId,                 // 1
+                                SampleItem1.ItemQuantity,           // 3
+                                SampleItem1.ItemParcelInstance,     // 0
+                                SampleItem1.ItemDescription,        // "Plate 1x4"
+                                SampleItem1.ItemValue,              // 0.06
+                                SampleItem1.ItemWeight,             // 0.02
+                                SampleItem1.ItemHsCode,             // "Code1"
+                                SampleItem1.ItemSkuCode,            // "SKU1"
+                                SampleItem1.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem1.ItemImageUrl);          // ""
+
+            // Second Item
+            testItem.AddItem(SampleItem2.ItemId,                    // 5
+                                SampleItem2.ItemQuantity,           // 1
+                                SampleItem2.ItemParcelInstance,     // 0
+                                SampleItem2.ItemDescription,        // "Turntable 2x2"
+                                SampleItem2.ItemValue,              // 0.12
+                                SampleItem2.ItemWeight,             // 0.03
+                                SampleItem2.ItemHsCode,             // "Code3"
+                                SampleItem2.ItemSkuCode,            // "SKU3"
+                                SampleItem2.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem2.ItemImageUrl);          // ""
+
+            // Third Item
+            testItem.AddItem(SampleItem3.ItemId,                    // 2
+                                SampleItem3.ItemQuantity,           // 2
+                                SampleItem3.ItemParcelInstance,     // 0
+                                SampleItem3.ItemDescription,        // "Tile 2x4"
+                                SampleItem3.ItemValue,              // 0.06
+                                SampleItem3.ItemWeight,             // 0.02
+                                SampleItem3.ItemHsCode,             // "Code2"
+                                SampleItem3.ItemSkuCode,            // "SKU2"
+                                SampleItem3.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem3.ItemImageUrl);          // ""
+
+            // Fourth Item
+            testItem.AddItem(SampleItem4.ItemId,                    // 3
+                                SampleItem4.ItemQuantity,           // 1
+                                SampleItem4.ItemParcelInstance,     // 0
+                                SampleItem4.ItemDescription,        // "Round Brick 2x2"
+                                SampleItem4.ItemValue,              // 0.15
+                                SampleItem4.ItemWeight,             // 0.05
+                                SampleItem4.ItemHsCode,             // "Code4"
+                                SampleItem4.ItemSkuCode,            // "SKU4"
+                                SampleItem4.ItemCountryOfOrigin,    // "Denmark"
+                                SampleItem4.ItemImageUrl);          // ""
+
+            // Fifth Item
+            testItem.AddItem(SampleItem5.ItemId,                    // 4
+                                SampleItem5.ItemQuantity,           // 8
+                                SampleItem5.ItemParcelInstance,     // 1
+                                SampleItem5.ItemDescription,        // "Brick 1x2"
+                                SampleItem5.ItemValue,              // 0.24
+                                SampleItem5.ItemWeight,             // 0.24
+                                SampleItem5.ItemHsCode,             // "Code7"
+                                SampleItem5.ItemSkuCode,            // "SKU7"
+                                SampleItem5.ItemCountryOfOrigin,    // "China"
+                                SampleItem5.ItemImageUrl);          // "https://www.bricklink.com/catalogList.asp?pg=2&catString=43&catType=P"
 
             bool hasFound = testItem.FindSpecificItem(2);
 
             // Check that we've got the third parcel correctly.
             Assert.AreEqual(testItem.TotalItemCount, 5);
             Assert.AreEqual(hasFound, true);
-            Assert.AreEqual(testItem.ItemId, "2");
-            Assert.AreEqual(testItem.ItemQuantity, 2);
-            Assert.AreEqual(testItem.ItemParcelInstance, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Tile 2x4");
-            Assert.AreEqual(testItem.ItemValue, 0.06);
-            Assert.AreEqual(testItem.ItemWeight, 0.02);
-            Assert.AreEqual(testItem.ItemHsCode, "Code2");
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU2");
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "Denmark");
-            Assert.AreEqual(testItem.ItemImageUrl, "");
+            Assert.AreEqual(SampleItem3.ItemId, testItem.ItemId);                           // "2"
+            Assert.AreEqual(SampleItem3.ItemQuantity, testItem.ItemQuantity);               // 2
+            Assert.AreEqual(SampleItem3.ItemParcelInstance, testItem.ItemParcelInstance);   // 0
+            Assert.AreEqual(SampleItem3.ItemDescription, testItem.ItemDescription);         // "Tile 2x4"
+            Assert.AreEqual(SampleItem3.ItemValue, testItem.ItemValue);                     // 0.06
+            Assert.AreEqual(SampleItem3.ItemWeight, testItem.ItemWeight);                   // 0.02
+            Assert.AreEqual(SampleItem3.ItemHsCode, testItem.ItemHsCode);                   // "Code2"
+            Assert.AreEqual(SampleItem3.ItemSkuCode, testItem.ItemSkuCode);                 // "SKU2"
+            Assert.AreEqual(SampleItem3.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin); // "Denmark"
+            Assert.AreEqual(SampleItem3.ItemImageUrl, testItem.ItemImageUrl);               // ""
         }
         #endregion
     }
