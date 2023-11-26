@@ -11,28 +11,59 @@ namespace CM.SendBrick.Library.Data
 
         public int AddOrder(IOrderData OrderData)
         {
-            _sequence += 1;
-            _ordersList.Add(_sequence, OrderData);
+            try
+            {
+                _sequence += 1;
+                _ordersList.Add(_sequence, OrderData);
 
-            return _sequence;
+                return _sequence;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void RemoveOrder(int Instance)
+        {
+            try
+            {
+                if (Instance < 0 || Instance > _sequence)
+                {
+                    throw new IndexOutOfRangeException("There is no order with ID " + Instance.ToString());
+                }
+
+                _ordersList.Remove(Instance);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public IOrderData GetOrder(int Instance)
         {
-            IOrderData orderRecord = null;
-
-            if (Instance < 0 || Instance > _sequence)
+            try
             {
-                throw new IndexOutOfRangeException("There is no order with ID " + Instance.ToString());
-            }
+                IOrderData orderRecord = null;
 
-            orderRecord = _ordersList[Instance];
-            if (orderRecord == null)
+                if (Instance < 0 || Instance > _sequence)
+                {
+                    throw new IndexOutOfRangeException("There is no order with ID " + Instance.ToString());
+                }
+
+                orderRecord = _ordersList[Instance];
+                if (orderRecord == null)
+                {
+                    throw new KeyNotFoundException("No valid order with ID " + Instance.ToString());
+                }
+
+                return orderRecord;
+            }
+            catch
             {
-                throw new KeyNotFoundException("No valid order with ID " + Instance.ToString());
+                throw;
             }
-
-            return orderRecord;
         }
     }
 }
