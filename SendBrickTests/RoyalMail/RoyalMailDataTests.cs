@@ -532,34 +532,34 @@ namespace CM.SendBrick.Library.Tests
             RoyalMailData testItem;
 
             testItem = new RoyalMailData();
-            testItem.AddParcel(1,
-                "17968198-1",
-                2.2,
-                15,
-                15,
-                5);
-            testItem.AddParcel(2,
-                "17968198-2",
-                0.9,
-                45,
-                10,
-                3);
-
+            testItem.AddParcel(SampleParcel1.ParcelInstance,    // 1
+                                SampleParcel1.ParcelId,         // "17968198-1"
+                                SampleParcel1.ParcelWeight,     // 2.2
+                                SampleParcel1.ParcelLength,     // 15
+                                SampleParcel1.ParcelWidth,      // 15
+                                SampleParcel1.ParcelHeight);    // 5
+            testItem.AddParcel(SampleParcel2.ParcelInstance,    // 2
+                                SampleParcel2.ParcelId,         // "17968198-2"
+                                SampleParcel2.ParcelWeight,     // 0.9
+                                SampleParcel2.ParcelLength,     // 45
+                                SampleParcel2.ParcelWidth,      // 10
+                                SampleParcel2.ParcelHeight);    // 3
+        
             testItem.FindFirstParcel();
-            Assert.AreEqual(testItem.ParcelInstance, 1, 0);
-            Assert.AreEqual(testItem.ParcelId, "17968198-1", true);
-            Assert.AreEqual(testItem.ParcelWeight, 2.2, 0);
-            Assert.AreEqual(testItem.ParcelLength, 15, 0);
-            Assert.AreEqual(testItem.ParcelWidth, 15, 0);
-            Assert.AreEqual(testItem.ParcelHeight, 5, 0);
+            Assert.AreEqual(SampleParcel1.ParcelInstance, testItem.ParcelInstance, 0);  // 1
+            Assert.AreEqual(SampleParcel1.ParcelId, testItem.ParcelId, true);           // "17968198-1"
+            Assert.AreEqual(SampleParcel1.ParcelWeight, testItem.ParcelWeight, 0);      // 2.2
+            Assert.AreEqual(SampleParcel1.ParcelLength, testItem.ParcelLength, 0);      // 15
+            Assert.AreEqual(SampleParcel1.ParcelWidth, testItem.ParcelWidth, 0);        // 15
+            Assert.AreEqual(SampleParcel1.ParcelHeight, testItem.ParcelHeight, 0);      // 5
 
             testItem.FindNextParcel();
-            Assert.AreEqual(testItem.ParcelInstance, 2, 0);
-            Assert.AreEqual(testItem.ParcelId, "17968198-2", true);
-            Assert.AreEqual(testItem.ParcelWeight, 0.9, 0);
-            Assert.AreEqual(testItem.ParcelLength, 45, 0);
-            Assert.AreEqual(testItem.ParcelWidth, 10, 0);
-            Assert.AreEqual(testItem.ParcelHeight, 3, 0);
+            Assert.AreEqual(SampleParcel2.ParcelInstance, testItem.ParcelInstance, 0);  // 2
+            Assert.AreEqual(SampleParcel2.ParcelId, testItem.ParcelId, true);           // "17968198-2"
+            Assert.AreEqual(SampleParcel2.ParcelWeight, testItem.ParcelWeight, 0);      // 0.9
+            Assert.AreEqual(SampleParcel2.ParcelLength, testItem.ParcelLength, 0);      // 45
+            Assert.AreEqual(SampleParcel2.ParcelWidth, testItem.ParcelWidth, 0);        // 10
+            Assert.AreEqual(SampleParcel2.ParcelHeight, testItem.ParcelHeight, 0);      // 3
         }
 
         /// <summary>
@@ -572,36 +572,36 @@ namespace CM.SendBrick.Library.Tests
 
             testItem = new RoyalMailData();
             testItem.AddParcel();
-            testItem.ParcelInstance = 1;
-            testItem.ParcelId = "17968198-1";
-            testItem.ParcelWeight = 2.2;
-            testItem.ParcelLength = 15;
-            testItem.ParcelWidth = 15;
-            testItem.ParcelHeight = 5;
+            testItem.ParcelInstance = SampleParcel1.ParcelInstance; // 1
+            testItem.ParcelId = SampleParcel1.ParcelId;             // "17968198-1"
+            testItem.ParcelWeight = SampleParcel1.ParcelWeight;     // 2.2
+            testItem.ParcelLength = SampleParcel1.ParcelLength;     // 15
+            testItem.ParcelWidth = SampleParcel1.ParcelWidth;       // 15
+            testItem.ParcelHeight = SampleParcel1.ParcelHeight;     // 5
 
             testItem.AddParcel();
-            testItem.ParcelInstance = 2;
-            testItem.ParcelId = "17968198-2";
-            testItem.ParcelWeight = 0.9;
-            testItem.ParcelLength = 45;
-            testItem.ParcelWidth = 10;
-            testItem.ParcelHeight = 3;
+            testItem.ParcelInstance = SampleParcel2.ParcelInstance; // 2
+            testItem.ParcelId = SampleParcel2.ParcelId;             // "17968198-2"
+            testItem.ParcelWeight = SampleParcel2.ParcelWeight;     // 0.9
+            testItem.ParcelLength = SampleParcel2.ParcelLength;     // 45
+            testItem.ParcelWidth = SampleParcel2.ParcelWidth;       // 10
+            testItem.ParcelHeight = SampleParcel2.ParcelHeight;     // 3
 
             testItem.FindFirstParcel();
-            Assert.AreEqual(testItem.ParcelInstance, 1, 0);
-            Assert.AreEqual(testItem.ParcelId, "17968198-1", true);
-            Assert.AreEqual(testItem.ParcelWeight, 2.2, 0);
-            Assert.AreEqual(testItem.ParcelLength, 15, 0);
-            Assert.AreEqual(testItem.ParcelWidth, 15, 0);
-            Assert.AreEqual(testItem.ParcelHeight, 5, 0);
+            Assert.AreEqual(SampleParcel1.ParcelInstance, testItem.ParcelInstance, 0);  // 1
+            Assert.AreEqual(SampleParcel1.ParcelId, testItem.ParcelId, true);           // "17968198-1"
+            Assert.AreEqual(SampleParcel1.ParcelWeight, testItem.ParcelWeight, 0);      // 2.2
+            Assert.AreEqual(SampleParcel1.ParcelLength, testItem.ParcelLength, 0);      // 15
+            Assert.AreEqual(SampleParcel1.ParcelWidth, testItem.ParcelWidth, 0);        // 15
+            Assert.AreEqual(SampleParcel1.ParcelHeight, testItem.ParcelHeight, 0);      // 5
 
             testItem.FindNextParcel();
-            Assert.AreEqual(testItem.ParcelInstance, 2, 0);
-            Assert.AreEqual(testItem.ParcelId, "17968198-2", true);
-            Assert.AreEqual(testItem.ParcelWeight, 0.9, 0);
-            Assert.AreEqual(testItem.ParcelLength, 45, 0);
-            Assert.AreEqual(testItem.ParcelWidth, 10, 0);
-            Assert.AreEqual(testItem.ParcelHeight, 3, 0);
+            Assert.AreEqual(SampleParcel2.ParcelInstance, testItem.ParcelInstance, 0);  // 2
+            Assert.AreEqual(SampleParcel2.ParcelId, testItem.ParcelId, true);           // "17968198-2"
+            Assert.AreEqual(SampleParcel2.ParcelWeight, testItem.ParcelWeight, 0);      // 0.9
+            Assert.AreEqual(SampleParcel2.ParcelLength, testItem.ParcelLength, 0);      // 45
+            Assert.AreEqual(SampleParcel2.ParcelWidth, testItem.ParcelWidth, 0);        // 10
+            Assert.AreEqual(SampleParcel2.ParcelHeight, testItem.ParcelHeight, 0);      // 3
         }
         #endregion
 
@@ -647,50 +647,50 @@ namespace CM.SendBrick.Library.Tests
             RoyalMailData testItem;
 
             testItem = new RoyalMailData();
-            testItem.AddItem("10782",
-                    1,
-                    2,
-                    "Hulk vs. Rhino Truck Showdown",
-                    17.99,
-                    0.9,
-                    "652534",
-                    "SKU3455692",
-                    "GB",
-                    "https://images.brickset.com/sets/large/10782-1.jpg?202109211242");
-            testItem.AddItem("76205",
-                    1,
-                    1,
-                    "Gargantos Showdown",
-                    24.99,
-                    1.0,
-                    "652584",
-                    "SKU3455682",
-                    "GB",
-                    "https://images.brickset.com/sets/images/76205-1.jpg?202109211239");
+            testItem.AddItem(SampleItem1.ItemId,                // "10782"
+                            SampleItem1.ItemQuantity,           // 1
+                            SampleItem1.ItemParcelInstance,     // 2
+                            SampleItem1.ItemDescription,        // "Hulk vs. Rhino Truck Showdown"
+                            SampleItem1.ItemValue,              // 17.99
+                            SampleItem1.ItemWeight,             // 0.9
+                            SampleItem1.ItemHsCode,             // "652534"
+                            SampleItem1.ItemSkuCode,            // "SKU3455692"
+                            SampleItem1.ItemCountryOfOrigin,    // "GB"
+                            SampleItem1.ItemImageUrl);          // "https://images.brickset.com/sets/large/10782-1.jpg?202109211242"
+            testItem.AddItem(SampleItem2.ItemId,                // "76205"
+                            SampleItem2.ItemQuantity,           // 1
+                            SampleItem2.ItemParcelInstance,     // 1
+                            SampleItem2.ItemDescription,        // "Gargantos Showdown"
+                            SampleItem2.ItemValue,              // 24.99
+                            SampleItem2.ItemWeight,             // 1.0
+                            SampleItem2.ItemHsCode,             // "652584"
+                            SampleItem2.ItemSkuCode,            // "SKU3455682"
+                            SampleItem2.ItemCountryOfOrigin,    // "GB"
+                            SampleItem2.ItemImageUrl);          //1 "https://images.brickset.com/sets/images/76205-1.jpg?202109211239"
 
             testItem.FindFirstItem();
-            Assert.AreEqual(testItem.ItemId, "10782", false);
-            Assert.AreEqual(testItem.ItemQuantity, 1, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Hulk vs. Rhino Truck Showdown", false);
-            Assert.AreEqual(testItem.ItemValue, 17.99, 0);
-            Assert.AreEqual(testItem.ItemWeight, 0.9, 0);
-            Assert.AreEqual(testItem.ItemParcelInstance, 2, 0);
-            Assert.AreEqual(testItem.ItemHsCode, "652534", false);
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU3455692", false);
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "GB", false);
-            Assert.AreEqual(testItem.ItemImageUrl, "https://images.brickset.com/sets/large/10782-1.jpg?202109211242", false);
+            Assert.AreEqual(SampleItem1.ItemId, testItem.ItemId, false);                        // "10782"
+            Assert.AreEqual(SampleItem1.ItemQuantity, testItem.ItemQuantity, 0);                // 1
+            Assert.AreEqual(SampleItem1.ItemDescription, testItem.ItemDescription, false);      // "Hulk vs. Rhino Truck Showdown"
+            Assert.AreEqual(SampleItem1.ItemValue, testItem.ItemValue, 0);                      // 17.99
+            Assert.AreEqual(SampleItem1.ItemWeight, testItem.ItemWeight, 0);                    // 0.9
+            Assert.AreEqual(SampleItem1.ItemParcelInstance, testItem.ItemParcelInstance, 0);    // 2
+            Assert.AreEqual(SampleItem1.ItemHsCode, testItem.ItemHsCode, false);                // "652534"
+            Assert.AreEqual(SampleItem1.ItemSkuCode, testItem.ItemSkuCode, false);              // "SKU3455692"
+            Assert.AreEqual(SampleItem1.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin, false);  // "GB"
+            Assert.AreEqual(SampleItem1.ItemImageUrl, testItem.ItemImageUrl, false);            // "https://images.brickset.com/sets/large/10782-1.jpg?202109211242"
 
             testItem.FindNextItem();
-            Assert.AreEqual(testItem.ItemId, "76205", false);
-            Assert.AreEqual(testItem.ItemQuantity, 1, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Gargantos Showdown", false);
-            Assert.AreEqual(testItem.ItemValue, 24.99, 0);
-            Assert.AreEqual(testItem.ItemWeight, 1.0, 0);
-            Assert.AreEqual(testItem.ItemParcelInstance, 1, 0);
-            Assert.AreEqual(testItem.ItemHsCode, "652584", false);
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU3455682", false);
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "GB", false);
-            Assert.AreEqual(testItem.ItemImageUrl, "https://images.brickset.com/sets/images/76205-1.jpg?202109211239", false);
+            Assert.AreEqual(SampleItem2.ItemId, testItem.ItemId, false);                        //, "76205"
+            Assert.AreEqual(SampleItem2.ItemQuantity, testItem.ItemQuantity, 0);                // 1
+            Assert.AreEqual(SampleItem2.ItemDescription, testItem.ItemDescription, false);      // "Gargantos Showdown"
+            Assert.AreEqual(SampleItem2.ItemValue, testItem.ItemValue, 0);                      // 24.99
+            Assert.AreEqual(SampleItem2.ItemWeight, testItem.ItemWeight, 0);                    // 1.0
+            Assert.AreEqual(SampleItem2.ItemParcelInstance, testItem.ItemParcelInstance, 0);    // 1
+            Assert.AreEqual(SampleItem2.ItemHsCode, testItem.ItemHsCode, false);                // "652584"
+            Assert.AreEqual(SampleItem2.ItemSkuCode, testItem.ItemSkuCode, false);              // "SKU3455682"
+            Assert.AreEqual(SampleItem2.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin, false);  // "GB"
+            Assert.AreEqual(SampleItem2.ItemImageUrl, testItem.ItemImageUrl, false);            // "https://images.brickset.com/sets/images/76205-1.jpg?202109211239"
         }
 
         /// <summary>
@@ -703,52 +703,52 @@ namespace CM.SendBrick.Library.Tests
 
             testItem = new RoyalMailData();
             testItem.AddItem();
-            testItem.ItemId = "10782";
-            testItem.ItemQuantity = 1;
-            testItem.ItemDescription = "Hulk vs. Rhino Truck Showdown";
-            testItem.ItemValue = 17.99;
-            testItem.ItemWeight = 0.9;
-            testItem.ItemParcelInstance = 2;
-            testItem.ItemHsCode = "652534";
-            testItem.ItemSkuCode = "SKU3455692";
-            testItem.ItemCountryOfOrigin = "GB";
-            testItem.ItemImageUrl = "https://images.brickset.com/sets/large/10782-1.jpg?202109211242";
+            testItem.ItemId = SampleItem1.ItemId;                           // "10782"
+            testItem.ItemQuantity = SampleItem1.ItemQuantity;               // 1
+            testItem.ItemDescription = SampleItem1.ItemDescription;         // "Hulk vs. Rhino Truck Showdown"
+            testItem.ItemValue = SampleItem1.ItemValue;                     // 17.99
+            testItem.ItemWeight = SampleItem1.ItemWeight;                   // 0.9
+            testItem.ItemParcelInstance = SampleItem1.ItemParcelInstance;   // 2
+            testItem.ItemHsCode = SampleItem1.ItemHsCode;                   // "652534"
+            testItem.ItemSkuCode = SampleItem1.ItemSkuCode;                 // "SKU3455692"
+            testItem.ItemCountryOfOrigin = SampleItem1.ItemCountryOfOrigin; // "GB"
+            testItem.ItemImageUrl = SampleItem1.ItemImageUrl;               // "https://images.brickset.com/sets/large/10782-1.jpg?202109211242"
 
             testItem.AddItem();
-            testItem.ItemId = "76205";
-            testItem.ItemQuantity = 1;
-            testItem.ItemDescription = "Gargantos Showdown";
-            testItem.ItemValue = 24.99;
-            testItem.ItemWeight = 1.0;
-            testItem.ItemParcelInstance = 1;
-            testItem.ItemHsCode = "652584";
-            testItem.ItemSkuCode = "SKU3455682";
-            testItem.ItemCountryOfOrigin = "GB";
-            testItem.ItemImageUrl = "https://images.brickset.com/sets/images/76205-1.jpg?202109211239";
+            testItem.ItemId = SampleItem2.ItemId;                           // "76205"
+            testItem.ItemQuantity = SampleItem2.ItemQuantity;               // 1
+            testItem.ItemDescription = SampleItem2.ItemDescription;         // "Gargantos Showdown"
+            testItem.ItemValue = SampleItem2.ItemValue;                     // 24.99
+            testItem.ItemWeight = SampleItem2.ItemWeight;                   // 1.0
+            testItem.ItemParcelInstance = SampleItem2.ItemParcelInstance;   // 1
+            testItem.ItemHsCode = SampleItem2.ItemHsCode;                   // "652584"
+            testItem.ItemSkuCode = SampleItem2.ItemSkuCode;                 // "SKU3455682"
+            testItem.ItemCountryOfOrigin = SampleItem2.ItemCountryOfOrigin; // "GB"
+            testItem.ItemImageUrl = SampleItem2.ItemImageUrl;               // "https://images.brickset.com/sets/images/76205-1.jpg?202109211239"
 
             testItem.FindFirstItem();
-            Assert.AreEqual(testItem.ItemId, "10782", false);
-            Assert.AreEqual(testItem.ItemQuantity, 1, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Hulk vs. Rhino Truck Showdown", false);
-            Assert.AreEqual(testItem.ItemValue, 17.99, 0);
-            Assert.AreEqual(testItem.ItemWeight, 0.9, 0);
-            Assert.AreEqual(testItem.ItemParcelInstance, 2, 0);
-            Assert.AreEqual(testItem.ItemHsCode, "652534", false);
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU3455692", false);
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "GB", false);
-            Assert.AreEqual(testItem.ItemImageUrl, "https://images.brickset.com/sets/large/10782-1.jpg?202109211242", false);
+            Assert.AreEqual(SampleItem1.ItemId, testItem.ItemId, false);                        // "10782"
+            Assert.AreEqual(SampleItem1.ItemQuantity, testItem.ItemQuantity, 0);                // 1
+            Assert.AreEqual(SampleItem1.ItemDescription, testItem.ItemDescription, false);      // "Hulk vs. Rhino Truck Showdown"
+            Assert.AreEqual(SampleItem1.ItemValue, testItem.ItemValue, 0);                      // 17.99
+            Assert.AreEqual(SampleItem1.ItemWeight, testItem.ItemWeight, 0);                    // 0.9
+            Assert.AreEqual(SampleItem1.ItemParcelInstance, testItem.ItemParcelInstance, 0);    // 2
+            Assert.AreEqual(SampleItem1.ItemHsCode, testItem.ItemHsCode, false);                // "652534"
+            Assert.AreEqual(SampleItem1.ItemSkuCode, testItem.ItemSkuCode, false);              // "SKU3455692"
+            Assert.AreEqual(SampleItem1.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin, false);  // "GB"
+            Assert.AreEqual(SampleItem1.ItemImageUrl, testItem.ItemImageUrl, false);            // "https://images.brickset.com/sets/large/10782-1.jpg?202109211242"
 
             testItem.FindNextItem();
-            Assert.AreEqual(testItem.ItemId, "76205", false);
-            Assert.AreEqual(testItem.ItemQuantity, 1, 0);
-            Assert.AreEqual(testItem.ItemDescription, "Gargantos Showdown", false);
-            Assert.AreEqual(testItem.ItemValue, 24.99, 0);
-            Assert.AreEqual(testItem.ItemWeight, 1.0, 0);
-            Assert.AreEqual(testItem.ItemParcelInstance, 1, 0);
-            Assert.AreEqual(testItem.ItemHsCode, "652584", false);
-            Assert.AreEqual(testItem.ItemSkuCode, "SKU3455682", false);
-            Assert.AreEqual(testItem.ItemCountryOfOrigin, "GB", false);
-            Assert.AreEqual(testItem.ItemImageUrl, "https://images.brickset.com/sets/images/76205-1.jpg?202109211239", false);
+            Assert.AreEqual(SampleItem2.ItemId, testItem.ItemId, false);                        //, "76205"
+            Assert.AreEqual(SampleItem2.ItemQuantity, testItem.ItemQuantity, 0);                // 1
+            Assert.AreEqual(SampleItem2.ItemDescription, testItem.ItemDescription, false);      // "Gargantos Showdown"
+            Assert.AreEqual(SampleItem2.ItemValue, testItem.ItemValue, 0);                      // 24.99
+            Assert.AreEqual(SampleItem2.ItemWeight, testItem.ItemWeight, 0);                    // 1.0
+            Assert.AreEqual(SampleItem2.ItemParcelInstance, testItem.ItemParcelInstance, 0);    // 1
+            Assert.AreEqual(SampleItem2.ItemHsCode, testItem.ItemHsCode, false);                // "652584"
+            Assert.AreEqual(SampleItem2.ItemSkuCode, testItem.ItemSkuCode, false);              // "SKU3455682"
+            Assert.AreEqual(SampleItem2.ItemCountryOfOrigin, testItem.ItemCountryOfOrigin, false);  // "GB"
+            Assert.AreEqual(SampleItem2.ItemImageUrl, testItem.ItemImageUrl, false);            // "https://images.brickset.com/sets/images/76205-1.jpg?202109211239"
         }
         #endregion
 
@@ -867,67 +867,65 @@ namespace CM.SendBrick.Library.Tests
         {
             RoyalMailData testItem;
 
-            DateTime justDate = new DateTime(2022, 01, 16);
-
-            testItem = new RoyalMailData(SampleOrder1.SupplierId,       // "bricksinbloom7308"
-                                SampleOrder1.SupplierReference1,        // "7308"
-                                SampleOrder1.SupplierReference2,        // "BrickLink"
-                                SampleOrder1.Department,                // 7308
-                                SampleOrder1.SupplierBusinessName,      // "Bricks In Bloom"
-                                SampleOrder1.SupplierContactName,       // "Leigha Middleton"
-                                SampleOrder1.SupplierAddressLine1,      // "Unit 4"
-                                SampleOrder1.SupplierAddressLine2,      // "Candy Works"
-                                SampleOrder1.SupplierAddressLine3,      // "15 Parkhouse Road"
-                                SampleOrder1.SupplierAddressTown,       // "Carlisle"
-                                SampleOrder1.SupplierAddressCounty,     // "Cumbria"
-                                SampleOrder1.SupplierCountryCode,       // "GB"
-                                SampleOrder1.SupplierAddressPostcode,   // "CA3 0JU"
-                                SampleOrder1.SupplierPhoneNumber,       // "1228511030"
-                                SampleOrder1.SupplierEmailAddress,      // "bricksinbloom@bricklink.com"
-                                SampleOrder1.SupplierVatNumber,         // "GB123 4567 89"
-                                SampleOrder1.CustomerId,                // "BL15748250"
-                                SampleOrder1.CustomerBusinessName,      // ""
-                                SampleOrder1.CustomerContactName,       // "Colin Middleton"
-                                SampleOrder1.CustomerAddressLine1,      // "257 Ecclesall Road"
-                                SampleOrder1.CustomerAddressLine2,      // ""
-                                SampleOrder1.CustomerAddressLine3,      // "Sheffield"
-                                SampleOrder1.CustomerAddressTown,       // ""
-                                SampleOrder1.CustomerAddressCounty,     // "South Yorkshire"
-                                SampleOrder1.CustomerCountryCode,       // "GB"
-                                SampleOrder1.CustomerAddressPostcode,   // "S5 7HJ"
-                                SampleOrder1.CustomerPhoneNumber,       // "7505363818"
-                                SampleOrder1.CustomerEmailAddress,      // "colin@test.com"
-                                SampleOrder1.CustomerVatNumber,         // ""
-                                SampleOrder1.PostingDate,               // 16/01/2022
-                                SampleOrder1.PostageType,               // "TPLN"
-                                SampleOrder1.PostingWeightUOM,          // "KG"
-                                SampleOrder1.CustomsProduct,            // "LEGO"
-                                SampleOrder1.CustomsDescriptionOfGoods, // "LEGO sets"
-                                SampleOrder1.CustomsReasonForExport,    // "Sale of goods"
-                                SampleOrder1.CustomsValue,              // 112.97
-                                SampleOrder1.CustomsCurrency,           // "GBP"
-                                SampleOrder1.CustomsIncoterms,          // "DDU"
-                                SampleOrder1.CustomsLabelFormat,        // "PDF"
-                                SampleOrder1.CustomsSilentPrintProfile, // "75b59db8-3cd3-4578-888e-54be016f07cc"
-                                SampleOrder1.CustomsShipmentAction,     // "Process"
-                                SampleOrder1.PostingLocation,           // "123456789"
-                                SampleOrder1.PostingServiceLevel,       // "01"
-                                SampleOrder1.PostingServiceFormat,      // "P"
-                                SampleOrder1.CustomerSafeplace,         // "Front Porch"
-                                SampleOrder1.PostingSaturdayGuaranteed, // false
-                                SampleOrder1.PostingConsequentialLoss,  // "Level5"
-                                SampleOrder1.PostingLocalCollect,       // false
+            testItem = new RoyalMailData(SampleOrder1.SupplierId,           // "bricksinbloom7308"
+                                SampleOrder1.SupplierReference1,            // "7308"
+                                SampleOrder1.SupplierReference2,            // "BrickLink"
+                                SampleOrder1.Department,                    // 7308
+                                SampleOrder1.SupplierBusinessName,          // "Bricks In Bloom"
+                                SampleOrder1.SupplierContactName,           // "Leigha Middleton"
+                                SampleOrder1.SupplierAddressLine1,          // "Unit 4"
+                                SampleOrder1.SupplierAddressLine2,          // "Candy Works"
+                                SampleOrder1.SupplierAddressLine3,          // "15 Parkhouse Road"
+                                SampleOrder1.SupplierAddressTown,           // "Carlisle"
+                                SampleOrder1.SupplierAddressCounty,         // "Cumbria"
+                                SampleOrder1.SupplierCountryCode,           // "GB"
+                                SampleOrder1.SupplierAddressPostcode,       // "CA3 0JU"
+                                SampleOrder1.SupplierPhoneNumber,           // "1228511030"
+                                SampleOrder1.SupplierEmailAddress,          // "bricksinbloom@bricklink.com"
+                                SampleOrder1.SupplierVatNumber,             // "GB123 4567 89"
+                                SampleOrder1.CustomerId,                    // "BL15748250"
+                                SampleOrder1.CustomerBusinessName,          // ""
+                                SampleOrder1.CustomerContactName,           // "Colin Middleton"
+                                SampleOrder1.CustomerAddressLine1,          // "257 Ecclesall Road"
+                                SampleOrder1.CustomerAddressLine2,          // ""
+                                SampleOrder1.CustomerAddressLine3,          // "Sheffield"
+                                SampleOrder1.CustomerAddressTown,           // ""
+                                SampleOrder1.CustomerAddressCounty,         // "South Yorkshire"
+                                SampleOrder1.CustomerCountryCode,           // "GB"
+                                SampleOrder1.CustomerAddressPostcode,       // "S5 7HJ"
+                                SampleOrder1.CustomerPhoneNumber,           // "7505363818"
+                                SampleOrder1.CustomerEmailAddress,          // "colin@test.com"
+                                SampleOrder1.CustomerVatNumber,             // ""
+                                SampleOrder1.PostingDate,                   // 16/01/2022
+                                SampleOrder1.PostageType,                   // "TPLN"
+                                SampleOrder1.PostingWeightUOM,              // "KG"
+                                SampleOrder1.CustomsProduct,                // "LEGO"
+                                SampleOrder1.CustomsDescriptionOfGoods,     // "LEGO sets"
+                                SampleOrder1.CustomsReasonForExport,        // "Sale of goods"
+                                SampleOrder1.CustomsValue,                  // 112.97
+                                SampleOrder1.CustomsCurrency,               // "GBP"
+                                SampleOrder1.CustomsIncoterms,              // "DDU"
+                                SampleOrder1.CustomsLabelFormat,            // "PDF"
+                                SampleOrder1.CustomsSilentPrintProfile,     // "75b59db8-3cd3-4578-888e-54be016f07cc"
+                                SampleOrder1.CustomsShipmentAction,         // "Process"
+                                SampleOrder1.PostingLocation,               // "123456789"
+                                SampleOrder1.PostingServiceLevel,           // "01"
+                                SampleOrder1.PostingServiceFormat,          // "P"
+                                SampleOrder1.CustomerSafeplace,             // "Front Porch"
+                                SampleOrder1.PostingSaturdayGuaranteed,     // false
+                                SampleOrder1.PostingConsequentialLoss,      // "Level5"
+                                SampleOrder1.PostingLocalCollect,           // false
                                 SampleOrder1.PostingTrackingNotifications,  // "EmailAndSMS"
-                                SampleOrder1.PostingRecordedSignedFor,  // false
-            "GB15748250",
-                "EORI",
-                10.42,
-                0.00,
-                0.00,
-                15748250,
-                justDate,
-                false,
-                1234567890);
+                                SampleOrder1.PostingRecordedSignedFor,      // false
+                                SampleOrder1.CustomsPreRegistrationNumber,  // "GB15748250"
+                                SampleOrder1.CustomsPreRegistrationType,    // "EORI"
+                                SampleOrder1.CustomsShippingCharges,        // 10.42
+                                SampleOrder1.CustomsOtherCharges,           // 0.00
+                                SampleOrder1.CustomsQuotedLandedCost,       // 0.00
+                                Convert.ToInt32(SampleOrder1.CustomsInvoiceNumber), // 15748250
+                                SampleOrder1.CustomsInvoiceDate,            // "2022-01-16
+                                SampleOrder1.CustomsExportLicence,          // false,
+                                SampleOrder1.AddresseeIdentificationReferenceNumber);     // 1234567890);
 
             Assert.AreEqual(SampleOrder1.SupplierId, testItem.SupplierId, false);                           // "bricksinbloom7308"
             Assert.AreEqual(SampleOrder1.SupplierReference1, testItem.SupplierReference1, false);           // "7308"
@@ -987,16 +985,15 @@ namespace CM.SendBrick.Library.Tests
             Assert.AreEqual(SampleOrder1.PostingTrackingNotifications, testItem.PostingTrackingNotifications, false);   // "EmailAndSMS"
             Assert.AreEqual(SampleOrder1.PostingRecordedSignedFor, testItem.PostingRecordedSignedFor);                  // false
 
-            Assert.AreEqual("GB15748250", testItem.CustomsPreRegistrationNumber, false);
-            Assert.AreEqual("EORI", testItem.CustomsPreRegistrationType, false);
-            Assert.AreEqual(10.42, testItem.CustomsShippingCharges, 0);
-            Assert.AreEqual(0.00, testItem.CustomsOtherCharges, 0);
-            Assert.AreEqual(0.00, testItem.CustomsQuotedLandedCost, 0);
-            Assert.AreEqual("15748250", testItem.CustomsInvoiceNumber, false);
-            Assert.AreEqual(justDate.ToString(), testItem.CustomsInvoiceDate.ToString(), false);
-            Assert.IsFalse(testItem.CustomsExportLicence);
-            Assert.AreEqual(1234567890, testItem.AddresseeIdentificationReferenceNumber, 0);
-
+            Assert.AreEqual(SampleOrder1.CustomsPreRegistrationNumber, testItem.CustomsPreRegistrationNumber, false);   // "GB15748250"
+            Assert.AreEqual(SampleOrder1.CustomsPreRegistrationType, testItem.CustomsPreRegistrationType, false);       // "EORI"
+            Assert.AreEqual(SampleOrder1.CustomsShippingCharges, testItem.CustomsShippingCharges, 0);                   // 10.42
+            Assert.AreEqual(SampleOrder1.CustomsOtherCharges, testItem.CustomsOtherCharges, 0);                         // 0.00
+            Assert.AreEqual(SampleOrder1.CustomsQuotedLandedCost, testItem.CustomsQuotedLandedCost, 0);                 // 0.00
+            Assert.AreEqual(SampleOrder1.CustomsInvoiceNumber, testItem.CustomsInvoiceNumber, false);                   // "15748250"
+            Assert.AreEqual(SampleOrder1.CustomsInvoiceDate.ToString(), testItem.CustomsInvoiceDate.ToString(), false); // "2022-01-16"
+            Assert.AreEqual(SampleOrder1.CustomsExportLicence, testItem.CustomsExportLicence);                          // false
+            Assert.AreEqual(SampleOrder1.AddresseeIdentificationReferenceNumber, testItem.AddresseeIdentificationReferenceNumber, 0);   // 1234567890
         }
 
         ///// <summary>

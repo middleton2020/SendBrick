@@ -4408,7 +4408,7 @@ namespace CM.SendBrick.Library.Tests
             //Items.packageOccurrence
             get
             {
-                return 0;
+                return 2;
             }
         }
         public static int ItemQuantity
@@ -4495,7 +4495,7 @@ namespace CM.SendBrick.Library.Tests
             //Items.packageOccurrence
             get
             {
-                return 0;
+                return 1;
             }
         }
         public static int ItemQuantity
@@ -4582,7 +4582,7 @@ namespace CM.SendBrick.Library.Tests
             //Items.packageOccurrence
             get
             {
-                return 0;
+                return 1;
             }
         }
         public static int ItemQuantity
@@ -4669,7 +4669,7 @@ namespace CM.SendBrick.Library.Tests
             //Items.packageOccurrence
             get
             {
-                return 0;
+                return 2;
             }
         }
         public static int ItemQuantity
