@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 namespace CM.SendBrick.Library.Tests
 {
     #region FullOrders
+    /// <summary>
+    /// "Bricks In Bloom", "Unit 4", "Colin Middleton", "Sheffield", "GBP", 10.42, 112.97, Saturday: no, Items: 3, Packagaes: 2
+    /// </summary>
     static class SampleOrder1
     {
         #region SupplierValues
@@ -218,7 +221,7 @@ namespace CM.SendBrick.Library.Tests
             //Destination.town
             get
             {
-                return "";
+                return "Sheffield";
             }
         }
         public static string CustomerAddressCounty
@@ -885,6 +888,9 @@ namespace CM.SendBrick.Library.Tests
         #endregion
     }
 
+    /// <summary>
+    /// "Bricks In Bloom", "Unit 5", "Colin Middleton", "", "GBP", 10.42, 112.97, Saturday: no, Items: 3, Packagaes: 2
+    /// </summary>
     static class SampleOrder2
     {
         #region SupplierValues
@@ -1763,6 +1769,9 @@ namespace CM.SendBrick.Library.Tests
         #endregion
     }
 
+    /// <summary>
+    /// "Brick Lane", "Unit 4", "Bad Bob", "", "GBP", 12.44, 112.97, Saturday: yes, Items: 4, Packagaes: 3
+    /// </summary>
     static class SampleOrder3
     {
         #region SupplierValues

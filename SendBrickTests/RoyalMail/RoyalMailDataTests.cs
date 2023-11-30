@@ -62,40 +62,40 @@ namespace CM.SendBrick.Library.Tests
             RoyalMailData testItem;
 
             testItem = new RoyalMailData();
-            testItem.AddShipper(SampleOrder1.SupplierId,
-                                SampleOrder1.SupplierReference1,
-                                SampleOrder1.SupplierReference2,
-                                SampleOrder1.Department,
-                                SampleOrder1.SupplierBusinessName,
-                                SampleOrder1.SupplierContactName,
-                                SampleOrder1.SupplierAddressLine1,
-                                SampleOrder1.SupplierAddressLine2,
-                                SampleOrder1.SupplierAddressLine3,
-                                SampleOrder1.SupplierAddressTown,
-                                SampleOrder1.SupplierAddressCounty,
-                                SampleOrder1.SupplierCountryCode,
-                                SampleOrder1.SupplierAddressPostcode,
-                                SampleOrder1.SupplierPhoneNumber,
-                                SampleOrder1.SupplierEmailAddress,
-                                SampleOrder1.SupplierVatNumber);
+            testItem.AddShipper(SampleOrder1.SupplierId,                // "bricksinbloom7308"
+                                SampleOrder1.SupplierReference1,        // "7308"
+                                SampleOrder1.SupplierReference2,        // "BrickLink"
+                                SampleOrder1.Department,                // 7308
+                                SampleOrder1.SupplierBusinessName,      // "Bricks In Bloom"
+                                SampleOrder1.SupplierContactName,       // "Leigha Middleton"
+                                SampleOrder1.SupplierAddressLine1,      // "Unit 4"
+                                SampleOrder1.SupplierAddressLine2,      // "Candy Works"
+                                SampleOrder1.SupplierAddressLine3,      // "15 Parkhouse Road"
+                                SampleOrder1.SupplierAddressTown,       // "Carlisle"
+                                SampleOrder1.SupplierAddressCounty,     // "Cumbria"
+                                SampleOrder1.SupplierCountryCode,       // "GB"
+                                SampleOrder1.SupplierAddressPostcode,   // "CA3 0JU"
+                                SampleOrder1.SupplierPhoneNumber,       // "1228511030"
+                                SampleOrder1.SupplierEmailAddress,      // "bricksinbloom@bricklink.com"
+                                SampleOrder1.SupplierVatNumber);        // "GB123 4567 89"
 
-            Assert.AreEqual(SampleOrder1.SupplierId, testItem.SupplierId, false);
-            Assert.AreEqual(SampleOrder1.SupplierReference1, testItem.SupplierReference1, false);
-            Assert.AreEqual(SampleOrder1.SupplierReference2, testItem.SupplierReference2, false);
-            Assert.AreEqual(SampleOrder1.Department, testItem.Department, 0);
-            Assert.AreEqual(SampleOrder1.SupplierBusinessName, testItem.SupplierBusinessName, false);
-            Assert.AreEqual(SampleOrder1.SupplierContactName, testItem.SupplierContactName, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressLine1, testItem.SupplierAddressLine1, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressLine2, testItem.SupplierAddressLine2, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressLine3, testItem.SupplierAddressLine3, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressLine4, testItem.SupplierAddressLine4, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressTown, testItem.SupplierAddressTown, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressCounty, testItem.SupplierAddressCounty, false);
-            Assert.AreEqual(SampleOrder1.SupplierCountryCode, testItem.SupplierCountryCode, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressPostcode, testItem.SupplierAddressPostcode, false);
-            Assert.AreEqual(SampleOrder1.SupplierPhoneNumber, testItem.SupplierPhoneNumber, false);
-            Assert.AreEqual(SampleOrder1.SupplierEmailAddress, testItem.SupplierEmailAddress, false);
-            Assert.AreEqual(SampleOrder1.SupplierVatNumber, testItem.SupplierVatNumber, false);
+            Assert.AreEqual(SampleOrder1.SupplierId, testItem.SupplierId, false);                           // "bricksinbloom7308"
+            Assert.AreEqual(SampleOrder1.SupplierReference1, testItem.SupplierReference1, false);           // "7308"
+            Assert.AreEqual(SampleOrder1.SupplierReference2, testItem.SupplierReference2, false);           // "BrickLink"
+            Assert.AreEqual(SampleOrder1.Department, testItem.Department, 0);                               // 7380
+            Assert.AreEqual(SampleOrder1.SupplierBusinessName, testItem.SupplierBusinessName, false);       // "Bricks In Bloom"
+            Assert.AreEqual(SampleOrder1.SupplierContactName, testItem.SupplierContactName, false);         //"Leigha Middleton"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine1, testItem.SupplierAddressLine1, false);       // "Unit 4"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine2, testItem.SupplierAddressLine2, false);       // "Candy Works"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine3, testItem.SupplierAddressLine3, false);       // "15 Parkhouse Road"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine4, testItem.SupplierAddressLine4, false);       // ""
+            Assert.AreEqual(SampleOrder1.SupplierAddressTown, testItem.SupplierAddressTown, false);         // "Carlisle"
+            Assert.AreEqual(SampleOrder1.SupplierAddressCounty, testItem.SupplierAddressCounty, false);     // "Cumbria"
+            Assert.AreEqual(SampleOrder1.SupplierCountryCode, testItem.SupplierCountryCode, false);         // "GB"
+            Assert.AreEqual(SampleOrder1.SupplierAddressPostcode, testItem.SupplierAddressPostcode, false); // "CA3 0JU"
+            Assert.AreEqual(SampleOrder1.SupplierPhoneNumber, testItem.SupplierPhoneNumber, false);         // "1228511030"
+            Assert.AreEqual(SampleOrder1.SupplierEmailAddress, testItem.SupplierEmailAddress, false);       // "bricksinbloom@bricklink.com"
+            Assert.AreEqual(SampleOrder1.SupplierVatNumber, testItem.SupplierVatNumber, false);             // "GB123 4567 89"
         }
 
         /// <summary>
@@ -107,40 +107,41 @@ namespace CM.SendBrick.Library.Tests
             RoyalMailData testItem;
 
             testItem = new RoyalMailData();
-            testItem.SupplierId = SampleOrder1.SupplierId;
-            testItem.SupplierReference1 = SampleOrder1.SupplierReference1;
-            testItem.SupplierReference2 = SampleOrder1.SupplierReference2;
-            testItem.Department = SampleOrder1.Department;
-            testItem.SupplierBusinessName = SampleOrder1.SupplierBusinessName;
-            testItem.SupplierContactName = SampleOrder1.SupplierContactName;
-            testItem.SupplierAddressLine1 = SampleOrder1.SupplierAddressLine1;
-            testItem.SupplierAddressLine2 = SampleOrder1.SupplierAddressLine2;
-            testItem.SupplierAddressLine3 = SampleOrder1.SupplierAddressLine3;
-            testItem.SupplierAddressTown = SampleOrder1.SupplierAddressTown;
-            testItem.SupplierAddressCounty = SampleOrder1.SupplierAddressCounty;
-            testItem.SupplierCountryCode = SampleOrder1.SupplierCountryCode;
-            testItem.SupplierAddressPostcode = SampleOrder1.SupplierAddressPostcode;
-            testItem.SupplierPhoneNumber = SampleOrder1.SupplierPhoneNumber;
-            testItem.SupplierEmailAddress = SampleOrder1.SupplierEmailAddress;
-            testItem.SupplierVatNumber = SampleOrder1.SupplierVatNumber;
+            testItem.SupplierId = SampleOrder1.SupplierId;                              // "bricksinbloom7308"
+            testItem.SupplierReference1 = SampleOrder1.SupplierReference1;              // "7308"
+            testItem.SupplierReference2 = SampleOrder1.SupplierReference2;              // "BrickLink"
+            testItem.Department = SampleOrder1.Department;                              // 7308
+            testItem.SupplierBusinessName = SampleOrder1.SupplierBusinessName;          // "Bricks In Bloom"
+            testItem.SupplierContactName = SampleOrder1.SupplierContactName;            // "Leigha Middleton"
+            testItem.SupplierAddressLine1 = SampleOrder1.SupplierAddressLine1;          // "Unit 4"
+            testItem.SupplierAddressLine2 = SampleOrder1.SupplierAddressLine2;          // "Candy Works"
+            testItem.SupplierAddressLine3 = SampleOrder1.SupplierAddressLine3;          // "15 Parkhouse Road"
+            testItem.SupplierAddressTown = SampleOrder1.SupplierAddressTown;            // ""
+            testItem.SupplierAddressCounty = SampleOrder1.SupplierAddressCounty;        // "Carlisle"
+            testItem.SupplierAddressCounty = SampleOrder1.SupplierAddressCounty;        // "Cumbria"
+            testItem.SupplierCountryCode = SampleOrder1.SupplierCountryCode;            // "GB"
+            testItem.SupplierAddressPostcode = SampleOrder1.SupplierAddressPostcode;    // "CA3 0JU"
+            testItem.SupplierPhoneNumber = SampleOrder1.SupplierPhoneNumber;            // "1228511030"
+            testItem.SupplierEmailAddress = SampleOrder1.SupplierEmailAddress;          // "bricksinbloom@bricklink.com"
+            testItem.SupplierVatNumber = SampleOrder1.SupplierVatNumber;                // "GB123 4567 89"
 
-            Assert.AreEqual(SampleOrder1.SupplierId, testItem.SupplierId, false);
-            Assert.AreEqual(SampleOrder1.SupplierReference1, testItem.SupplierReference1, false);
-            Assert.AreEqual(SampleOrder1.SupplierReference2, testItem.SupplierReference2, false);
-            Assert.AreEqual(SampleOrder1.Department, testItem.Department, 0);
-            Assert.AreEqual(SampleOrder1.SupplierBusinessName, testItem.SupplierBusinessName, false);
-            Assert.AreEqual(SampleOrder1.SupplierContactName, testItem.SupplierContactName, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressLine1, testItem.SupplierAddressLine1, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressLine2, testItem.SupplierAddressLine2, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressLine3, testItem.SupplierAddressLine3, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressLine4, testItem.SupplierAddressLine4, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressTown, testItem.SupplierAddressTown, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressCounty, testItem.SupplierAddressCounty, false);
-            Assert.AreEqual(SampleOrder1.SupplierCountryCode, testItem.SupplierCountryCode, false);
-            Assert.AreEqual(SampleOrder1.SupplierAddressPostcode, testItem.SupplierAddressPostcode, false);
-            Assert.AreEqual(SampleOrder1.SupplierPhoneNumber, testItem.SupplierPhoneNumber, false);
-            Assert.AreEqual(SampleOrder1.SupplierEmailAddress, testItem.SupplierEmailAddress, false);
-            Assert.AreEqual(SampleOrder1.SupplierVatNumber, testItem.SupplierVatNumber, false);
+            Assert.AreEqual(SampleOrder1.SupplierId, testItem.SupplierId, false);                           // "bricksinbloom7308"
+            Assert.AreEqual(SampleOrder1.SupplierReference1, testItem.SupplierReference1, false);           // "7308"
+            Assert.AreEqual(SampleOrder1.SupplierReference2, testItem.SupplierReference2, false);           // "BrickLink"
+            Assert.AreEqual(SampleOrder1.Department, testItem.Department, 0);                               // 7380
+            Assert.AreEqual(SampleOrder1.SupplierBusinessName, testItem.SupplierBusinessName, false);       // "Bricks In Bloom"
+            Assert.AreEqual(SampleOrder1.SupplierContactName, testItem.SupplierContactName, false);         // "Leigha Middleton"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine1, testItem.SupplierAddressLine1, false);       // "Unit 4"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine2, testItem.SupplierAddressLine2, false);       // "Candy Works"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine3, testItem.SupplierAddressLine3, false);       // "15 Parkhouse Road"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine4, testItem.SupplierAddressLine4, false);       // ""
+            Assert.AreEqual(SampleOrder1.SupplierAddressTown, testItem.SupplierAddressTown, false);         // "Carlisle"
+            Assert.AreEqual(SampleOrder1.SupplierAddressCounty, testItem.SupplierAddressCounty, false);     // "Cumbria"
+            Assert.AreEqual(SampleOrder1.SupplierCountryCode, testItem.SupplierCountryCode, false);         // "GB"
+            Assert.AreEqual(SampleOrder1.SupplierAddressPostcode, testItem.SupplierAddressPostcode, false); // "CA3 0JU"
+            Assert.AreEqual(SampleOrder1.SupplierPhoneNumber, testItem.SupplierPhoneNumber, false);         // "1228511030"
+            Assert.AreEqual(SampleOrder1.SupplierEmailAddress, testItem.SupplierEmailAddress, false);       // "bricksinbloom@bricklink.com"
+            Assert.AreEqual(SampleOrder1.SupplierVatNumber, testItem.SupplierVatNumber, false);             // "GB123 4567 89"
         }
         #endregion
 
@@ -194,34 +195,34 @@ namespace CM.SendBrick.Library.Tests
             RoyalMailData testItem;
 
             testItem = new RoyalMailData();
-            testItem.AddDestination(SampleOrder1.CustomerId,
-                SampleOrder1.CustomerBusinessName,
-                SampleOrder1.CustomerContactName,
-                SampleOrder1.CustomerAddressLine1,
-                SampleOrder1.CustomerAddressLine2,
-                SampleOrder1.CustomerAddressLine3,
-                SampleOrder1.CustomerAddressTown,
-                SampleOrder1.CustomerAddressCounty,
-                SampleOrder1.CustomerCountryCode,
-                SampleOrder1.CustomerAddressPostcode,
-                SampleOrder1.CustomerPhoneNumber,
-                SampleOrder1.CustomerEmailAddress,
-                SampleOrder1.CustomerVatNumber);
+            testItem.AddDestination(SampleOrder1.CustomerId,                // "BL15748250"
+                                    SampleOrder1.CustomerBusinessName,      // ""
+                                    SampleOrder1.CustomerContactName,       // "Colin Middleton"
+                                    SampleOrder1.CustomerAddressLine1,      // "257 Ecclesall Road"
+                                    SampleOrder1.CustomerAddressLine2,      // ""
+                                    SampleOrder1.CustomerAddressLine3,      // "Sheffield"
+                                    SampleOrder1.CustomerAddressTown,       // "Sheffield"
+                                    SampleOrder1.CustomerAddressCounty,     // "South Yorkshire"
+                                    SampleOrder1.CustomerCountryCode,       // "GB"
+                                    SampleOrder1.CustomerAddressPostcode,   // "S5 7HJ"
+                                    SampleOrder1.CustomerPhoneNumber,       // "7505363818"
+                                    SampleOrder1.CustomerEmailAddress,      // "colin@test.com"
+                                    SampleOrder1.CustomerVatNumber);        // ""
 
-            Assert.AreEqual(SampleOrder1.CustomerId, testItem.CustomerId, false);
-            Assert.AreEqual(SampleOrder1.CustomerBusinessName, testItem.CustomerBusinessName, false);
-            Assert.AreEqual(SampleOrder1.CustomerContactName, testItem.CustomerContactName, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressLine1, testItem.CustomerAddressLine1, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressLine2, testItem.CustomerAddressLine2, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressLine3, testItem.CustomerAddressLine3, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressLine4, testItem.CustomerAddressLine4, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressTown, testItem.CustomerAddressTown, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressCounty, testItem.CustomerAddressCounty, false);
-            Assert.AreEqual(SampleOrder1.CustomerCountryCode, testItem.CustomerCountryCode, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressPostcode, testItem.CustomerAddressPostcode, false);
-            Assert.AreEqual(SampleOrder1.CustomerPhoneNumber, testItem.CustomerPhoneNumber, false);
-            Assert.AreEqual(SampleOrder1.CustomerEmailAddress, testItem.CustomerEmailAddress, false);
-            Assert.AreEqual(SampleOrder1.CustomerVatNumber, testItem.CustomerVatNumber, false);
+            Assert.AreEqual(SampleOrder1.CustomerId, testItem.CustomerId, false);                           // "BL15748250"
+            Assert.AreEqual(SampleOrder1.CustomerBusinessName, testItem.CustomerBusinessName, false);       // ""
+            Assert.AreEqual(SampleOrder1.CustomerContactName, testItem.CustomerContactName, false);         // "Colin Middleton"
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine1, testItem.CustomerAddressLine1, false);       // "257 Ecclesall Road"
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine2, testItem.CustomerAddressLine2, false);       // ""
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine3, testItem.CustomerAddressLine3, false);       // "Sheffield"
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine4, testItem.CustomerAddressLine4, false);       // ""
+            Assert.AreEqual(SampleOrder1.CustomerAddressTown, testItem.CustomerAddressTown, false);         // "Sheffield"
+            Assert.AreEqual(SampleOrder1.CustomerAddressCounty, testItem.CustomerAddressCounty, false);     // "South Yorkshire"
+            Assert.AreEqual(SampleOrder1.CustomerCountryCode, testItem.CustomerCountryCode, false);         // "GB"
+            Assert.AreEqual(SampleOrder1.CustomerAddressPostcode, testItem.CustomerAddressPostcode, false); // "S5 7HJ"
+            Assert.AreEqual(SampleOrder1.CustomerPhoneNumber, testItem.CustomerPhoneNumber, false);         // "7505363818"
+            Assert.AreEqual(SampleOrder1.CustomerEmailAddress, testItem.CustomerEmailAddress, false);       // "colin@test.com"
+            Assert.AreEqual(SampleOrder1.CustomerVatNumber, testItem.CustomerVatNumber, false);             // ""
         }
 
         /// <summary>
@@ -233,34 +234,34 @@ namespace CM.SendBrick.Library.Tests
             RoyalMailData testItem;
 
             testItem = new RoyalMailData();
-            testItem.CustomerId = SampleOrder1.CustomerId;
-            testItem.CustomerBusinessName = SampleOrder1.CustomerBusinessName;
-            testItem.CustomerContactName = SampleOrder1.CustomerContactName;
-            testItem.CustomerAddressLine1 = SampleOrder1.CustomerAddressLine1;
-            testItem.CustomerAddressLine2 = SampleOrder1.CustomerAddressLine2;
-            testItem.CustomerAddressLine3 = SampleOrder1.CustomerAddressLine3;
-            testItem.CustomerAddressTown = SampleOrder1.CustomerAddressTown;
-            testItem.CustomerAddressCounty = SampleOrder1.CustomerAddressCounty;
-            testItem.CustomerCountryCode = SampleOrder1.CustomerCountryCode;
-            testItem.CustomerAddressPostcode = SampleOrder1.CustomerAddressPostcode;
-            testItem.CustomerPhoneNumber = SampleOrder1.CustomerPhoneNumber;
-            testItem.CustomerEmailAddress = SampleOrder1.CustomerEmailAddress;
-            testItem.CustomerVatNumber = SampleOrder1.CustomerVatNumber;
+            testItem.CustomerId = SampleOrder1.CustomerId;                              // "BL15748250"
+            testItem.CustomerBusinessName = SampleOrder1.CustomerBusinessName;          // ""
+            testItem.CustomerContactName = SampleOrder1.CustomerContactName;            // "Colin Middleton"
+            testItem.CustomerAddressLine1 = SampleOrder1.CustomerAddressLine1;          // "257 Ecclesall Road"
+            testItem.CustomerAddressLine2 = SampleOrder1.CustomerAddressLine2;          // ""
+            testItem.CustomerAddressLine3 = SampleOrder1.CustomerAddressLine3;          // "Sheffield"
+            testItem.CustomerAddressTown = SampleOrder1.CustomerAddressTown;            // "Sheffield"
+            testItem.CustomerAddressCounty = SampleOrder1.CustomerAddressCounty;        // "South Yorkshire"
+            testItem.CustomerCountryCode = SampleOrder1.CustomerCountryCode;            // "GB"
+            testItem.CustomerAddressPostcode = SampleOrder1.CustomerAddressPostcode;    // "S5 7HJ"
+            testItem.CustomerPhoneNumber = SampleOrder1.CustomerPhoneNumber;            // "7505363818"
+            testItem.CustomerEmailAddress = SampleOrder1.CustomerEmailAddress;          // "colin@test.com"
+            testItem.CustomerVatNumber = SampleOrder1.CustomerVatNumber;                // ""
 
-            Assert.AreEqual(SampleOrder1.CustomerId, testItem.CustomerId, false);
-            Assert.AreEqual(SampleOrder1.CustomerBusinessName, testItem.CustomerBusinessName, false);
-            Assert.AreEqual(SampleOrder1.CustomerContactName, testItem.CustomerContactName, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressLine1, testItem.CustomerAddressLine1, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressLine2, testItem.CustomerAddressLine2, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressLine3, testItem.CustomerAddressLine3, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressLine4, testItem.CustomerAddressLine4, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressTown, testItem.CustomerAddressTown, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressCounty, testItem.CustomerAddressCounty, false);
-            Assert.AreEqual(SampleOrder1.CustomerCountryCode, testItem.CustomerCountryCode, false);
-            Assert.AreEqual(SampleOrder1.CustomerAddressPostcode, testItem.CustomerAddressPostcode, false);
-            Assert.AreEqual(SampleOrder1.CustomerPhoneNumber, testItem.CustomerPhoneNumber, false);
-            Assert.AreEqual(SampleOrder1.CustomerEmailAddress, testItem.CustomerEmailAddress, false);
-            Assert.AreEqual(SampleOrder1.CustomerVatNumber, testItem.CustomerVatNumber, false);
+            Assert.AreEqual(SampleOrder1.CustomerId, testItem.CustomerId, false);                           // "BL15748250"
+            Assert.AreEqual(SampleOrder1.CustomerBusinessName, testItem.CustomerBusinessName, false);       // ""
+            Assert.AreEqual(SampleOrder1.CustomerContactName, testItem.CustomerContactName, false);         // "Colin Middleton"
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine1, testItem.CustomerAddressLine1, false);       // "257 Ecclesall Road"
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine2, testItem.CustomerAddressLine2, false);       // ""
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine3, testItem.CustomerAddressLine3, false);       // "Sheffield"
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine4, testItem.CustomerAddressLine4, false);       // ""
+            Assert.AreEqual(SampleOrder1.CustomerAddressTown, testItem.CustomerAddressTown, false);         // "Sheffield"
+            Assert.AreEqual(SampleOrder1.CustomerAddressCounty, testItem.CustomerAddressCounty, false);     // "South Yorkshire"
+            Assert.AreEqual(SampleOrder1.CustomerCountryCode, testItem.CustomerCountryCode, false);         // "GB"
+            Assert.AreEqual(SampleOrder1.CustomerAddressPostcode, testItem.CustomerAddressPostcode, false); // "S5 7HJ"
+            Assert.AreEqual(SampleOrder1.CustomerPhoneNumber, testItem.CustomerPhoneNumber, false);         // "7505363818"
+            Assert.AreEqual(SampleOrder1.CustomerEmailAddress, testItem.CustomerEmailAddress, false);       // "colin@test.com"
+            Assert.AreEqual(SampleOrder1.CustomerVatNumber, testItem.CustomerVatNumber, false);             // ""
         }
         #endregion
 
@@ -314,38 +315,34 @@ namespace CM.SendBrick.Library.Tests
         {
             RoyalMailData testItem;
 
-            DateTime justDate = new DateTime(2022, 01, 16);
-
             testItem = new RoyalMailData();
-            testItem.AddShipmentInformation(justDate,
-                "TPLN",
-                //2,
-                //3.1,
-                "KG",
-                "LEGO",
-                "LEGO sets",
-                "Sale of goods",
-                112.97,
-                "GBP",
-                "DDU",
-                "PDF",
-                "75b59db8-3cd3-4578-888e-54be016f07cc",
-                "Process");
+            testItem.AddShipmentInformation(SampleOrder1.PostingDate,               // 16/01/2022
+                                            SampleOrder1.PostageType,               // "TPLN"
+                                            SampleOrder1.PostingWeightUOM,          // "KG"
+                                            SampleOrder1.CustomsProduct,            // "LEGO"
+                                            SampleOrder1.CustomsDescriptionOfGoods, // "LEGO sets"
+                                            SampleOrder1.CustomsReasonForExport,    // "Sale of goods"
+                                            SampleOrder1.CustomsValue,              // 112.97
+                                            SampleOrder1.CustomsCurrency,           // "GBP"
+                                            SampleOrder1.CustomsIncoterms,          // "DDU"
+                                            SampleOrder1.CustomsLabelFormat,        // "PDF"
+                                            SampleOrder1.CustomsSilentPrintProfile, // "75b59db8-3cd3-4578-888e-54be016f07cc"
+                                            SampleOrder1.CustomsShipmentAction);    // "Process"
 
-            Assert.AreEqual(justDate.ToString(), testItem.PostingDate.ToString(), false);
-            Assert.AreEqual("TPLN", testItem.PostageType, false);
-            Assert.AreEqual(0, testItem.PostingTotalPackages, 0);
-            Assert.AreEqual(0, testItem.PostingTotalWeight, 0);
-            Assert.AreEqual("KG", testItem.PostingWeightUOM, false);
-            Assert.AreEqual("LEGO", testItem.CustomsProduct, false);
-            Assert.AreEqual("LEGO sets", testItem.CustomsDescriptionOfGoods, false);
-            Assert.AreEqual("Sale of goods", testItem.CustomsReasonForExport, false);
-            Assert.AreEqual(112.97, testItem.CustomsValue, 0);
-            Assert.AreEqual("GBP", testItem.CustomsCurrency, false);
-            Assert.AreEqual("DDU", testItem.CustomsIncoterms, false);
-            Assert.AreEqual("PDF", testItem.CustomsLabelFormat, false);
-            Assert.AreEqual("75b59db8-3cd3-4578-888e-54be016f07cc", testItem.CustomsSilentPrintProfile, false);
-            Assert.AreEqual("Process", testItem.CustomsShipmentAction, false);
+            Assert.AreEqual(SampleOrder1.PostingDate.ToString(), testItem.PostingDate.ToString(), false);       // 16/01/2023
+            Assert.AreEqual(SampleOrder1.PostageType, testItem.PostageType, false);                             // "TPLN"
+            Assert.AreEqual(0, testItem.PostingTotalPackages, 0);                                               // No packages have been added
+            Assert.AreEqual(0, testItem.PostingTotalWeight, 0);                                                 // No packages have been added
+            Assert.AreEqual(SampleOrder1.PostingWeightUOM, testItem.PostingWeightUOM, false);                   // "KG"
+            Assert.AreEqual(SampleOrder1.CustomsProduct, testItem.CustomsProduct, false);                       // "LEGO"
+            Assert.AreEqual(SampleOrder1.CustomsDescriptionOfGoods, testItem.CustomsDescriptionOfGoods, false); // "LEGO sets"
+            Assert.AreEqual(SampleOrder1.CustomsReasonForExport, testItem.CustomsReasonForExport, false);       // "Sale of goods"
+            Assert.AreEqual(SampleOrder1.CustomsValue, testItem.CustomsValue, 0);                               // 112.97
+            Assert.AreEqual(SampleOrder1.CustomsCurrency, testItem.CustomsCurrency, false);                     // "GBP"
+            Assert.AreEqual(SampleOrder1.CustomsIncoterms, testItem.CustomsIncoterms, false);                   // "DDU"
+            Assert.AreEqual(SampleOrder1.CustomsLabelFormat, testItem.CustomsLabelFormat, false);               // "PDF"
+            Assert.AreEqual(SampleOrder1.CustomsSilentPrintProfile, testItem.CustomsSilentPrintProfile, false); // "75b59db8-3cd3-4578-888e-54be016f07cc"
+            Assert.AreEqual(SampleOrder1.CustomsShipmentAction, testItem.CustomsShipmentAction, false);         // "Process"
         }
 
         /// <summary>
@@ -359,36 +356,33 @@ namespace CM.SendBrick.Library.Tests
             testItem = new RoyalMailData();
             testItem.AddShipmentInformation();
 
-            DateTime justDate = new DateTime(2022, 01, 16);
-            testItem.PostingDate = justDate;
-            testItem.PostageType = "TPLN";
-            //testItem.PostingTotalPackages = 2;
-            //testItem.PostingTotalWeight = 3.1;
-            testItem.PostingWeightUOM = "KG";
-            testItem.CustomsProduct = "LEGO";
-            testItem.CustomsDescriptionOfGoods = "LEGO sets";
-            testItem.CustomsReasonForExport = "Sale of goods";
-            testItem.CustomsValue = 112.97;
-            testItem.CustomsCurrency = "GBP";
-            testItem.CustomsIncoterms = "DDU";
-            testItem.CustomsLabelFormat = "PDF";
-            testItem.CustomsSilentPrintProfile = "75b59db8-3cd3-4578-888e-54be016f07cc";
-            testItem.CustomsShipmentAction = "Process";
+            testItem.PostingDate = SampleOrder1.PostingDate;                                // 16/01/2023
+            testItem.PostageType = SampleOrder1.PostageType;                                // "TPLN"
+            testItem.PostingWeightUOM = SampleOrder1.PostingWeightUOM;                      // "KG"
+            testItem.CustomsProduct = SampleOrder1.CustomsProduct;                          // "LEGO"
+            testItem.CustomsDescriptionOfGoods = SampleOrder1.CustomsDescriptionOfGoods;    // "LEGO sets"
+            testItem.CustomsReasonForExport = SampleOrder1.CustomsReasonForExport;          // "Sale of goods"
+            testItem.CustomsValue = SampleOrder1.CustomsValue;                              // 112.97
+            testItem.CustomsCurrency = SampleOrder1.CustomsCurrency;                        // "GBP"
+            testItem.CustomsIncoterms = SampleOrder1.CustomsIncoterms;                      // "DDU"
+            testItem.CustomsLabelFormat = SampleOrder1.CustomsLabelFormat;                  // "PDF"
+            testItem.CustomsSilentPrintProfile = SampleOrder1.CustomsSilentPrintProfile;    // "75b59db8-3cd3-4578-888e-54be016f07cc"
+            testItem.CustomsShipmentAction = SampleOrder1.CustomsShipmentAction;            // "Process"
 
-            Assert.AreEqual(justDate.ToString(), testItem.PostingDate.ToString(), false);
-            Assert.AreEqual("TPLN", testItem.PostageType, false);
-            Assert.AreEqual(0, testItem.PostingTotalPackages, 0);
-            Assert.AreEqual(0, testItem.PostingTotalWeight, 0);
-            Assert.AreEqual("KG", testItem.PostingWeightUOM, false);
-            Assert.AreEqual("LEGO", testItem.CustomsProduct, false);
-            Assert.AreEqual("LEGO sets", testItem.CustomsDescriptionOfGoods, false);
-            Assert.AreEqual("Sale of goods", testItem.CustomsReasonForExport, false);
-            Assert.AreEqual(112.97, testItem.CustomsValue, 0);
-            Assert.AreEqual("GBP", testItem.CustomsCurrency, false);
-            Assert.AreEqual("DDU", testItem.CustomsIncoterms, false);
-            Assert.AreEqual("PDF", testItem.CustomsLabelFormat, false);
-            Assert.AreEqual("75b59db8-3cd3-4578-888e-54be016f07cc", testItem.CustomsSilentPrintProfile, false);
-            Assert.AreEqual("Process", testItem.CustomsShipmentAction, false);
+            Assert.AreEqual(SampleOrder1.PostingDate.ToString(), testItem.PostingDate.ToString(), false);       // 16/01/2023
+            Assert.AreEqual(SampleOrder1.PostageType, testItem.PostageType, false);                             // "TPLN"
+            Assert.AreEqual(0, testItem.PostingTotalPackages, 0);                                               // No packages have been added
+            Assert.AreEqual(0, testItem.PostingTotalWeight, 0);                                                 // No packages have been added
+            Assert.AreEqual(SampleOrder1.PostingWeightUOM, testItem.PostingWeightUOM, false);                   // "KG"
+            Assert.AreEqual(SampleOrder1.CustomsProduct, testItem.CustomsProduct, false);                       // "LEGO"
+            Assert.AreEqual(SampleOrder1.CustomsDescriptionOfGoods, testItem.CustomsDescriptionOfGoods, false); // "LEGO sets"
+            Assert.AreEqual(SampleOrder1.CustomsReasonForExport, testItem.CustomsReasonForExport, false);       // "Sale of goods"
+            Assert.AreEqual(SampleOrder1.CustomsValue, testItem.CustomsValue, 0);                               // 112.97
+            Assert.AreEqual(SampleOrder1.CustomsCurrency, testItem.CustomsCurrency, false);                     // "GBP"
+            Assert.AreEqual(SampleOrder1.CustomsIncoterms, testItem.CustomsIncoterms, false);                   // "DDU"
+            Assert.AreEqual(SampleOrder1.CustomsLabelFormat, testItem.CustomsLabelFormat, false);               // "PDF"
+            Assert.AreEqual(SampleOrder1.CustomsSilentPrintProfile, testItem.CustomsSilentPrintProfile, false); // "75b59db8-3cd3-4578-888e-54be016f07cc"
+            Assert.AreEqual(SampleOrder1.CustomsShipmentAction, testItem.CustomsShipmentAction, false);         // "Process"
         }
         #endregion
 
@@ -443,25 +437,25 @@ namespace CM.SendBrick.Library.Tests
             RoyalMailData testItem;
 
             testItem = new RoyalMailData();
-            testItem.AddServiceOption("123456789",
-                "01",
-                "P",
-                "Front Porch",
-                false,
-                "Level5",
-                false,
-                "EmailAndSMS",
-                false);
+            testItem.AddServiceOption(SampleOrder1.PostingLocation,             // "123456789"
+                                    SampleOrder1.PostingServiceLevel,           // "01"
+                                    SampleOrder1.PostingServiceFormat,          // "P"
+                                    SampleOrder1.CustomerSafeplace,             // "Front Porch"
+                                    SampleOrder1.PostingSaturdayGuaranteed,     // false
+                                    SampleOrder1.PostingConsequentialLoss,      // "Level5"
+                                    SampleOrder1.PostingLocalCollect,           // false
+                                    SampleOrder1.PostingTrackingNotifications,  // "EmailAndSMS"
+                                    SampleOrder1.PostingRecordedSignedFor);     // false
 
-            Assert.AreEqual("123456789", testItem.PostingLocation, false);
-            Assert.AreEqual("01", testItem.PostingServiceLevel, false);
-            Assert.AreEqual("P", testItem.PostingServiceFormat, false);
-            Assert.AreEqual("Front Porch", testItem.CustomerSafeplace, false);
-            Assert.IsFalse(testItem.PostingSaturdayGuaranteed);
-            Assert.AreEqual("Level5", testItem.PostingConsequentialLoss, false);
-            Assert.IsFalse(testItem.PostingLocalCollect);
-            Assert.AreEqual("EmailAndSMS", testItem.PostingTrackingNotifications, false);
-            Assert.IsFalse(testItem.PostingRecordedSignedFor);
+            Assert.AreEqual(SampleOrder1.PostingLocation, testItem.PostingLocation, false);                             // "123456789"
+            Assert.AreEqual(SampleOrder1.PostingServiceLevel, testItem.PostingServiceLevel, false);                     // "01"
+            Assert.AreEqual(SampleOrder1.PostingServiceFormat, testItem.PostingServiceFormat, false);                   // "P"
+            Assert.AreEqual(SampleOrder1.CustomerSafeplace, testItem.CustomerSafeplace, false);                         // "Front Porch"
+            Assert.AreEqual(SampleOrder1.PostingSaturdayGuaranteed, testItem.PostingSaturdayGuaranteed);                // false
+            Assert.AreEqual(SampleOrder1.PostingConsequentialLoss, testItem.PostingConsequentialLoss, false);           // "Level5"
+            Assert.AreEqual(SampleOrder1.PostingLocalCollect, testItem.PostingLocalCollect);                            // false
+            Assert.AreEqual(SampleOrder1.PostingTrackingNotifications, testItem.PostingTrackingNotifications, false);   // "EmailAndSMS"
+            Assert.AreEqual(SampleOrder1.PostingRecordedSignedFor, testItem.PostingRecordedSignedFor);                  // false
         }
 
         /// <summary>
@@ -474,25 +468,25 @@ namespace CM.SendBrick.Library.Tests
 
             testItem = new RoyalMailData();
             testItem.AddServiceOption();
-            testItem.PostingLocation = "123456789";
-            testItem.PostingServiceLevel = "01";
-            testItem.PostingServiceFormat = "P";
-            testItem.CustomerSafeplace = "Front Porch";
-            testItem.PostingSaturdayGuaranteed = false;
-            testItem.PostingConsequentialLoss = "Level5";
-            testItem.PostingLocalCollect = false;
-            testItem.PostingTrackingNotifications = "EmailAndSMS";
-            testItem.PostingRecordedSignedFor = false;
+            testItem.PostingLocation = SampleOrder1.PostingLocation;                            // "123456789";
+            testItem.PostingServiceLevel = SampleOrder1.PostingServiceLevel;                    // "01";
+            testItem.PostingServiceFormat = SampleOrder1.PostingServiceFormat;                  // "P";
+            testItem.CustomerSafeplace = SampleOrder1.CustomerSafeplace;                        // "Front Porch";
+            testItem.PostingSaturdayGuaranteed = SampleOrder1.PostingSaturdayGuaranteed;        // false;
+            testItem.PostingConsequentialLoss = SampleOrder1.PostingConsequentialLoss;          // "Level5";
+            testItem.PostingLocalCollect = SampleOrder1.PostingLocalCollect;                    // false;
+            testItem.PostingTrackingNotifications = SampleOrder1.PostingTrackingNotifications;  // "EmailAndSMS";
+            testItem.PostingRecordedSignedFor = SampleOrder1.PostingRecordedSignedFor;          // false;
 
-            Assert.AreEqual("123456789", testItem.PostingLocation, false);
-            Assert.AreEqual("01", testItem.PostingServiceLevel, false);
-            Assert.AreEqual("P", testItem.PostingServiceFormat, false);
-            Assert.AreEqual("Front Porch", testItem.CustomerSafeplace, false);
-            Assert.IsFalse(testItem.PostingSaturdayGuaranteed);
-            Assert.AreEqual("Level5", testItem.PostingConsequentialLoss, false);
-            Assert.IsFalse(testItem.PostingLocalCollect);
-            Assert.AreEqual("EmailAndSMS", testItem.PostingTrackingNotifications, false);
-            Assert.IsFalse(testItem.PostingRecordedSignedFor);
+            Assert.AreEqual(SampleOrder1.PostingLocation, testItem.PostingLocation, false);                             // "123456789"
+            Assert.AreEqual(SampleOrder1.PostingServiceLevel, testItem.PostingServiceLevel, false);                     // "01"
+            Assert.AreEqual(SampleOrder1.PostingServiceFormat, testItem.PostingServiceFormat, false);                   // "P"
+            Assert.AreEqual(SampleOrder1.CustomerSafeplace, testItem.CustomerSafeplace, false);                         // "Front Porch"
+            Assert.AreEqual(SampleOrder1.PostingSaturdayGuaranteed, testItem.PostingSaturdayGuaranteed);                // false
+            Assert.AreEqual(SampleOrder1.PostingConsequentialLoss, testItem.PostingConsequentialLoss, false);           // "Level5"
+            Assert.AreEqual(SampleOrder1.PostingLocalCollect, testItem.PostingLocalCollect);                            // false
+            Assert.AreEqual(SampleOrder1.PostingTrackingNotifications, testItem.PostingTrackingNotifications, false);   // "EmailAndSMS"
+            Assert.AreEqual(SampleOrder1.PostingRecordedSignedFor, testItem.PostingRecordedSignedFor);                  // false
         }
         #endregion
 
@@ -875,57 +869,57 @@ namespace CM.SendBrick.Library.Tests
 
             DateTime justDate = new DateTime(2022, 01, 16);
 
-            testItem = new RoyalMailData("bricksinbloom7308",
-                "7308",
-                "BrcikLink",
-                7308,
-                "Bricks In  Bloom",
-                "Leigha Middleton",
-                "Unit 4",
-                "Candy Works",
-                "15 Parkhouse Road",
-                "Carlisle",
-                "Cumbria",
-                "GB",
-                "CA3 0JU",
-                "1228511030",
-                "bricksinbloom@bricklink.com",
-                "GB123 4567 89",
-                "BL15748250",
-                "",
-                "Colin Middleton",
-                "257 Ecclesall Road",
-                "",
-                "",
-                "Sheffield",
-                "South Yorkshire",
-                "GB",
-                "S5 7HJ",
-                "7505363818",
-                "colin@test.com",
-                "",
-                justDate,
-                "TPLN",
-                "KG",
-                "LEGO",
-                "LEGO sets",
-                "Sale of goods",
-                112.97,
-                "GBP",
-                "DDU",
-                "PDF",
-                "75b59db8-3cd3-4578-888e-54be016f07cc",
-                "Process",
-                "123456789",
-                "01",
-                "P",
-                "Front Porch",
-                false,
-                "Level5",
-                false,
-                "EmailAndSMS",
-                false,
-                "GB15748250",
+            testItem = new RoyalMailData(SampleOrder1.SupplierId,       // "bricksinbloom7308"
+                                SampleOrder1.SupplierReference1,        // "7308"
+                                SampleOrder1.SupplierReference2,        // "BrickLink"
+                                SampleOrder1.Department,                // 7308
+                                SampleOrder1.SupplierBusinessName,      // "Bricks In Bloom"
+                                SampleOrder1.SupplierContactName,       // "Leigha Middleton"
+                                SampleOrder1.SupplierAddressLine1,      // "Unit 4"
+                                SampleOrder1.SupplierAddressLine2,      // "Candy Works"
+                                SampleOrder1.SupplierAddressLine3,      // "15 Parkhouse Road"
+                                SampleOrder1.SupplierAddressTown,       // "Carlisle"
+                                SampleOrder1.SupplierAddressCounty,     // "Cumbria"
+                                SampleOrder1.SupplierCountryCode,       // "GB"
+                                SampleOrder1.SupplierAddressPostcode,   // "CA3 0JU"
+                                SampleOrder1.SupplierPhoneNumber,       // "1228511030"
+                                SampleOrder1.SupplierEmailAddress,      // "bricksinbloom@bricklink.com"
+                                SampleOrder1.SupplierVatNumber,         // "GB123 4567 89"
+                                SampleOrder1.CustomerId,                // "BL15748250"
+                                SampleOrder1.CustomerBusinessName,      // ""
+                                SampleOrder1.CustomerContactName,       // "Colin Middleton"
+                                SampleOrder1.CustomerAddressLine1,      // "257 Ecclesall Road"
+                                SampleOrder1.CustomerAddressLine2,      // ""
+                                SampleOrder1.CustomerAddressLine3,      // "Sheffield"
+                                SampleOrder1.CustomerAddressTown,       // ""
+                                SampleOrder1.CustomerAddressCounty,     // "South Yorkshire"
+                                SampleOrder1.CustomerCountryCode,       // "GB"
+                                SampleOrder1.CustomerAddressPostcode,   // "S5 7HJ"
+                                SampleOrder1.CustomerPhoneNumber,       // "7505363818"
+                                SampleOrder1.CustomerEmailAddress,      // "colin@test.com"
+                                SampleOrder1.CustomerVatNumber,         // ""
+                                SampleOrder1.PostingDate,               // 16/01/2022
+                                SampleOrder1.PostageType,               // "TPLN"
+                                SampleOrder1.PostingWeightUOM,          // "KG"
+                                SampleOrder1.CustomsProduct,            // "LEGO"
+                                SampleOrder1.CustomsDescriptionOfGoods, // "LEGO sets"
+                                SampleOrder1.CustomsReasonForExport,    // "Sale of goods"
+                                SampleOrder1.CustomsValue,              // 112.97
+                                SampleOrder1.CustomsCurrency,           // "GBP"
+                                SampleOrder1.CustomsIncoterms,          // "DDU"
+                                SampleOrder1.CustomsLabelFormat,        // "PDF"
+                                SampleOrder1.CustomsSilentPrintProfile, // "75b59db8-3cd3-4578-888e-54be016f07cc"
+                                SampleOrder1.CustomsShipmentAction,     // "Process"
+                                SampleOrder1.PostingLocation,           // "123456789"
+                                SampleOrder1.PostingServiceLevel,       // "01"
+                                SampleOrder1.PostingServiceFormat,      // "P"
+                                SampleOrder1.CustomerSafeplace,         // "Front Porch"
+                                SampleOrder1.PostingSaturdayGuaranteed, // false
+                                SampleOrder1.PostingConsequentialLoss,  // "Level5"
+                                SampleOrder1.PostingLocalCollect,       // false
+                                SampleOrder1.PostingTrackingNotifications,  // "EmailAndSMS"
+                                SampleOrder1.PostingRecordedSignedFor,  // false
+            "GB15748250",
                 "EORI",
                 10.42,
                 0.00,
@@ -935,61 +929,63 @@ namespace CM.SendBrick.Library.Tests
                 false,
                 1234567890);
 
-            Assert.AreEqual("bricksinbloom7308", testItem.SupplierId, false);
-            Assert.AreEqual("7308", testItem.SupplierReference1, false);
-            Assert.AreEqual("BrcikLink", testItem.SupplierReference2, false);
-            Assert.AreEqual(7308, testItem.Department, 0);
-            Assert.AreEqual("Bricks In  Bloom", testItem.SupplierBusinessName, false);
-            Assert.AreEqual("Leigha Middleton", testItem.SupplierContactName, false);
-            Assert.AreEqual("Unit 4", testItem.SupplierAddressLine1, false);
-            Assert.AreEqual("Candy Works", testItem.SupplierAddressLine2, false);
-            Assert.AreEqual("15 Parkhouse Road", testItem.SupplierAddressLine3, false);
-            Assert.AreEqual("Carlisle", testItem.SupplierAddressTown, false);
-            Assert.AreEqual("Cumbria", testItem.SupplierAddressCounty, false);
-            Assert.AreEqual("GB", testItem.SupplierCountryCode, false);
-            Assert.AreEqual("CA3 0JU", testItem.SupplierAddressPostcode, false);
-            Assert.AreEqual("1228511030", testItem.SupplierPhoneNumber, false);
-            Assert.AreEqual("bricksinbloom@bricklink.com", testItem.SupplierEmailAddress, false);
-            Assert.AreEqual("GB123 4567 89", testItem.SupplierVatNumber, false);
+            Assert.AreEqual(SampleOrder1.SupplierId, testItem.SupplierId, false);                           // "bricksinbloom7308"
+            Assert.AreEqual(SampleOrder1.SupplierReference1, testItem.SupplierReference1, false);           // "7308"
+            Assert.AreEqual(SampleOrder1.SupplierReference2, testItem.SupplierReference2, false);           // "BrickLink"
+            Assert.AreEqual(SampleOrder1.Department, testItem.Department, 0);                               // 7380
+            Assert.AreEqual(SampleOrder1.SupplierBusinessName, testItem.SupplierBusinessName, false);       // "Bricks In Bloom"
+            Assert.AreEqual(SampleOrder1.SupplierContactName, testItem.SupplierContactName, false);         //"Leigha Middleton"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine1, testItem.SupplierAddressLine1, false);       // "Unit 4"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine2, testItem.SupplierAddressLine2, false);       // "Candy Works"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine3, testItem.SupplierAddressLine3, false);       // "15 Parkhouse Road"
+            Assert.AreEqual(SampleOrder1.SupplierAddressLine4, testItem.SupplierAddressLine4, false);       // ""
+            Assert.AreEqual(SampleOrder1.SupplierAddressTown, testItem.SupplierAddressTown, false);         // "Carlisle"
+            Assert.AreEqual(SampleOrder1.SupplierAddressCounty, testItem.SupplierAddressCounty, false);     // "Cumbria"
+            Assert.AreEqual(SampleOrder1.SupplierCountryCode, testItem.SupplierCountryCode, false);         // "GB"
+            Assert.AreEqual(SampleOrder1.SupplierAddressPostcode, testItem.SupplierAddressPostcode, false); // "CA3 0JU"
+            Assert.AreEqual(SampleOrder1.SupplierPhoneNumber, testItem.SupplierPhoneNumber, false);         // "1228511030"
+            Assert.AreEqual(SampleOrder1.SupplierEmailAddress, testItem.SupplierEmailAddress, false);       // "bricksinbloom@bricklink.com"
+            Assert.AreEqual(SampleOrder1.SupplierVatNumber, testItem.SupplierVatNumber, false);             // "GB123 4567 89"
 
-            Assert.AreEqual("BL15748250", testItem.CustomerId, false);
-            Assert.AreEqual("", testItem.CustomerBusinessName, false);
-            Assert.AreEqual("Colin Middleton", testItem.CustomerContactName, false);
-            Assert.AreEqual("257 Ecclesall Road", testItem.CustomerAddressLine1, false);
-            Assert.AreEqual("", testItem.CustomerAddressLine2, false);
-            Assert.AreEqual("", testItem.CustomerAddressLine3, false);
-            Assert.AreEqual("Sheffield", testItem.CustomerAddressTown, false);
-            Assert.AreEqual("South Yorkshire", testItem.CustomerAddressCounty, false);
-            Assert.AreEqual("GB", testItem.CustomerCountryCode, false);
-            Assert.AreEqual("S5 7HJ", testItem.CustomerAddressPostcode, false);
-            Assert.AreEqual("7505363818", testItem.CustomerPhoneNumber, false);
-            Assert.AreEqual("colin@test.com", testItem.CustomerEmailAddress, false);
-            Assert.AreEqual("", testItem.CustomerVatNumber, false);
+            Assert.AreEqual(SampleOrder1.CustomerId, testItem.CustomerId, false);                           // "BL15748250"
+            Assert.AreEqual(SampleOrder1.CustomerBusinessName, testItem.CustomerBusinessName, false);       // ""
+            Assert.AreEqual(SampleOrder1.CustomerContactName, testItem.CustomerContactName, false);         // "Colin Middleton"
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine1, testItem.CustomerAddressLine1, false);       // "257 Ecclesall Road"
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine2, testItem.CustomerAddressLine2, false);       // ""
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine3, testItem.CustomerAddressLine3, false);       // "Sheffield"
+            Assert.AreEqual(SampleOrder1.CustomerAddressLine4, testItem.CustomerAddressLine4, false);       // ""
+            Assert.AreEqual(SampleOrder1.CustomerAddressTown, testItem.CustomerAddressTown, false);         // ""
+            Assert.AreEqual(SampleOrder1.CustomerAddressCounty, testItem.CustomerAddressCounty, false);     // "South Yorkshire"
+            Assert.AreEqual(SampleOrder1.CustomerCountryCode, testItem.CustomerCountryCode, false);         // "GB"
+            Assert.AreEqual(SampleOrder1.CustomerAddressPostcode, testItem.CustomerAddressPostcode, false); // "S5 7HJ"
+            Assert.AreEqual(SampleOrder1.CustomerPhoneNumber, testItem.CustomerPhoneNumber, false);         // "7505363818"
+            Assert.AreEqual(SampleOrder1.CustomerEmailAddress, testItem.CustomerEmailAddress, false);       // "colin@test.com"
+            Assert.AreEqual(SampleOrder1.CustomerVatNumber, testItem.CustomerVatNumber, false);             // ""
 
-            Assert.AreEqual(justDate.ToString(), testItem.PostingDate.ToString(), false);
-            Assert.AreEqual("TPLN", testItem.PostageType, false);
-            Assert.AreEqual(0, testItem.PostingTotalPackages, 0);
-            Assert.AreEqual(0, testItem.PostingTotalWeight, 0);
-            Assert.AreEqual("KG", testItem.PostingWeightUOM, false);
-            Assert.AreEqual("LEGO", testItem.CustomsProduct, false);
-            Assert.AreEqual("LEGO sets", testItem.CustomsDescriptionOfGoods, false);
-            Assert.AreEqual("Sale of goods", testItem.CustomsReasonForExport, false);
-            Assert.AreEqual(112.97, testItem.CustomsValue, 0);
-            Assert.AreEqual("GBP", testItem.CustomsCurrency, false);
-            Assert.AreEqual("DDU", testItem.CustomsIncoterms, false);
-            Assert.AreEqual("PDF", testItem.CustomsLabelFormat, false);
-            Assert.AreEqual("75b59db8-3cd3-4578-888e-54be016f07cc", testItem.CustomsSilentPrintProfile, false);
-            Assert.AreEqual("Process", testItem.CustomsShipmentAction, false);
+            Assert.AreEqual(SampleOrder1.PostingDate.ToString(), testItem.PostingDate.ToString(), false);       // 16/01/2023
+            Assert.AreEqual(SampleOrder1.PostageType, testItem.PostageType, false);                             // "TPLN"
+            Assert.AreEqual(0, testItem.PostingTotalPackages, 0);                                               // No packages have been added
+            Assert.AreEqual(0, testItem.PostingTotalWeight, 0);                                                 // No packages have been added
+            Assert.AreEqual(SampleOrder1.PostingWeightUOM, testItem.PostingWeightUOM, false);                   // "KG"
+            Assert.AreEqual(SampleOrder1.CustomsProduct, testItem.CustomsProduct, false);                       // "LEGO"
+            Assert.AreEqual(SampleOrder1.CustomsDescriptionOfGoods, testItem.CustomsDescriptionOfGoods, false); // "LEGO sets"
+            Assert.AreEqual(SampleOrder1.CustomsReasonForExport, testItem.CustomsReasonForExport, false);       // "Sale of goods"
+            Assert.AreEqual(SampleOrder1.CustomsValue, testItem.CustomsValue, 0);                               // 112.97
+            Assert.AreEqual(SampleOrder1.CustomsCurrency, testItem.CustomsCurrency, false);                     // "GBP"
+            Assert.AreEqual(SampleOrder1.CustomsIncoterms, testItem.CustomsIncoterms, false);                   // "DDU"
+            Assert.AreEqual(SampleOrder1.CustomsLabelFormat, testItem.CustomsLabelFormat, false);               // "PDF"
+            Assert.AreEqual(SampleOrder1.CustomsSilentPrintProfile, testItem.CustomsSilentPrintProfile, false); // "75b59db8-3cd3-4578-888e-54be016f07cc"
+            Assert.AreEqual(SampleOrder1.CustomsShipmentAction, testItem.CustomsShipmentAction, false);         // "Process"
 
-            Assert.AreEqual("123456789", testItem.PostingLocation, false);
-            Assert.AreEqual("01", testItem.PostingServiceLevel, false);
-            Assert.AreEqual("P", testItem.PostingServiceFormat, false);
-            Assert.AreEqual("Front Porch", testItem.CustomerSafeplace, false);
-            Assert.IsFalse(testItem.PostingSaturdayGuaranteed);
-            Assert.AreEqual("Level5", testItem.PostingConsequentialLoss, false);
-            Assert.IsFalse(testItem.PostingLocalCollect);
-            Assert.AreEqual("EmailAndSMS", testItem.PostingTrackingNotifications, false);
-            Assert.IsFalse(testItem.PostingRecordedSignedFor);
+            Assert.AreEqual(SampleOrder1.PostingLocation, testItem.PostingLocation, false);                             // "123456789"
+            Assert.AreEqual(SampleOrder1.PostingServiceLevel, testItem.PostingServiceLevel, false);                     // "01"
+            Assert.AreEqual(SampleOrder1.PostingServiceFormat, testItem.PostingServiceFormat, false);                   // "P"
+            Assert.AreEqual(SampleOrder1.CustomerSafeplace, testItem.CustomerSafeplace, false);                         // "Front Porch"
+            Assert.AreEqual(SampleOrder1.PostingSaturdayGuaranteed, testItem.PostingSaturdayGuaranteed);                // false
+            Assert.AreEqual(SampleOrder1.PostingConsequentialLoss, testItem.PostingConsequentialLoss, false);           // "Level5"
+            Assert.AreEqual(SampleOrder1.PostingLocalCollect, testItem.PostingLocalCollect);                            // false
+            Assert.AreEqual(SampleOrder1.PostingTrackingNotifications, testItem.PostingTrackingNotifications, false);   // "EmailAndSMS"
+            Assert.AreEqual(SampleOrder1.PostingRecordedSignedFor, testItem.PostingRecordedSignedFor);                  // false
 
             Assert.AreEqual("GB15748250", testItem.CustomsPreRegistrationNumber, false);
             Assert.AreEqual("EORI", testItem.CustomsPreRegistrationType, false);
@@ -1110,56 +1106,56 @@ namespace CM.SendBrick.Library.Tests
             DateTime justDate = new DateTime(2022, 01, 16);
 
             testItem = new RoyalMailData();
-            testItem.AddShipper("bricksinbloom7308",
-                                "7308",
-                                "BrickLink",
-                                7308,
-                                "Bricks In  Bloom",
-                                "Leigha Middleton",
-                                "Unit 4",
-                                "Candy Works",
-                                "15 Parkhouse Road",
-                                "Carlisle",
-                                "Cumbria",
-                                "GB",
-                                "CA3 0JU",
-                                "1228 511030",
-                                "bricksinbloom@bricklink.com",
-                                "GB123 4567 89");
-            testItem.AddDestination("BL15748250",
-                                "",
-                                "Colin Middleton",
-                                "257 Ecclesall Road",
-                                "",
-                                "",
-                                "Sheffield",
-                                "South Yorkshire",
-                                "GB",
-                                "S5 7HJ",
-                                "7505363818",
-                                "colin@test.com",
-                                "");
-            testItem.AddShipmentInformation(justDate,
-                                "TPLN",
-                                "KG",
-                                "LEGO",
-                                "LEGO sets",
-                                "Sale of goods",
-                                112.97,
-                                "GBP",
-                                "DDU",
-                                "PDF",
-                                "75b59db8-3cd3-4578-888e-54be016f07cc",
-                                "Process");
-            testItem.AddServiceOption("123456789",
-                                "01",
-                                "P",
-                                "Front Porch",
-                                false,
-                                "Level5",
-                                false,
-                                "EmailAndSMS",
-                                false);
+            testItem.AddShipper(SampleOrder1.SupplierId,                // "bricksinbloom7308"
+                                SampleOrder1.SupplierReference1,        // "7308"
+                                SampleOrder1.SupplierReference2,        // "BrickLink"
+                                SampleOrder1.Department,                // 7308
+                                SampleOrder1.SupplierBusinessName,      // "Bricks In Bloom"
+                                SampleOrder1.SupplierContactName,       // "Leigha Middleton"
+                                SampleOrder1.SupplierAddressLine1,      // "Unit 4"
+                                SampleOrder1.SupplierAddressLine2,      // "Candy Works"
+                                SampleOrder1.SupplierAddressLine3,      // "15 Parkhouse Road"
+                                SampleOrder1.SupplierAddressTown,       // "Carlisle"
+                                SampleOrder1.SupplierAddressCounty,     // "Cumbria"
+                                SampleOrder1.SupplierCountryCode,       // "GB"
+                                SampleOrder1.SupplierAddressPostcode,   // "CA3 0JU"
+                                SampleOrder1.SupplierPhoneNumber,       // "1228511030"
+                                SampleOrder1.SupplierEmailAddress,      // "bricksinbloom@bricklink.com"
+                                SampleOrder1.SupplierVatNumber);        // "GB123 4567 89"
+            testItem.AddDestination(SampleOrder1.CustomerId,                // "BL15748250"
+                                    SampleOrder1.CustomerBusinessName,      // ""
+                                    SampleOrder1.CustomerContactName,       // "Colin Middleton"
+                                    SampleOrder1.CustomerAddressLine1,      // "257 Ecclesall Road"
+                                    SampleOrder1.CustomerAddressLine2,      // ""
+                                    SampleOrder1.CustomerAddressLine3,      // "Sheffield"
+                                    SampleOrder1.CustomerAddressTown,       // ""
+                                    SampleOrder1.CustomerAddressCounty,     // "South Yorkshire"
+                                    SampleOrder1.CustomerCountryCode,       // "GB"
+                                    SampleOrder1.CustomerAddressPostcode,   // "S5 7HJ"
+                                    SampleOrder1.CustomerPhoneNumber,       // "7505363818"
+                                    SampleOrder1.CustomerEmailAddress,      // "colin@test.com"
+                                    SampleOrder1.CustomerVatNumber);        // ""
+            testItem.AddShipmentInformation(SampleOrder1.PostingDate,               // 16/01/2022
+                                            SampleOrder1.PostageType,               // "TPLN"
+                                            SampleOrder1.PostingWeightUOM,          // "KG"
+                                            SampleOrder1.CustomsProduct,            // "LEGO"
+                                            SampleOrder1.CustomsDescriptionOfGoods, // "LEGO sets"
+                                            SampleOrder1.CustomsReasonForExport,    // "Sale of goods"
+                                            SampleOrder1.CustomsValue,              // 112.97
+                                            SampleOrder1.CustomsCurrency,           // "GBP"
+                                            SampleOrder1.CustomsIncoterms,          // "DDU"
+                                            SampleOrder1.CustomsLabelFormat,        // "PDF"
+                                            SampleOrder1.CustomsSilentPrintProfile, // "75b59db8-3cd3-4578-888e-54be016f07cc"
+                                            SampleOrder1.CustomsShipmentAction);    // "Process"
+            testItem.AddServiceOption(SampleOrder1.PostingLocation,             // "123456789"
+                                    SampleOrder1.PostingServiceLevel,           // "01"
+                                    SampleOrder1.PostingServiceFormat,          // "P"
+                                    SampleOrder1.CustomerSafeplace,             // "Front Porch"
+                                    SampleOrder1.PostingSaturdayGuaranteed,     // false
+                                    SampleOrder1.PostingConsequentialLoss,      // "Level5"
+                                    SampleOrder1.PostingLocalCollect,           // false
+                                    SampleOrder1.PostingTrackingNotifications,  // "EmailAndSMS"
+                                    SampleOrder1.PostingRecordedSignedFor);     // false
             testItem.AddParcel(1,
                                 "17968198-1",
                                 2.2,
